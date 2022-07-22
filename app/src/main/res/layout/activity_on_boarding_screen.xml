@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.onBoardingScreen.OnBoardingScreenActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="280dp"
+        android:layout_marginVertical="0dp"
+        android:alpha=".96"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/movies" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/onboarding_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="6">
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/btn_actors"
+            style="@style/Button"
+            android:layout_width="208dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="52dp"
+            android:background="@color/red"
+            android:text="@string/actors_btn_text"
+            android:textOff="@string/actors_btn_text"
+            android:textOn="@string/actors_btn_text"
+            app:iconTint="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/btn_genres"
+            style="@style/Button"
+            android:layout_width="208dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/red"
+            android:text="@string/genres_btn_text"
+            android:textOff="@string/genres_btn_text"
+            android:textOn="@string/genres_btn_text"
+
+            app:iconTint="#FFC107"
+            app:layout_constraintEnd_toEndOf="@+id/btn_actors"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btn_actors"
+            app:layout_constraintTop_toBottomOf="@+id/btn_actors" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

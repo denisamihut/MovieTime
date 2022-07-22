@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1365" />
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/drawable/onboarding_bg.xml" value="0.1625" />
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/drawable/round_btn.xml" value="0.1625" />
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_actors_screen.xml" value="0.2988679352838745" />
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_actors_secreen.xml" value="0.1" />
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_genres_screen.xml" value="0.2989583333333333" />
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_main.xml" value="0.2989583333333333" />
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_movie_details_screen.xml" value="0.2989583333333333" />
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_on_boarding_screen.xml" value="0.2989583333333333" />
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.2989583333333333" />
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/item_actor.xml" value="0.1" />
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/item_actors.xml" value="0.19924529018924966" />
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/item_genre.xml" value="0.1" />
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1625" />
+        <entry key="..\:/MovieApp/app/src/main/res/drawable/onboarding_bg.xml" value="0.2485" />
+        <entry key="..\:/MovieApp/app/src/main/res/drawable/round_btn.xml" value="0.2485" />
+        <entry key="..\:/MovieApp/app/src/main/res/layout/activity_actors_secreen.xml" value="0.1" />
+        <entry key="..\:/MovieApp/app/src/main/res/layout/activity_genres_screen.xml" value="0.2" />
+        <entry key="..\:/MovieApp/app/src/main/res/layout/activity_movie_details_screen.xml" value="0.264" />
+        <entry key="..\:/MovieApp/app/src/main/res/layout/activity_on_boarding_screen.xml" value="0.2" />
+        <entry key="..\:/MovieApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="..\:/MovieApp/app/src/main/res/layout/item_actors.xml" value="0.2578125" />
+        <entry key="..\:/MovieApp/app/src/main/res/layout/item_genre.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
