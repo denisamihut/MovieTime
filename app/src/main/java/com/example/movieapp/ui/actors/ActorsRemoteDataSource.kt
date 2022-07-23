@@ -10,10 +10,10 @@ class ActorsRemoteDataSource(retrofit: Retrofit) {
     private val apiService: ActorsAPIService = retrofit.create(ActorsAPIService::class.java)
     private val actorMapper = ActorsMapper()
 
-    fun getActors(): List<Actors> {
+    fun getActors(): List<Results> {
         return apiService.getActors(API_KEY, LANGUAGE, PAGE)
             .executeAndDeliver()
-            .actors
+            .results
             .map { actorMapper.map(it) }
     }
 }

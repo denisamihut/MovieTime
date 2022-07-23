@@ -1,6 +1,6 @@
 package com.example.movieapp.ui.actors
 
-class Actors ( //results
+class Results ( //results
 //    var id: Int,
 //    var name: String,
 //    var isSelected: Boolean

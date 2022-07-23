@@ -12,12 +12,12 @@ import kotlinx.coroutines.withContext
 
 class ActorsActivity : AppCompatActivity() {
 
-    private var actors: List<Actors> = emptyList()
+    private var results: List<Results> = emptyList() //lista de results
     private val actorsRepository = ActorsRepository.instance
 
     private fun getActors() {
         GlobalScope.launch(Dispatchers.IO) {
-            actors = actorsRepository.getAllRemoteActors()
+            results = actorsRepository.getAllRemoteActors()
             withContext(Dispatchers.Main) {
                 setupRecyclerView()
             }
@@ -34,6 +34,6 @@ class ActorsActivity : AppCompatActivity() {
         val rvActor = findViewById<RecyclerView>(R.id.rv_actors)
         rvActor.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        rvActor.adapter = ActorsAdapter(actors)
+        rvActor.adapter = ActorsAdapter(results)
     }
 }

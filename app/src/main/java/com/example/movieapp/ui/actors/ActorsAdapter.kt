@@ -10,11 +10,11 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.R
 
-class ActorsAdapter(private val actorsList: List<Actors>) :
+class ActorsAdapter(private val actorsList: List<Results>) :
     RecyclerView.Adapter<ActorsAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val actorName: TextView = view.findViewById(R.id.tv_name)
+        val actorName: TextView = view.findViewById(R.id.tv_name2)
         val parentView: ConstraintLayout = view.findViewById(R.id.parent)
         val starIcon: ImageView = view.findViewById(R.id.star)
     }
@@ -29,6 +29,9 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val actor = actorsList[position]
         holder.actorName.text = actor.name
+        holder.actorName.text = actor.profile_path
+
+
 
         if (position % 2 == 0) {
             holder.parentView.setBackgroundColor(
