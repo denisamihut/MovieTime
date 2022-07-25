@@ -12,7 +12,7 @@ import kotlinx.coroutines.withContext
 
 class ActorsActivity : AppCompatActivity() {
 
-    private var results: List<Results> = emptyList() //lista de results
+    private var results: List<Actors> = emptyList()
     private val actorsRepository = ActorsRepository.instance
 
     private fun getActors() {

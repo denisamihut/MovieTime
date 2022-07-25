@@ -3,4 +3,8 @@
     <string name="splash_title">Welcome to MovieTime!</string>
     <string name="actors_btn_text">Actors</string>
     <string name="genres_btn_text">Genres</string>
+    <string name="on_boarding_info">This is a setup for first time users</string>
+    <string name="genresInfo">Please pick your favourite genres</string>
+    <string name="btnPrefGenres">Next</string>
+
 </resources>

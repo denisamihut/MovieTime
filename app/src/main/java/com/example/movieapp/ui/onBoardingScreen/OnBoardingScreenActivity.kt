@@ -18,11 +18,11 @@ class OnBoardingScreenActivity : AppCompatActivity() {
     }
 
     private fun setClickListeners(){
-        val genresButton = findViewById<Button>(R.id.btn_genres)
+        val genresButton = findViewById<Button>(R.id.btnGenres)
         genresButton.setOnClickListener {
             startActivity(Intent(this, GenresActivity::class.java))
         }
-        val actorsButton = findViewById<Button>(R.id.btn_actors)
+        val actorsButton = findViewById<Button>(R.id.btnActors)
         actorsButton.setOnClickListener {
             startActivity(Intent(this, ActorsActivity::class.java))
         }

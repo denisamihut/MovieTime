@@ -14,9 +14,9 @@ class GenresAdapter(private val genresList: List<Genres>) :
     RecyclerView.Adapter<GenresAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val genreName: TextView = view.findViewById(R.id.tv_name2)
+        val genreName: TextView = view.findViewById(R.id.tv_name)
         val parentView: ConstraintLayout = view.findViewById(R.id.parent)
-        val starIcon: ImageView = view.findViewById(R.id.star)
+        val starIcon: ImageView = view.findViewById(R.id.heart)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -34,7 +34,7 @@ class GenresAdapter(private val genresList: List<Genres>) :
             holder.parentView.setBackgroundColor(
                 ContextCompat.getColor(
                     holder.parentView.context,
-                    R.color.teal_200
+                    R.color.grey_100
                 )
             )
         }
@@ -43,9 +43,9 @@ class GenresAdapter(private val genresList: List<Genres>) :
             genre.isSelected = !genre.isSelected
             holder.parentView.setBackgroundColor(
                 when (genre.isSelected) {
-                    true -> ContextCompat.getColor(holder.parentView.context, R.color.purple_200)
+                    true -> ContextCompat.getColor(holder.parentView.context, R.color.blue_dark)
                     else -> when (position % 2 == 0) {
-                        true -> ContextCompat.getColor(holder.parentView.context, R.color.teal_200)
+                        true -> ContextCompat.getColor(holder.parentView.context, R.color.grey_100)
                         else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
                     }
                 }

@@ -10,13 +10,13 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.R
 
-class ActorsAdapter(private val actorsList: List<Results>) :
+class ActorsAdapter(private val actorsList: List<Actors>) :
     RecyclerView.Adapter<ActorsAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val actorName: TextView = view.findViewById(R.id.tv_name2)
+        val actorName: TextView = view.findViewById(R.id.tv_name)
         val parentView: ConstraintLayout = view.findViewById(R.id.parent)
-        val starIcon: ImageView = view.findViewById(R.id.star)
+        val starIcon: ImageView = view.findViewById(R.id.heart)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

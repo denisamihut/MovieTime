@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="1.0">
 
         <androidx.appcompat.widget.AppCompatToggleButton
-            android:id="@+id/btn_actors"
+            android:id="@+id/btnActors"
             style="@style/Button"
             android:layout_width="208dp"
             android:layout_height="48dp"
@@ -35,7 +35,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatToggleButton
-            android:id="@+id/btn_genres"
+            android:id="@+id/btnGenres"
             style="@style/Button"
             android:layout_width="208dp"
             android:layout_height="48dp"
@@ -44,19 +44,19 @@
             android:text="@string/genres_btn_text"
             android:textOff="@string/genres_btn_text"
             android:textOn="@string/genres_btn_text"
-            app:layout_constraintEnd_toEndOf="@+id/btn_actors"
+            app:layout_constraintEnd_toEndOf="@+id/btnActors"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/btn_actors"
-            app:layout_constraintTop_toBottomOf="@+id/btn_actors" />
+            app:layout_constraintStart_toStartOf="@+id/btnActors"
+            app:layout_constraintTop_toBottomOf="@+id/btnActors" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/appMottoOnBoarding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="This is the setup for first time users"
+            android:text="@string/on_boarding_info"
             android:textSize="20sp"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/btn_actors"
+            app:layout_constraintBottom_toTopOf="@+id/btnActors"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -64,9 +64,10 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/appLogoOnBoarding"
         android:layout_width="164dp"
         android:layout_height="187dp"
+        android:contentDescription="app logo"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
