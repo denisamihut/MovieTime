@@ -5,6 +5,6 @@
     <string name="genres_btn_text">Genres</string>
     <string name="on_boarding_info">This is a setup for first time users</string>
     <string name="genresInfo">Please pick your favourite genres</string>
-    <string name="btnPrefGenres">Next</string>
+    <string name="btnSave">Save</string>
 
 </resources>

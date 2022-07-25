@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:visibility="visible">
 
     <TextView
@@ -15,16 +15,17 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/star"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Action" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/star"
         android:layout_width="61dp"
         android:layout_height="38dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_star_24" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

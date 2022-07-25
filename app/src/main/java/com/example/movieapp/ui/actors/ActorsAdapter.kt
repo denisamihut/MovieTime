@@ -16,7 +16,8 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val actorName: TextView = view.findViewById(R.id.tv_name)
         val parentView: ConstraintLayout = view.findViewById(R.id.parent)
-        val starIcon: ImageView = view.findViewById(R.id.heart)
+        val starIcon: ImageView = view.findViewById(R.id.star)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -29,7 +30,6 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val actor = actorsList[position]
         holder.actorName.text = actor.name
-        holder.actorName.text = actor.profile_path
 
 
 

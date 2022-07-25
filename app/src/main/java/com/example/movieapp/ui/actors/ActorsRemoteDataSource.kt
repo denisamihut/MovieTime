@@ -3,7 +3,7 @@ package com.example.movieapp.ui.actors
 import com.example.movieapp.network.executeAndDeliver
 import com.example.movieapp.utils.Constants.API_KEY
 import com.example.movieapp.utils.Constants.LANGUAGE
-import com.example.movieapp.utils.Constants.PAGE
+
 import retrofit2.Retrofit
 
 class ActorsRemoteDataSource(retrofit: Retrofit) {
@@ -11,9 +11,9 @@ class ActorsRemoteDataSource(retrofit: Retrofit) {
     private val actorMapper = ActorsMapper()
 
     fun getActors(): List<Actors> {
-        return apiService.getActors(API_KEY, LANGUAGE, PAGE)
+        return apiService.getActors(API_KEY, LANGUAGE)
             .executeAndDeliver()
-            .results
+            .actors
             .map { actorMapper.map(it) }
     }
 }

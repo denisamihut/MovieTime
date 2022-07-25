@@ -19,7 +19,7 @@
         tools:listitem="@layout/item_genre" />
 
     <TextView
-        android:id="@+id/genresInfo"
+        android:id="@+id/btnInfos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -32,16 +32,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnPrefGenres"
+        android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:backgroundTint="@color/orange"
-        android:text="@string/btnPrefGenres"
+        android:text="@string/btnSave"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/rv_genres" />
 
 

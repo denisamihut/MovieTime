@@ -7,7 +7,7 @@ class ActorsRepository private constructor(){
         val instance = ActorsRepository()
     }
 
-    private val ActorsRemoteDataSource = com.example.movieapp.ui.actors.ActorsRemoteDataSource(APIClient.instance.retrofit)
+    private val ActorsRemoteDataSource = ActorsRemoteDataSource(APIClient.instance.retrofit)
 
     fun getAllRemoteActors() = ActorsRemoteDataSource.getActors()
 }

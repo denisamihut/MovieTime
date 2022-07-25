@@ -10,6 +10,5 @@ interface ActorsAPIService {
     fun getActors(
         @Query("api_key") apiKey: String,
         @Query("language") language: String,
-        @Query("page") page: Int
     ): Call<ActorsListResponse>
 }
