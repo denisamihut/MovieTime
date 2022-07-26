@@ -7,7 +7,13 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.example.movieapp.R
+import com.example.movieapp.SearchActivity
+import com.example.movieapp.ui.genres.GenresRepository
 import com.example.movieapp.ui.onBoardingScreen.OnBoardingScreenActivity
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 private const val DELAY = 3000L
 
@@ -16,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
 
     private var handler: Handler? = null
     private var runnable: Runnable? = null
-
+    private val genresRepository = GenresRepository.instance
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
@@ -34,8 +40,26 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun openNextScreen() {
-        OnBoardingScreenActivity.open(this)
+        isSaved()
+
         finish()
+    }
+
+    private fun isSaved() {
+        GlobalScope.launch(Dispatchers.IO) {
+            val genreCount = genresRepository.getCount()
+            withContext(Dispatchers.Main) {
+                verifyIsSaved(genreCount)
+            }
+        }
+    }
+
+    private fun verifyIsSaved(genreCount: Int) {
+        val isSaved = genreCount > 0
+        if (isSaved)
+            SearchActivity.open(this)
+        else
+            OnBoardingScreenActivity.open(this)
     }
 
     override fun onDestroy() {

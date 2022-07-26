@@ -8,5 +8,16 @@
     <string name="actorsInfo">Pick your . - genres</string>
 
     <string name="btnSave">Save</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">MovieTime</string>
+    <string name="nav_header_subtitle">Your favourite genres</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_search_movies">Search Movies</string>
+    <string name="menu_save_movies">Saved Movies</string>
+
 
 </resources>
