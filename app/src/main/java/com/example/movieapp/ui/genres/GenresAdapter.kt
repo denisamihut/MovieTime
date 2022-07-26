@@ -3,7 +3,6 @@ package com.example.movieapp.ui.genres
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -16,7 +15,6 @@ class GenresAdapter(private val genresList: List<Genres>) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val genreName: TextView = view.findViewById(R.id.tv_name)
         val parentView: ConstraintLayout = view.findViewById(R.id.parent)
-        val heartIcon: ImageView = view.findViewById(R.id.star)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -29,28 +27,28 @@ class GenresAdapter(private val genresList: List<Genres>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val genre = genresList[position]
         holder.genreName.text = genre.name
-        selectGenres(holder, genre)
+
+        selectGenre(holder, genre)
 
         holder.parentView.setOnClickListener {
             genre.isSelected = !genre.isSelected
-            selectGenres(holder, genre)
+            selectGenre(holder, genre)
+
         }
     }
 
-    private fun selectGenres(holder: ViewHolder, genre: Genres) {
+    private fun selectGenre(holder: ViewHolder, genre: Genres) {
         holder.parentView.setBackgroundColor(
             when (genre.isSelected) {
-                true -> ContextCompat.getColor(holder.parentView.context, R.color.grey_100)
+                true -> ContextCompat.getColor(holder.parentView.context, R.color.blue_dark)
                 else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
-
             }
         )
 
-        holder.parentView.setBackgroundColor(
+        holder.genreName.setTextColor(
             when (genre.isSelected) {
-                true -> ContextCompat.getColor(holder.parentView.context, R.color.grey_100)
-                else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
-
+                true -> ContextCompat.getColor(holder.parentView.context, R.color.white)
+                else -> ContextCompat.getColor(holder.parentView.context, R.color.black)
             }
         )
     }
