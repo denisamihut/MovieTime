@@ -9,6 +9,8 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.R
+import com.example.movieapp.ui.genres.Genres
+import com.example.movieapp.ui.genres.GenresAdapter
 
 class ActorsAdapter(private val actorsList: List<Actors>) :
     RecyclerView.Adapter<ActorsAdapter.ViewHolder>() {
@@ -16,7 +18,6 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val actorName: TextView = view.findViewById(R.id.tv_name)
         val parentView: ConstraintLayout = view.findViewById(R.id.parent)
-        val starIcon: ImageView = view.findViewById(R.id.star)
 
     }
 
@@ -31,33 +32,29 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
         val actor = actorsList[position]
         holder.actorName.text = actor.name
 
+        selectActor(holder, actor)
 
-
-        if (position % 2 == 0) {
-            holder.parentView.setBackgroundColor(
-                ContextCompat.getColor(
-                    holder.parentView.context,
-                    R.color.teal_200
-                )
-            )
-        }
         holder.parentView.setOnClickListener {
             actor.isSelected = !actor.isSelected
-            holder.parentView.setBackgroundColor(
-                when (actor.isSelected) {
-                    true -> ContextCompat.getColor(holder.parentView.context, R.color.purple_200)
-                    else -> when (position % 2 == 0) {
-                        true -> ContextCompat.getColor(holder.parentView.context, R.color.teal_200)
-                        else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
-                    }
-                }
-            )
+            selectActor(holder, actor)
 
-            holder.starIcon.visibility = when (actor.isSelected) {
-                true -> View.VISIBLE
-                else -> View.INVISIBLE
-            }
         }
+    }
+
+    private fun selectActor(holder: ViewHolder, actor: Actors) {
+        holder.parentView.setBackgroundColor(
+            when (actor.isSelected) {
+                true -> ContextCompat.getColor(holder.parentView.context, R.color.blue_dark)
+                else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
+            }
+        )
+
+        holder.actorName.setTextColor(
+            when (actor.isSelected) {
+                true -> ContextCompat.getColor(holder.parentView.context, R.color.white)
+                else -> ContextCompat.getColor(holder.parentView.context, R.color.black)
+            }
+        )
     }
 
     override fun getItemCount() = actorsList.size

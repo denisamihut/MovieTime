@@ -11,5 +11,4 @@ class ActorsResponse(
     @SerializedName("name")
     var name: String,
 
-
 )
