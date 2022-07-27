@@ -3,14 +3,11 @@ package com.example.movieapp.ui.actors
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.R
-import com.example.movieapp.ui.genres.Genres
-import com.example.movieapp.ui.genres.GenresAdapter
 
 class ActorsAdapter(private val actorsList: List<Actors>) :
     RecyclerView.Adapter<ActorsAdapter.ViewHolder>() {
@@ -18,7 +15,6 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val actorName: TextView = view.findViewById(R.id.tv_name)
         val parentView: ConstraintLayout = view.findViewById(R.id.parent)
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

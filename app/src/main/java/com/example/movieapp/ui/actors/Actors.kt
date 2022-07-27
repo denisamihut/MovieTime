@@ -7,10 +7,10 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "results")
 
-data class Actors (
-
+data class Actors(
     @ColumnInfo(name = "profile_path")
     var profile_path: String?,
+
     @PrimaryKey
     @NonNull
     @ColumnInfo(name = "id")
@@ -25,6 +25,6 @@ data class Actors (
     override fun equals(other: Any?) = (other is Actors) && id == other.id
 
     override fun toString(): String {
-        return "Genre(id=$id, name='$name', isSelected=$isSelected)"
+        return "Actor(id=$id, name='$name', isSelected=$isSelected)"
     }
 }

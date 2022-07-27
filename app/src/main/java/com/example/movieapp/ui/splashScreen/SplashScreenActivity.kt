@@ -8,7 +8,9 @@ import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.example.movieapp.R
 import com.example.movieapp.SearchActivity
+import com.example.movieapp.ui.actors.ActorsRepository
 import com.example.movieapp.ui.genres.GenresRepository
+//import com.example.movieapp.ui.movies.MoviesRepository
 import com.example.movieapp.ui.onBoardingScreen.OnBoardingScreenActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -24,6 +26,9 @@ class SplashActivity : AppCompatActivity() {
     private var runnable: Runnable? = null
 
     private val genresRepository = GenresRepository.instance
+    private val actorsRepository = ActorsRepository.instance
+//    private val moviesRepository = MoviesRepository.instance
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,27 +41,26 @@ class SplashActivity : AppCompatActivity() {
         runnable = Runnable {
             openNextScreen()
         }
-
         handler?.postDelayed(runnable!!, DELAY)
     }
 
     private fun openNextScreen() {
         isSaved()
-
         finish()
     }
 
     private fun isSaved() {
         GlobalScope.launch(Dispatchers.IO) {
             val genreCount = genresRepository.getCount()
+            val actorsCount = actorsRepository.getCount()
             withContext(Dispatchers.Main) {
-                verifyIsSaved(genreCount)
+                verifyIsSaved(genreCount, actorsCount)
             }
         }
     }
 
-    private fun verifyIsSaved(genreCount: Int) {
-        val isSaved = genreCount > 0
+    private fun verifyIsSaved(genreCount: Int, actorsCount: Int) {
+        val isSaved = genreCount > 0 && actorsCount > 0
         if (isSaved)
             SearchActivity.open(this)
         else
