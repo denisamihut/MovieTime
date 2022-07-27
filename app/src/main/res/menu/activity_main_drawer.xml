@@ -11,7 +11,6 @@
         <item
             android:id="@+id/nav_save_movies"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_save_movies" />
-
+            android:title= "@string/menu_save_movies" />
     </group>
 </menu>

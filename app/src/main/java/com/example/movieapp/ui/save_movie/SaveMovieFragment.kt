@@ -1,4 +1,4 @@
-package com.example.movieapp.ui.search_movies
+package com.example.movieapp.ui.save_movie
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.movieapp.databinding.FragmentSearchMoviesBinding
+import com.example.movieapp.databinding.FragmentSaveMoviesBinding
 
-class SearchMovieFragment : Fragment() {
+class SaveMovieFragment : Fragment() {
 
-    private var _binding: FragmentSearchMoviesBinding? = null
+    private var _binding: FragmentSaveMoviesBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class SearchMovieFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(SearchMovieViewModel::class.java)
+        val galleryViewModel =
+            ViewModelProvider(this).get(SaveMovieViewModel::class.java)
 
-        _binding = FragmentSearchMoviesBinding.inflate(inflater, container, false)
+        _binding = FragmentSaveMoviesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textGallery
+        galleryViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

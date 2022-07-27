@@ -34,7 +34,7 @@ class SearchActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarSearch.toolbar)
 
-        binding.appBarSearch.fab.setOnClickListener { view ->
+        binding.appBarSearch.toolbar.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }

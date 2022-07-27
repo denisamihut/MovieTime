@@ -10,8 +10,10 @@
         android:id="@+id/rv_genres"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="75dp"
         android:layout_marginBottom="70dp"
+        android:background="@color/grey_100"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,23 +41,15 @@
         android:layout_marginBottom="10dp"
         android:backgroundTint="@color/orange"
         android:text="@string/btnSave"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_genres" />
+        app:layout_constraintTop_toBottomOf="@+id/rv_genres"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="59dp"
-        android:layout_height="29dp"
-        app:layout_constraintBottom_toTopOf="@+id/rv_genres"
-        app:layout_constraintEnd_toEndOf="@+id/genresInfo"
-        app:layout_constraintHorizontal_bias="0.573"
-        app:layout_constraintStart_toStartOf="@+id/genresInfo"
-        app:layout_constraintTop_toTopOf="@+id/genresInfo"
-        app:layout_constraintVertical_bias="0.2"
-        app:srcCompat="@drawable/app_heart" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,13 +1,13 @@
-package com.example.movieapp.ui.search_movies
+package com.example.movieapp.ui.save_movie
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SearchMovieViewModel : ViewModel() {
+class SaveMovieViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+        value = "This is gallery Fragment"
     }
     val text: LiveData<String> = _text
 }

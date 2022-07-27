@@ -22,12 +22,13 @@ class SplashActivity : AppCompatActivity() {
 
     private var handler: Handler? = null
     private var runnable: Runnable? = null
+
     private val genresRepository = GenresRepository.instance
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
         initHandlerToOpenNextActivity()
-
     }
 
     private fun initHandlerToOpenNextActivity() {
