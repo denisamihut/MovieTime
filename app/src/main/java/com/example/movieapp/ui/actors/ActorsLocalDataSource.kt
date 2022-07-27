@@ -2,7 +2,6 @@ package com.example.movieapp.ui.actors
 
 import com.example.movieapp.database.Database
 
-
 class ActorsLocalDataSource(database: Database) {
 
     val actorsDAO: ActorsDAO = database.movieAppDatabase.actorsDao()
@@ -14,4 +13,6 @@ class ActorsLocalDataSource(database: Database) {
     fun deleteAll() = actorsDAO.deleteAll()
     fun deleteAll(actors: List<Actors>) = actorsDAO.deleteAll(actors)
     fun replaceAll(actors: List<Actors>) = actorsDAO.replaceAll(actors)
+    fun getCount() = actorsDAO.getCount()
+
 }

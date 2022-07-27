@@ -11,9 +11,7 @@ class ActorsRepository private constructor(){
     private val actorsRemoteDataSource = ActorsRemoteDataSource(APIClient.instance.retrofit)
     private val actorsLocalDataSource = ActorsLocalDataSource(Database.instance)
 
-
     fun getAllRemoteActors() = actorsRemoteDataSource.getActors()
-
     fun getAllLocalActors() = actorsLocalDataSource.getAll()
     fun saveLocal(actor: Actors) = actorsLocalDataSource.save(actor)
     fun saveAllLocal(actors: List<Actors>) = actorsLocalDataSource.saveAll(actors)
@@ -21,5 +19,5 @@ class ActorsRepository private constructor(){
     fun deleteAllLocal() = actorsLocalDataSource.deleteAll()
     fun deleteAllLocal(actors: List<Actors>) = actorsLocalDataSource.deleteAll(actors)
     fun replaceAllLocal(actors: List<Actors>) = actorsLocalDataSource.replaceAll(actors)
-
+    fun getCount() = actorsLocalDataSource.getCount()
 }

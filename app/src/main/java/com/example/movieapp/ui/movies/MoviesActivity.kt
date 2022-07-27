@@ -1,4 +1,4 @@
-package com.example.movieapp.ui.actors
+package com.example.movieapp.ui.movies
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,58 +12,58 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class ActorsActivity : AppCompatActivity() {
+class MoviesActivity : AppCompatActivity() {
 
-    private var actors: List<Actors> = emptyList()
-    private val actorRepository = ActorsRepository.instance
+    private var movies: List<Movies> = emptyList()
+    private val movieRepository = MoviesRepository.instance
 
-    private fun getActors() {
+    private fun getMovies() {
         GlobalScope.launch(Dispatchers.IO) {
-            actors = actorRepository.getAllRemoteActors()
+            movies = movieRepository.getAllRemoteMovies()
             withContext(Dispatchers.Main) {
-                preselectSavedActors()
+                preselectSavedMovies()
             }
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_actors_screen)
+        setContentView(R.layout.activity_movies_screen)
         setOnClickListeners()
-        getActors()
+        getMovies()
     }
 
     private fun setOnClickListeners() {
         val btnSave = findViewById<Button>(R.id.btnSave)
         btnSave.setOnClickListener {
-            saveActors()
+            saveMovies()
         }
     }
 
-    private fun getSelectedActors(): List<Actors> {
-        return actors.filter { actor -> actor.isSelected }
+    private fun getSelectedMovies(): List<Movies> {
+        return movies.filter { movie -> movie.isSelected }
     }
 
-    private fun saveActors() {
+    private fun saveMovies() {
         GlobalScope.launch(Dispatchers.IO) {
-            actorRepository.deleteAllLocal()
-            actorRepository.saveAllLocal(getSelectedActors())
+            movieRepository.deleteAllLocal()
+            movieRepository.saveAllLocal(getSelectedMovies())
         }
         OnBoardingScreenActivity.open(this)
     }
 
     private fun setupRecyclerView() {
-        val rvActor = findViewById<RecyclerView>(R.id.rv_actors)
-        rvActor.layoutManager =
+        val rvMovie = findViewById<RecyclerView>(R.id.rv_movies)
+        rvMovie.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        rvActor.adapter = ActorsAdapter(actors)
+        rvMovie.adapter = MoviesAdapter(movies)
     }
 
-    private fun preselectSavedActors() {
+    private fun preselectSavedMovies() {
         GlobalScope.launch(Dispatchers.IO) {
-            val savedActors: List<Actors> = actorRepository.getAllLocalActors()
+            val savedMovies: List<Movies> = movieRepository.getAllLocalMovies()
             withContext(Dispatchers.Main) {
-                actors.forEach { actor -> actor.isSelected = savedActors.contains(actor) }
+                movies.forEach { movie -> movie.isSelected = savedMovies.contains(movie) }
                 setupRecyclerView()
             }
         }

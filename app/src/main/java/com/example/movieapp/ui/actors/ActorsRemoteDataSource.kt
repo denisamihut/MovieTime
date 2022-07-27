@@ -3,7 +3,6 @@ package com.example.movieapp.ui.actors
 import com.example.movieapp.network.executeAndDeliver
 import com.example.movieapp.utils.Constants.API_KEY
 import com.example.movieapp.utils.Constants.LANGUAGE
-
 import retrofit2.Retrofit
 
 class ActorsRemoteDataSource(retrofit: Retrofit) {

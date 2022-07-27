@@ -35,6 +35,16 @@ class SearchMovieFragment : Fragment() {
         return root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        getFilms()
+    }
+
+    private fun getFilms() {
+
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

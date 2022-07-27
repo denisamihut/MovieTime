@@ -1,4 +1,4 @@
-package com.example.movieapp.ui.actors
+package com.example.movieapp.ui.movies
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,49 +9,49 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.R
 
-class ActorsAdapter(private val actorsList: List<Actors>) :
-    RecyclerView.Adapter<ActorsAdapter.ViewHolder>() {
+class MoviesAdapter(private val moviesList: List<Movies>) :
+    RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val actorName: TextView = view.findViewById(R.id.tv_name)
+        val movieName: TextView = view.findViewById(R.id.tv_name)
         val parentView: ConstraintLayout = view.findViewById(R.id.parent)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_actor, parent, false)
+            .inflate(R.layout.item_movie, parent, false)
 
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val actor = actorsList[position]
-        holder.actorName.text = actor.name
+        val movie = moviesList[position]
+        holder.movieName.text = movie.title
 
-        selectActor(holder, actor)
+        selectMovie(holder, movie)
 
         holder.parentView.setOnClickListener {
-            actor.isSelected = !actor.isSelected
-            selectActor(holder, actor)
+            movie.isSelected = !movie.isSelected
+            selectMovie(holder, movie)
 
         }
     }
 
-    private fun selectActor(holder: ViewHolder, actor: Actors) {
+    private fun selectMovie(holder: ViewHolder, movie: Movies) {
         holder.parentView.setBackgroundColor(
-            when (actor.isSelected) {
+            when (movie.isSelected) {
                 true -> ContextCompat.getColor(holder.parentView.context, R.color.blue_dark)
                 else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
             }
         )
 
-        holder.actorName.setTextColor(
-            when (actor.isSelected) {
+        holder.movieName.setTextColor(
+            when (movie.isSelected) {
                 true -> ContextCompat.getColor(holder.parentView.context, R.color.white)
                 else -> ContextCompat.getColor(holder.parentView.context, R.color.black)
             }
         )
     }
 
-    override fun getItemCount() = actorsList.size
+    override fun getItemCount() = moviesList.size
 }

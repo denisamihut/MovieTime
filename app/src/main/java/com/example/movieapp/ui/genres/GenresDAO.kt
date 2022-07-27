@@ -4,7 +4,6 @@ import androidx.room.*
 
 @Dao
 interface GenresDAO {
-
     @Query("SELECT * FROM genres")
     fun getAll(): List<Genres>
 
