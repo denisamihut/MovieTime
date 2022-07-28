@@ -9,7 +9,7 @@ class MoviesMapper {
             release_date = moviesResponse.release_date,
             id = moviesResponse.id,
             title = moviesResponse.title,
-            isSelected = false,
+            isSelected = false
         )
     }
 }

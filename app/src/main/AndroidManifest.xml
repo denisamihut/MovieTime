@@ -16,7 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieApp"
         tools:targetApi="31">
-
+        <activity
+            android:name=".TabbedMainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_tabbed_main"
+            android:theme="@style/Theme.MovieApp.NoActionBar" />
         <activity
             android:name=".SearchActivity"
             android:exported="false"
