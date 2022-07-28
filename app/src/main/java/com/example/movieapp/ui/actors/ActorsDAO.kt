@@ -1,7 +1,6 @@
 package com.example.movieapp.ui.actors
 
 import androidx.room.*
-import com.example.movieapp.ui.genres.Genres
 
 @Dao
 interface ActorsDAO {
@@ -30,5 +29,5 @@ interface ActorsDAO {
     }
 
     @Query("SELECT COUNT(id) FROM results")
-    fun getCount() : Int
+    fun getCount(): Int
 }

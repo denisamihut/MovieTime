@@ -3,6 +3,7 @@ package com.example.movieapp.ui.movies
 import com.google.gson.annotations.SerializedName
 
 class MoviesResponse (
+
     @SerializedName("poster_path")
     var poster_path: String,
 

@@ -10,7 +10,6 @@ import com.example.movieapp.R
 import com.example.movieapp.SearchActivity
 import com.example.movieapp.ui.actors.ActorsRepository
 import com.example.movieapp.ui.genres.GenresRepository
-import com.example.movieapp.ui.movies.MoviesRepository
 import com.example.movieapp.ui.onBoardingScreen.OnBoardingScreenActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -27,7 +26,6 @@ class SplashActivity : AppCompatActivity() {
 
     private val genresRepository = GenresRepository.instance
     private val actorsRepository = ActorsRepository.instance
-    private val moviesRepository = MoviesRepository.instance
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -54,7 +54,7 @@ class GenresActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-        val rvGenres = findViewById<RecyclerView>(R.id.rv_movies)
+        val rvGenres = findViewById<RecyclerView>(R.id.rv_genres)
         rvGenres.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         rvGenres.adapter = GenresAdapter(genres)
