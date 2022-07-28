@@ -49,6 +49,22 @@
             app:layout_constraintStart_toStartOf="@+id/btnActors"
             app:layout_constraintTop_toBottomOf="@+id/btnActors" />
 
+
+<!--        <androidx.appcompat.widget.AppCompatToggleButton-->
+<!--            android:id="@+id/btnMovies"-->
+<!--            style="@style/Button"-->
+<!--            android:layout_width="208dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_marginTop="52dp"-->
+<!--            android:background="@color/orange"-->
+<!--            android:text="@string/movies_btn_text"-->
+<!--            android:textOff="@string/movies_btn_text"-->
+<!--            android:textOn="@string/movies_btn_text"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/btnGenres"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/btnGenres"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/btnGenres" />-->
+
         <TextView
             android:id="@+id/appMottoOnBoarding"
             android:layout_width="wrap_content"

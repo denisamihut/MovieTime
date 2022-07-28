@@ -5,7 +5,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "results")
+@Entity(tableName = "actors")
 
 data class Actors(
     @ColumnInfo(name = "profile_path")

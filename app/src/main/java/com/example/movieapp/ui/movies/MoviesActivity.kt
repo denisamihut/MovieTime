@@ -28,7 +28,7 @@ class MoviesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_movies_screen)
+        setContentView(R.layout.fragment_search_movies)
         setOnClickListeners()
         getMovies()
     }
