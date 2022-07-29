@@ -6,8 +6,10 @@
     <string name="movies_btn_text">Movies</string>
 
     <string name="on_boarding_info">Welcome to MovieTime!</string>
-    <string name="moviesInfo">Pick your favourite genres</string>
+    <string name="moviesInfo">Pick your favourite movies</string>
     <string name="actorsInfo">Pick your favourite actors</string>
+    <string name="genresInfo">Pick your favourite genres</string>
+
     <string name="btnSave">Save</string>
     <string name="title_activity_search">SearchActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -22,6 +24,10 @@
     <string name="title_activity_tabbed_main">TabbedMainActivity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="favorites">Tab 2</string>
+    <string name="watched">Tab 2</string>
+
+
 
 
 </resources>

@@ -24,7 +24,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/moviesInfo"
         android:textAlignment="center"
         android:textColor="@color/orange"
         android:textSize="30sp"

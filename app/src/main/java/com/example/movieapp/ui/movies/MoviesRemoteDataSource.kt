@@ -1,5 +1,6 @@
 package com.example.movieapp.ui.movies
 
+import android.app.SearchManager.QUERY
 import com.example.movieapp.network.executeAndDeliver
 import com.example.movieapp.utils.Constants.API_KEY
 import com.example.movieapp.utils.Constants.LANGUAGE
@@ -10,7 +11,7 @@ class MoviesRemoteDataSource(retrofit: Retrofit) {
     private val movieMapper = MoviesMapper()
 
     fun getMovies(): List<Movies> {
-        return apiService.getMovies(API_KEY, LANGUAGE)
+        return apiService.getMovies(API_KEY, LANGUAGE, QUERY)
             .executeAndDeliver()
             .movies
             .map { movieMapper.map(it) }

@@ -13,11 +13,12 @@
         android:layout_marginTop="85dp"
         android:layout_marginBottom="70dp"
         android:background="@color/grey_100"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/item_actor" />
 
     <TextView
@@ -26,7 +27,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="@string/moviesInfo"
         android:textAlignment="center"
         android:textColor="@color/orange"
         android:textSize="30sp"

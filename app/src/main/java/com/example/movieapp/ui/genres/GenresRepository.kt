@@ -11,6 +11,7 @@ class GenresRepository private constructor() {
     private val genresRemoteDataSource = GenresRemoteDataSource(APIClient.instance.retrofit)
     private val genresLocalDataSource = GenresLocalDataSource(Database.instance)
 
+    fun getAllLocalIds() = genresLocalDataSource.getAllIds()
     fun getAllRemoteGenres() = genresRemoteDataSource.getGenres()
     fun getAllLocalGenres() = genresLocalDataSource.getAll()
     fun saveLocal(genre: Genres) = genresLocalDataSource.save(genre)

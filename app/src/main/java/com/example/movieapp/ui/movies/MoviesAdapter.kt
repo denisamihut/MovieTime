@@ -13,8 +13,9 @@ class MoviesAdapter(private val moviesList: List<Movies>) :
     RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val movieName: TextView = view.findViewById(R.id.tv_name)
-        val parentView: ConstraintLayout = view.findViewById(R.id.parent)
+        val movieTitle: TextView = view.findViewById(R.id.txtMovieTitle)
+        val parentView: ConstraintLayout = view.findViewById(R.id.clMovie)
+  val txtDescription: TextView = view.findViewById(R.id.txtMovieDescription)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -26,32 +27,14 @@ class MoviesAdapter(private val moviesList: List<Movies>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val movie = moviesList[position]
-        holder.movieName.text = movie.title
+        holder.movieTitle.text = movie.title
+        holder.txtDescription.text = movie.overview
 
-        selectMovie(holder, movie)
 
-        holder.parentView.setOnClickListener {
-            movie.isSelected = !movie.isSelected
-            selectMovie(holder, movie)
 
-        }
     }
 
-    private fun selectMovie(holder: ViewHolder, movie: Movies) {
-        holder.parentView.setBackgroundColor(
-            when (movie.isSelected) {
-                true -> ContextCompat.getColor(holder.parentView.context, R.color.blue_dark)
-                else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
-            }
-        )
 
-        holder.movieName.setTextColor(
-            when (movie.isSelected) {
-                true -> ContextCompat.getColor(holder.parentView.context, R.color.white)
-                else -> ContextCompat.getColor(holder.parentView.context, R.color.black)
-            }
-        )
-    }
 
     override fun getItemCount() = moviesList.size
 }
