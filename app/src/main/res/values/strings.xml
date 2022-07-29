@@ -1,23 +1,33 @@
 <resources>
     <string name="app_name">MovieTime</string>
-    <string name="splash_title">Welcome to MovieTime!</string>
+    <string name="splash_title">MovieTime </string>
     <string name="actors_btn_text">Actors</string>
     <string name="genres_btn_text">Genres</string>
-    <string name="on_boarding_info">This is a setup for first time users</string>
-    <string name="genresInfo">Pick your favourite genres</string>
+    <string name="movies_btn_text">Movies</string>
+
+    <string name="on_boarding_info">Welcome to MovieTime!</string>
+    <string name="moviesInfo">Pick your favourite movies</string>
     <string name="actorsInfo">Pick your favourite actors</string>
+    <string name="genresInfo">Pick your favourite genres</string>
 
     <string name="btnSave">Save</string>
     <string name="title_activity_search">SearchActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">MovieTime</string>
-    <string name="nav_header_subtitle">Your favourite genres</string>
+    <string name="nav_header_title">MovieTime App</string>
+    <string name="nav_header_subtitle">Your ultimate movie experience</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
     <string name="menu_search_movies">Search Movies</string>
-    <string name="menu_save_movies">Save Movies</string>
+    <string name="menu_save_movies">Saved Movies</string>
+    <string name="title_activity_tabbed_main">TabbedMainActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="favorites">Tab 2</string>
+    <string name="watched">Tab 2</string>
+
+
 
 
 </resources>

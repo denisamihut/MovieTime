@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class SearchMovieViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+        value = "This is search movie Fragment"
     }
     val text: LiveData<String> = _text
 }

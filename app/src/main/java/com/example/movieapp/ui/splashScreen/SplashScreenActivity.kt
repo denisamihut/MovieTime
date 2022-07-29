@@ -1,6 +1,5 @@
 package com.example.movieapp.ui.splashScreen
 
-
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.Handler
@@ -27,6 +26,7 @@ class SplashActivity : AppCompatActivity() {
 
     private val genresRepository = GenresRepository.instance
     private val actorsRepository = ActorsRepository.instance
+
 //    private val moviesRepository = MoviesRepository.instance
 
 

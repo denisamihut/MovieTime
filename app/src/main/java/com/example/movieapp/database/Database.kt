@@ -7,6 +7,8 @@ import com.example.movieapp.ui.genres.Genres
 import com.example.movieapp.ui.genres.GenresDAO
 import com.example.movieapp.ui.actors.Actors
 import com.example.movieapp.ui.actors.ActorsDAO
+import com.example.movieapp.ui.movies.Movies
+import com.example.movieapp.ui.movies.MoviesDAO
 
 class Database private constructor() {
     companion object {
@@ -14,13 +16,15 @@ class Database private constructor() {
     }
 
     @androidx.room.Database(
-        entities = [Genres::class,  Actors::class],
-        version = 2
+        entities = [Genres::class,  Actors::class, Movies::class],
+        version = 5
     )
 
     abstract class MovieAppDatabase : RoomDatabase() {
         abstract fun genresDao(): GenresDAO
         abstract fun actorsDao(): ActorsDAO
+        abstract fun moviesDao(): MoviesDAO
+
 
     }
 

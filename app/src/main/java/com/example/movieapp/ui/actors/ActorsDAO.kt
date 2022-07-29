@@ -1,11 +1,10 @@
 package com.example.movieapp.ui.actors
 
 import androidx.room.*
-import com.example.movieapp.ui.genres.Genres
 
 @Dao
 interface ActorsDAO {
-    @Query("SELECT * FROM results")
+    @Query("SELECT * FROM actors")
     fun getAll(): List<Actors>
 
     @Insert
@@ -20,7 +19,7 @@ interface ActorsDAO {
     @Delete
     fun deleteAll(actors: List<Actors>)
 
-    @Query("DELETE FROM results")
+    @Query("DELETE FROM actors")
     fun deleteAll()
 
     @Transaction
@@ -29,6 +28,7 @@ interface ActorsDAO {
         saveAll(actors)
     }
 
-    @Query("SELECT COUNT(id) FROM results")
-    fun getCount() : Int
+
+    @Query("SELECT COUNT(id) FROM actors")
+    fun getCount(): Int
 }

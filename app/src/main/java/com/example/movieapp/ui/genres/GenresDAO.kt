@@ -8,6 +8,9 @@ interface GenresDAO {
     @Query("SELECT * FROM genres")
     fun getAll(): List<Genres>
 
+    @Query("SELECT id FROM genres")
+    fun getAllIds(): List<Genres>
+
     @Insert
     fun save(genre: Genres)
 

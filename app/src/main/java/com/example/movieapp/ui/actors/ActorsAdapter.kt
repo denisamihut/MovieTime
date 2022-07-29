@@ -3,24 +3,30 @@ package com.example.movieapp.ui.actors
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.movieapp.R
+
+import com.example.movieapp.utils.Constants.IMAGE_URL
 
 class ActorsAdapter(private val actorsList: List<Actors>) :
     RecyclerView.Adapter<ActorsAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+
         val actorName: TextView = view.findViewById(R.id.tv_name)
         val parentView: ConstraintLayout = view.findViewById(R.id.parent)
+
+        val imageView: ImageView = view.findViewById(R.id.imageview)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_actor, parent, false)
-
         return ViewHolder(view)
     }
 
@@ -28,8 +34,10 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
         val actor = actorsList[position]
         holder.actorName.text = actor.name
 
-        selectActor(holder, actor)
+        Glide.with(holder.imageView.context).load(IMAGE_URL + actor.profile_path)
+            .into(holder.imageView)
 
+        selectActor(holder, actor)
         holder.parentView.setOnClickListener {
             actor.isSelected = !actor.isSelected
             selectActor(holder, actor)
