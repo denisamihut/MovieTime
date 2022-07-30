@@ -25,7 +25,11 @@
         android:layout_height="wrap_content"
         android:paddingVertical="10dp"
         android:text="this is a title"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnWatched"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtMovieDescription"
@@ -35,7 +39,9 @@
         android:text="this is a movie description"
         android:textColor="@color/black"
 
-        app:layout_constraintTop_toTopOf="0dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnWatched" />
 
     <Button
         android:id="@+id/btnFavorites"
