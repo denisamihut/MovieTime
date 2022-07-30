@@ -1,6 +1,7 @@
 package com.example.movieapp.ui.search_movie
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -62,22 +63,31 @@ class SearchMovieFragment : Fragment() {
 
     private fun getQueryParams() {
         preselectSavedGenres()
+//        preselectSavedActors()
     }
 
     private fun preselectSavedGenres() {
         GlobalScope.launch(Dispatchers.IO) {
-            val savedGenres: List<Genres> = genresRepository.getAllLocalGenres()
+            val savedGenresIds: List<Int> = genresRepository.getAllLocalIds()
             genreIds = savedGenresIds.joinToString(separator = "|") { "$it" }
-
-//            val savedActors: List<Actors> = actorsRepository.getAllLocalActors()
-//            actorIds = savedActorsIds.joinToString(separator = "I") { '$it' }
-
-
+            val savedActorsIds: List<Int> = actorsRepository.getAllLocalIds()
+            actorIds = savedActorsIds.joinToString(separator = "|") { "$it" }
+//            Log.e("Testing", "rezultat: $preparedString")
             withContext(Dispatchers.Main) {
                 getMovies()
             }
         }
     }
+
+//    private fun preselectSavedActors() {
+//        GlobalScope.launch(Dispatchers.IO) {
+//            val savedActorsIds: List<Int> = actorsRepository.getAllLocalIds()
+//            actorIds = savedActorsIds.joinToString { it -> "|$it" }
+//            withContext(Dispatchers.Main) {
+//                getMovies()
+//            }
+//        }
+//    }
 
     private fun getMovies() {
         GlobalScope.launch(Dispatchers.IO) {
