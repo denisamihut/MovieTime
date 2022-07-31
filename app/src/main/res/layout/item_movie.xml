@@ -11,62 +11,62 @@
 
     <ImageView
         android:id="@+id/imgMovie"
-        android:layout_width="40dp"
-        android:layout_height="48dp"
-        android:layout_margin="16dp"
+        android:layout_width="71dp"
+        android:layout_height="81dp"
+        android:layout_margin="8dp"
+        android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtMovieTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="36dp"
         android:paddingVertical="10dp"
         android:text="this is a title"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnWatched"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnFavorites"
+        app:layout_constraintStart_toEndOf="@+id/imgMovie"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtMovieDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="38dp"
         android:layout_margin="16dp"
         android:text="this is a movie description"
         android:textColor="@color/black"
-
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnWatched" />
+        app:layout_constraintEnd_toStartOf="@+id/btnWatched"
+        app:layout_constraintStart_toEndOf="@+id/imgMovie"
+        app:layout_constraintTop_toBottomOf="@+id/txtMovieTitle" />
 
     <Button
         android:id="@+id/btnFavorites"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="52dp"
+        android:layout_height="36dp"
         android:layout_margin="16dp"
-        android:text="favorites button"
+        android:text="fb"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@id/txtMovieTitle"
-        app:layout_constraintEnd_toEndOf="@id/imgMovie"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnWatched"
-        android:layout_width="180dp"
-        android:layout_height="42dp"
+        android:layout_width="51dp"
+        android:layout_height="37dp"
         android:layout_margin="16dp"
-        android:text="watched button"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="w"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@id/txtMovieTitle"
-        app:layout_constraintEnd_toEndOf="@id/imgMovie"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFavorites" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
