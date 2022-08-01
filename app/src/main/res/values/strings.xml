@@ -5,9 +5,9 @@
     <string name="genres_btn_text">Genres</string>
     <string name="movies_btn_text">Movies</string>
 
-    <string name="on_boarding_info">Welcome to MovieTime!</string>
+    <string name="on_boarding_info">PREFERENCES MENU</string>
     <string name="actorsInfo">PICK YOUR FAVOURITE ACTORS</string>
-    <string name="genresInfo">Pick your favourite genres</string>
+    <string name="genresInfo">PICK YOUR FAVOURITE GENRES </string>
 
     <string name="btnSave">Save</string>
     <string name="title_activity_search">SearchActivity</string>
