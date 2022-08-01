@@ -4,13 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue_dark"
     tools:context=".ui.onBoardingScreen.OnBoardingScreenActivity">
+
+    <ImageView
+        android:id="@+id/onBoardingLogo"
+        android:layout_width="143dp"
+        android:layout_height="164dp"
+        android:contentDescription="app logo"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.686"
+        app:srcCompat="@drawable/camera" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@drawable/onboarding_bg"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".64"
@@ -19,13 +32,27 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
+        <TextView
+            android:id="@+id/onBoardingDescription"
+            android:layout_width="373dp"
+            android:layout_height="62dp"
+            android:text="This is a setup for first time users so you can get personalized content "
+            android:textAlignment="center"
+            android:textColor="@color/blue_dark"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnActors"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.appcompat.widget.AppCompatToggleButton
             android:id="@+id/btnActors"
             style="@style/Button"
             android:layout_width="208dp"
             android:layout_height="48dp"
-            android:layout_marginTop="108dp"
+            android:layout_marginTop="156dp"
             android:background="@color/orange"
+            android:textColor="@color/white"
             android:text="@string/actors_btn_text"
             android:textOff="@string/actors_btn_text"
             android:textOn="@string/actors_btn_text"
@@ -40,6 +67,7 @@
             android:layout_width="208dp"
             android:layout_height="48dp"
             android:layout_marginTop="52dp"
+            android:textColor="@color/white"
             android:background="@color/orange"
             android:text="@string/genres_btn_text"
             android:textOff="@string/genres_btn_text"
@@ -50,45 +78,8 @@
             app:layout_constraintTop_toBottomOf="@+id/btnActors" />
 
 
-<!--        <androidx.appcompat.widget.AppCompatToggleButton-->
-<!--            android:id="@+id/btnMovies"-->
-<!--            style="@style/Button"-->
-<!--            android:layout_width="208dp"-->
-<!--            android:layout_height="48dp"-->
-<!--            android:layout_marginTop="52dp"-->
-<!--            android:background="@color/orange"-->
-<!--            android:text="@string/movies_btn_text"-->
-<!--            android:textOff="@string/movies_btn_text"-->
-<!--            android:textOn="@string/movies_btn_text"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/btnGenres"-->
-<!--            app:layout_constraintHorizontal_bias="0.0"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/btnGenres"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/btnGenres" />-->
 
-        <TextView
-            android:id="@+id/appMottoOnBoarding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/on_boarding_info"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toTopOf="@+id/btnActors"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.391" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/appLogoOnBoarding"
-        android:layout_width="164dp"
-        android:layout_height="187dp"
-        android:contentDescription="app logo"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/camera" />
 </androidx.constraintlayout.widget.ConstraintLayout>
