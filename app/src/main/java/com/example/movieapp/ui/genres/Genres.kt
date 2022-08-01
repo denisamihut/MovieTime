@@ -7,16 +7,11 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "genres")
 data class Genres(
-    @PrimaryKey
-    @NonNull
-    @ColumnInfo(name = "id")
-    var id: Int,
 
-    @ColumnInfo(name = "name")
-    var name: String,
+    @PrimaryKey @NonNull @ColumnInfo(name = "id") val id: Int,
+    @ColumnInfo(name = "name") val name: String,
+    @ColumnInfo(name = "isSelected") var isSelected: Boolean
 
-    @ColumnInfo(name = "isSelected")
-    var isSelected: Boolean
 ) {
     override fun equals(other: Any?) = (other is Genres) && id == other.id
 

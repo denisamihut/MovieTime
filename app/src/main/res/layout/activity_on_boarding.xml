@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue_dark"
-    tools:context=".ui.onBoardingScreen.OnBoardingScreenActivity">
+    android:background="@color/blue"
+    tools:context=".ui.on_boarding.OnBoardingScreenActivity">
 
     <ImageView
         android:id="@+id/onBoardingLogo"
         android:layout_width="143dp"
         android:layout_height="164dp"
-        android:contentDescription="app logo"
+        android:contentDescription="@string/app_logo_text"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.686"
-        app:srcCompat="@drawable/camera" />
+        app:srcCompat="@drawable/app_logo" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -36,9 +36,9 @@
             android:id="@+id/onBoardingDescription"
             android:layout_width="373dp"
             android:layout_height="62dp"
-            android:text="This is a setup for first time users so you can get personalized content "
+            android:text="@string/on_boarding_text"
             android:textAlignment="center"
-            android:textColor="@color/blue_dark"
+            android:textColor="@color/blue"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/btnActors"
             app:layout_constraintEnd_toEndOf="parent"
@@ -52,8 +52,8 @@
             android:layout_height="48dp"
             android:layout_marginTop="156dp"
             android:background="@color/orange"
-            android:textColor="@color/white"
             android:text="@string/actors_btn_text"
+            android:textColor="@color/black"
             android:textOff="@string/actors_btn_text"
             android:textOn="@string/actors_btn_text"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,9 +67,9 @@
             android:layout_width="208dp"
             android:layout_height="48dp"
             android:layout_marginTop="52dp"
-            android:textColor="@color/white"
             android:background="@color/orange"
             android:text="@string/genres_btn_text"
+            android:textColor="@color/black"
             android:textOff="@string/genres_btn_text"
             android:textOn="@string/genres_btn_text"
             app:layout_constraintEnd_toEndOf="@+id/btnActors"
@@ -77,9 +77,5 @@
             app:layout_constraintStart_toStartOf="@+id/btnActors"
             app:layout_constraintTop_toBottomOf="@+id/btnActors" />
 
-
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

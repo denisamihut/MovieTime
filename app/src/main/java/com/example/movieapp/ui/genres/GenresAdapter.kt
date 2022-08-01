@@ -40,7 +40,7 @@ class GenresAdapter(private val genresList: List<Genres>) :
     private fun selectGenre(holder: ViewHolder, genre: Genres) {
         holder.parentView.setBackgroundColor(
             when (genre.isSelected) {
-                true -> ContextCompat.getColor(holder.parentView.context, R.color.blue_dark)
+                true -> ContextCompat.getColor(holder.parentView.context, R.color.blue)
                 else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
             }
         )

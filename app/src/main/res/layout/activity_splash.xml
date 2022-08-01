@@ -5,22 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue"
-    tools:context=".ui.splashScreen.SplashActivity">
+    tools:context=".ui.splash_screen.SplashActivity">
 
     <ImageView
         android:id="@+id/appLogo"
         android:layout_width="202dp"
         android:layout_height="183dp"
         android:layout_marginTop="96dp"
-        android:contentDescription="app logo"
+        android:contentDescription="@string/app_logo_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/camera" />
+        app:srcCompat="@drawable/app_logo" />
 
     <TextView
-        android:id="@+id/appMotto"
+        android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/splash_title"
@@ -45,8 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appMotto"
+        app:layout_constraintTop_toBottomOf="@+id/appName"
         app:layout_constraintVertical_bias="0.374" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

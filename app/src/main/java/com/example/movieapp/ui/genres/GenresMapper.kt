@@ -3,8 +3,8 @@ package com.example.movieapp.ui.genres
 class GenresMapper {
     fun map(genresResponse: GenresResponse): Genres {
         return Genres(
-            id = genresResponse.id,
-            name = genresResponse.name,
+            id = genresResponse.genre_id,
+            name = genresResponse.genre_name,
             isSelected = false
         )
     }

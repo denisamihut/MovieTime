@@ -1,4 +1,4 @@
-package com.example.movieapp.ui.onBoardingScreen
+package com.example.movieapp.ui.on_boarding
 
 import android.content.Context
 import android.content.Intent
@@ -8,12 +8,11 @@ import android.widget.Button
 import com.example.movieapp.R
 import com.example.movieapp.ui.actors.ActorsActivity
 import com.example.movieapp.ui.genres.GenresActivity
-import com.example.movieapp.ui.movies.MoviesActivity
 
 class OnBoardingScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_on_boarding_screen)
+        setContentView(R.layout.activity_on_boarding)
         setClickListeners()
     }
 
@@ -26,10 +25,6 @@ class OnBoardingScreenActivity : AppCompatActivity() {
         actorsButton.setOnClickListener {
             startActivity(Intent(this, ActorsActivity::class.java))
         }
-//        val moviesButton = findViewById<Button>(R.id.btnMovies)
-//        moviesButton.setOnClickListener {
-//            startActivity(Intent(this, MoviesActivity::class.java))
-//        }
     }
 
     companion object {

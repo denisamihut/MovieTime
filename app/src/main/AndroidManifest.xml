@@ -36,14 +36,14 @@
             android:name=".ui.genres.GenresActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.movieDetailsScreen.MovieDetailsScreenActivity"
+            android:name=".ui.movie_details.MovieDetailsScreenActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.onBoardingScreen.OnBoardingScreenActivity"
+            android:name=".ui.on_boarding.OnBoardingScreenActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".ui.splashScreen.SplashActivity"
+            android:name=".ui.splash_screen.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
