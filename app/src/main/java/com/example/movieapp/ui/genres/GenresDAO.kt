@@ -33,5 +33,5 @@ interface GenresDAO {
     }
 
     @Query("SELECT COUNT(id) FROM genres")
-    fun getCount() : Int
+    fun getCount(): Int
 }

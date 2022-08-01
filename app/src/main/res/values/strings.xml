@@ -1,15 +1,17 @@
 <resources>
     <string name="app_name">MovieTime</string>
-    <string name="splash_title">MovieTime </string>
+    <string name="splash_title">MovieTime</string>
+
+    <string name="app_logo_text">App logo</string>
+    <string name="on_boarding_text">This is a setup for first time users so you can get personalized content</string>
     <string name="actors_btn_text">Actors</string>
     <string name="genres_btn_text">Genres</string>
-    <string name="movies_btn_text">Movies</string>
 
-    <string name="on_boarding_info">PREFERENCES MENU</string>
-    <string name="actorsInfo">PICK YOUR FAVOURITE ACTORS</string>
-    <string name="genresInfo">PICK YOUR FAVOURITE GENRES </string>
+    <string name="preferences_text">MovieTime: Preferences</string>
+    <string name="actor_text">PICK YOUR FAVOURITE ACTORS</string>
+    <string name="genre_text">PICK YOUR FAVOURITE GENRES</string>
+    <string name="save_btn_text">Save</string>
 
-    <string name="btnSave">Save</string>
     <string name="title_activity_search">SearchActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -17,6 +19,8 @@
     <string name="nav_header_subtitle">Your ultimate movie experience</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="movie_name">Settings</string>
+
 
     <string name="menu_search_movies">Search Movies</string>
     <string name="menu_save_movies">Saved Movies</string>

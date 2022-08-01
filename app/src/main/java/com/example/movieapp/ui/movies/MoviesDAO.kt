@@ -29,5 +29,5 @@ interface MoviesDAO {
     }
 
     @Query("SELECT COUNT(id) FROM movies")
-    fun getCount() : Int
+    fun getCount(): Int
 }

@@ -10,19 +10,12 @@ import androidx.room.PrimaryKey
 
 
 data class Actors(
-    @ColumnInfo(name = "profile_path")
-    var profile_path: String?,
 
-    @PrimaryKey
-    @NonNull
-    @ColumnInfo(name = "id")
-    var id: Int,
+    @ColumnInfo(name = "profile_path") val profile_path: String?,
+    @PrimaryKey @NonNull @ColumnInfo(name = "id") val id: Int,
+    @ColumnInfo(name = "name") val name: String,
+    @ColumnInfo(name = "isSelected") var isSelected: Boolean
 
-    @ColumnInfo(name = "name")
-    var name: String,
-
-    @ColumnInfo(name = "isSelected")
-    var isSelected: Boolean
 ) {
     override fun equals(other: Any?) = (other is Actors) && id == other.id
 

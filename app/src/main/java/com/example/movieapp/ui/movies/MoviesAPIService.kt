@@ -12,5 +12,5 @@ interface MoviesAPIService {
         @Query("language") language: String,
         @Query("query") query: String
 
-        ): Call<MoviesListResponse>
+    ): Call<MoviesListResponse>
 }

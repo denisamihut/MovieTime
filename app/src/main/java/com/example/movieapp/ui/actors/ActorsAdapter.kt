@@ -14,6 +14,7 @@ import com.example.movieapp.R
 import com.example.movieapp.utils.Constants.IMAGE_URL
 
 class ActorsAdapter(private val actorsList: List<Actors>) :
+
     RecyclerView.Adapter<ActorsAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -41,14 +42,13 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
         holder.parentView.setOnClickListener {
             actor.isSelected = !actor.isSelected
             selectActor(holder, actor)
-
         }
     }
 
     private fun selectActor(holder: ViewHolder, actor: Actors) {
         holder.parentView.setBackgroundColor(
             when (actor.isSelected) {
-                true -> ContextCompat.getColor(holder.parentView.context, R.color.blue_dark)
+                true -> ContextCompat.getColor(holder.parentView.context, R.color.blue)
                 else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
             }
         )

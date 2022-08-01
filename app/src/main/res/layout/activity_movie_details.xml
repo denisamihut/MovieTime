@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.movieDetailsScreen.MovieDetailsScreenActivity">
+    tools:context=".ui.movie_details.MovieDetailsScreenActivity">
 
     <VideoView
         android:id="@+id/videoView2"
@@ -44,8 +44,8 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/yellowpainted"
-            tools:srcCompat="@drawable/yellowpainted" />
+            app:srcCompat="@drawable/app_movie_details"
+            tools:srcCompat="@drawable/app_movie_details" />
 
         <TextView
             android:id="@+id/textView4"

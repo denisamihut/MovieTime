@@ -13,6 +13,7 @@ class MoviesRepository private constructor() {
     private val moviesLocalDataSource = MoviesLocalDataSource(Database.instance)
 
     fun getAllRemoteMovies() = moviesRemoteDataSource.getMovies()
+
     fun getAllLocalMovies() = moviesLocalDataSource.getAll()
     fun saveLocal(movie: Movies) = moviesLocalDataSource.save(movie)
     fun saveAllLocal(movies: List<Movies>) = moviesLocalDataSource.saveAll(movies)

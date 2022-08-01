@@ -3,9 +3,9 @@ package com.example.movieapp.ui.actors
 class ActorsMapper {
     fun map(actorsResponse: ActorsResponse): Actors {
         return Actors(
-            profile_path = actorsResponse.profile_path,
-            id = actorsResponse.id,
-            name = actorsResponse.name,
+            profile_path = actorsResponse.actor_photo,
+            id = actorsResponse.actor_id,
+            name = actorsResponse.actor_name,
             isSelected = false,
         )
     }

@@ -1,4 +1,4 @@
-package com.example.movieapp.ui.splashScreen
+package com.example.movieapp.ui.splash_screen
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -9,8 +9,7 @@ import com.example.movieapp.R
 import com.example.movieapp.SearchActivity
 import com.example.movieapp.ui.actors.ActorsRepository
 import com.example.movieapp.ui.genres.GenresRepository
-//import com.example.movieapp.ui.movies.MoviesRepository
-import com.example.movieapp.ui.onBoardingScreen.OnBoardingScreenActivity
+import com.example.movieapp.ui.on_boarding.OnBoardingScreenActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -32,7 +31,7 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen)
+        setContentView(R.layout.activity_splash)
         initHandlerToOpenNextActivity()
     }
 

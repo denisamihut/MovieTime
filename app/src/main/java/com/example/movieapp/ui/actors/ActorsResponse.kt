@@ -4,11 +4,8 @@ import com.google.gson.annotations.SerializedName
 
 class ActorsResponse(
 
-    @SerializedName("profile_path")
-    var profile_path: String?,
-    @SerializedName("id")
-    var id: Int,
-    @SerializedName("name")
-    var name: String
+    @SerializedName("profile_path") var actor_photo: String?,
+    @SerializedName("id") var actor_id: Int,
+    @SerializedName("name") var actor_name: String
 
 )

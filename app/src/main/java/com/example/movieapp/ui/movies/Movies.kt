@@ -9,25 +9,13 @@ import androidx.room.PrimaryKey
 
 data class Movies(
 
-    @ColumnInfo(name = "poster_path")
-    var poster_path: String,
+    @ColumnInfo(name = "poster_path") val poster_path: String,
+    @ColumnInfo(name = "overview") val overview: String,
+    @ColumnInfo(name = "release_date") val release_date: String,
+    @PrimaryKey @NonNull @ColumnInfo(name = "id") val id: Int,
+    @ColumnInfo(name = "title") val title: String,
+    @ColumnInfo(name = "isSelected") var isSelected: Boolean
 
-    @ColumnInfo(name = "overview")
-    var overview: String,
-
-    @ColumnInfo(name = "release_date")
-    var release_date: String,
-
-    @PrimaryKey
-    @NonNull
-    @ColumnInfo(name = "id")
-    var id: Int,
-
-    @ColumnInfo(name = "title")
-    var title: String,
-
-    @ColumnInfo(name = "isSelected")
-    var isSelected: Boolean
 ) {
     override fun equals(other: Any?) = (other is Movies) && id == other.id
 
