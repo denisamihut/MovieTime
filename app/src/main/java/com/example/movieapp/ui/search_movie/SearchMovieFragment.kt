@@ -1,10 +1,10 @@
 package com.example.movieapp.ui.search_movie
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.R
 import com.example.movieapp.databinding.FragmentSearchMoviesBinding
 import com.example.movieapp.ui.actors.ActorsRepository
-import com.example.movieapp.ui.genres.Genres
 import com.example.movieapp.ui.genres.GenresRepository
 import com.example.movieapp.ui.movies.Movies
 import com.example.movieapp.ui.movies.MoviesAdapter
@@ -34,8 +33,6 @@ class SearchMovieFragment : Fragment() {
     private var genreIds = ""
     private var actorIds = ""
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -59,35 +56,24 @@ class SearchMovieFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         getQueryParams()
+        setSearchTextListener()
     }
 
     private fun getQueryParams() {
-        preselectSavedGenres()
-//        preselectSavedActors()
+        preselectSavedMovies()
     }
 
-    private fun preselectSavedGenres() {
+    private fun preselectSavedMovies() {
         GlobalScope.launch(Dispatchers.IO) {
             val savedGenresIds: List<Int> = genresRepository.getAllLocalIds()
             genreIds = savedGenresIds.joinToString(separator = "|") { "$it" }
             val savedActorsIds: List<Int> = actorsRepository.getAllLocalIds()
             actorIds = savedActorsIds.joinToString(separator = "|") { "$it" }
-//            Log.e("Testing", "rezultat: $preparedString")
             withContext(Dispatchers.Main) {
                 getMovies()
             }
         }
     }
-
-//    private fun preselectSavedActors() {
-//        GlobalScope.launch(Dispatchers.IO) {
-//            val savedActorsIds: List<Int> = actorsRepository.getAllLocalIds()
-//            actorIds = savedActorsIds.joinToString { it -> "|$it" }
-//            withContext(Dispatchers.Main) {
-//                getMovies()
-//            }
-//        }
-//    }
 
     private fun getMovies() {
         GlobalScope.launch(Dispatchers.IO) {
@@ -112,5 +98,32 @@ class SearchMovieFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun setSearchTextListener() {
+        val search = binding.searchView
+        search.setOnQueryTextListener(object :
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(newText: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                if ((newText?.length ?: 0) >= 1) {
+                    getSearchedMovies(newText ?: "")
+                } else
+                    getMovies()
+                return false
+            }
+        })
+    }
+
+    fun getSearchedMovies(query: String) {
+        GlobalScope.launch(Dispatchers.IO) {
+            movies = moviesRepository.getSearchedMovies(query)
+            withContext(Dispatchers.Main) {
+                binding.rvMovies.adapter = MoviesAdapter(movies)
+            }
+        }
     }
 }

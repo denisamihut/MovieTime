@@ -16,4 +16,11 @@ class MoviesRemoteDataSource(retrofit: Retrofit) {
             .movies
             .map { movieMapper.map(it) }
     }
+
+    fun getSearchedMovies(query: String): List<Movies> {
+        return apiService.getSearchedMovies(API_KEY, LANGUAGE, query)
+            .executeAndDeliver()
+            .movies
+            .map { movieMapper.map(it) }
+    }
 }

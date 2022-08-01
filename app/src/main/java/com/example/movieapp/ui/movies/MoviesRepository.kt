@@ -14,6 +14,8 @@ class MoviesRepository private constructor() {
 
     fun getAllRemoteMovies() = moviesRemoteDataSource.getMovies()
 
+    fun getSearchedMovies(query: String) = moviesRemoteDataSource.getSearchedMovies(query)
+
     fun getAllLocalMovies() = moviesLocalDataSource.getAll()
     fun saveLocal(movie: Movies) = moviesLocalDataSource.save(movie)
     fun saveAllLocal(movies: List<Movies>) = moviesLocalDataSource.saveAll(movies)

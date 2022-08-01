@@ -9,9 +9,9 @@ import androidx.room.PrimaryKey
 
 data class Movies(
 
-    @ColumnInfo(name = "poster_path") val poster_path: String,
-    @ColumnInfo(name = "overview") val overview: String,
-    @ColumnInfo(name = "release_date") val release_date: String,
+    @ColumnInfo(name = "poster_path") val poster_path: String?,
+    @ColumnInfo(name = "overview") val overview: String?,
+    @ColumnInfo(name = "release_date") val release_date: String?,
     @PrimaryKey @NonNull @ColumnInfo(name = "id") val id: Int,
     @ColumnInfo(name = "title") val title: String,
     @ColumnInfo(name = "isSelected") var isSelected: Boolean
