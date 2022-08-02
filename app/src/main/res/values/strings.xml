@@ -24,13 +24,11 @@
     <string name="menu_search_movies">All Movies</string>
     <string name="menu_save_movies">My Movies</string>
     <string name="title_activity_tabbed_main">TabbedMainActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="favorites">Tab 2</string>
-    <string name="watched">Tab 2</string>
+    <string name="tab_text_1">Favorites</string>
+    <string name="tab_text_2">Watched</string>
+    <string name="favorites">Favorites</string>
+    <string name="watched">Watched</string>
 
-
-    <string name="description1">this is actor photo</string>
-
+    <string name="description1">This is actor photo</string>
 
 </resources>

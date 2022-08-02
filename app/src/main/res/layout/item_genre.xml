@@ -13,12 +13,22 @@
         android:layout_height="wrap_content"
         android:paddingVertical="10dp"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Action" />
+
+    <ImageView
+        android:id="@+id/heartIcon"
+        android:layout_width="45dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/app_heart" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
