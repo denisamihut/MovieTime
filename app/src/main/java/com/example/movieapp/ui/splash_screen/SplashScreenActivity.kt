@@ -57,9 +57,9 @@ class SplashActivity : AppCompatActivity() {
 
     private fun verifyIsSaved(genreCount: Int, actorsCount: Int) {
         val isSaved = genreCount > 0 && actorsCount > 0
-//        if (isSaved)
-//            SearchActivity.open(this)
-//        else
+        if (isSaved)
+            SearchActivity.open(this)
+        else
             OnBoardingActivity.open(this)
     }
 
