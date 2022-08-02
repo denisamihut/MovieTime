@@ -9,7 +9,7 @@ import com.example.movieapp.R
 import com.example.movieapp.SearchActivity
 import com.example.movieapp.ui.actors.ActorsRepository
 import com.example.movieapp.ui.genres.GenresRepository
-import com.example.movieapp.ui.on_boarding.OnBoardingScreenActivity
+import com.example.movieapp.ui.on_boarding.OnBoardingActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -25,9 +25,6 @@ class SplashActivity : AppCompatActivity() {
 
     private val genresRepository = GenresRepository.instance
     private val actorsRepository = ActorsRepository.instance
-
-//    private val moviesRepository = MoviesRepository.instance
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,10 +57,10 @@ class SplashActivity : AppCompatActivity() {
 
     private fun verifyIsSaved(genreCount: Int, actorsCount: Int) {
         val isSaved = genreCount > 0 && actorsCount > 0
-        if (isSaved)
-            SearchActivity.open(this)
-        else
-            OnBoardingScreenActivity.open(this)
+//        if (isSaved)
+//            SearchActivity.open(this)
+//        else
+            OnBoardingActivity.open(this)
     }
 
     override fun onDestroy() {

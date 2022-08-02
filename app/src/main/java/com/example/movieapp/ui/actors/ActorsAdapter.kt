@@ -19,10 +19,9 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        val actorName: TextView = view.findViewById(R.id.tv_name)
+        val actorName: TextView = view.findViewById(R.id.tvActorName)
         val parentView: ConstraintLayout = view.findViewById(R.id.parent)
-
-        val imageView: ImageView = view.findViewById(R.id.imageview)
+        val imageView: ImageView = view.findViewById(R.id.ivActorPhoto)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

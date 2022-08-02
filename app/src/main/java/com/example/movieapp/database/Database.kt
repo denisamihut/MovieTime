@@ -16,16 +16,15 @@ class Database private constructor() {
     }
 
     @androidx.room.Database(
-        entities = [Genres::class,  Actors::class, Movies::class],
+        entities = [Genres::class, Actors::class, Movies::class],
         version = 5
     )
 
     abstract class MovieAppDatabase : RoomDatabase() {
+
         abstract fun genresDao(): GenresDAO
         abstract fun actorsDao(): ActorsDAO
         abstract fun moviesDao(): MoviesDAO
-
-
     }
 
     lateinit var movieAppDatabase: MovieAppDatabase

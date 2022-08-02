@@ -15,12 +15,12 @@ class MoviesAdapter(private val moviesList: List<Movies>) :
     RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val movieTitle: TextView = view.findViewById(R.id.txtMovieTitle)
+        val movieTitle: TextView = view.findViewById(R.id.tvMovieTitle)
         val parentView: ConstraintLayout = view.findViewById(R.id.clMovie)
-        val txtDescription: TextView = view.findViewById(R.id.txtMovieDescription)
-        val movieRelease: TextView = view.findViewById(R.id.txtMovieRelease)
+        val txtDescription: TextView = view.findViewById(R.id.tvMovieDescription)
+        val movieRelease: TextView = view.findViewById(R.id.ivMovieRelease)
 
-        val imageView: ImageView = view.findViewById(R.id.imgMovie)
+        val imageView: ImageView = view.findViewById(R.id.ivMoviePoster)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

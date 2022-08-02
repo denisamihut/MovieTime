@@ -6,7 +6,7 @@ import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.R
-import com.example.movieapp.ui.on_boarding.OnBoardingScreenActivity
+import com.example.movieapp.ui.on_boarding.OnBoardingActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -49,11 +49,11 @@ class MoviesActivity : AppCompatActivity() {
             movieRepository.deleteAllLocal()
             movieRepository.saveAllLocal(getSelectedMovies())
         }
-        OnBoardingScreenActivity.open(this)
+        OnBoardingActivity.open(this)
     }
 
     private fun setupRecyclerView() {
-        val rvMovie = findViewById<RecyclerView>(R.id.rv_movies)
+        val rvMovie = findViewById<RecyclerView>(R.id.rvMovies)
         rvMovie.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         rvMovie.adapter = MoviesAdapter(movies)

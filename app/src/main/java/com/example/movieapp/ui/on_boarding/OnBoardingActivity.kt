@@ -9,7 +9,7 @@ import com.example.movieapp.R
 import com.example.movieapp.ui.actors.ActorsActivity
 import com.example.movieapp.ui.genres.GenresActivity
 
-class OnBoardingScreenActivity : AppCompatActivity() {
+class OnBoardingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_on_boarding)
@@ -29,7 +29,7 @@ class OnBoardingScreenActivity : AppCompatActivity() {
 
     companion object {
         fun open(context: Context) {
-            context.startActivity(Intent(context, OnBoardingScreenActivity::class.java))
+            context.startActivity(Intent(context, OnBoardingActivity::class.java))
         }
     }
 }

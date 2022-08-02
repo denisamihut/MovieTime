@@ -21,7 +21,6 @@
     <string name="action_settings">Settings</string>
     <string name="movie_name">Settings</string>
 
-
     <string name="menu_search_movies">Search Movies</string>
     <string name="menu_save_movies">Saved Movies</string>
     <string name="title_activity_tabbed_main">TabbedMainActivity</string>
@@ -29,6 +28,9 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="favorites">Tab 2</string>
     <string name="watched">Tab 2</string>
+
+
+    <string name="description1">this is actor photo</string>
 
 
 </resources>

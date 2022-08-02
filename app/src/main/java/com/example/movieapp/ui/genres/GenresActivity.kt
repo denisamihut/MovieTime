@@ -6,12 +6,11 @@ import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.R
-import com.example.movieapp.ui.on_boarding.OnBoardingScreenActivity
+import com.example.movieapp.ui.on_boarding.OnBoardingActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-
 
 class GenresActivity : AppCompatActivity() {
 
@@ -50,7 +49,7 @@ class GenresActivity : AppCompatActivity() {
             genreRepository.deleteAllLocal()
             genreRepository.saveAllLocal(getSelectedGenres())
         }
-        OnBoardingScreenActivity.open(this)
+        OnBoardingActivity.open(this)
     }
 
     private fun setupRecyclerView() {

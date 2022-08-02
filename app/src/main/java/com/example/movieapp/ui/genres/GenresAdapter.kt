@@ -13,7 +13,7 @@ class GenresAdapter(private val genresList: List<Genres>) :
     RecyclerView.Adapter<GenresAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val genreName: TextView = view.findViewById(R.id.tv_name)
+        val genreName: TextView = view.findViewById(R.id.tvActorName)
         val parentView: ConstraintLayout = view.findViewById(R.id.parent)
     }
 

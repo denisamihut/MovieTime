@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SearchView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -26,6 +25,7 @@ class SearchMovieFragment : Fragment() {
 
     private var _binding: FragmentSearchMoviesBinding? = null
     private var movies: List<Movies> = emptyList()
+
     private val moviesRepository = MoviesRepository.instance
     private val genresRepository = GenresRepository.instance
     private val actorsRepository = ActorsRepository.instance
@@ -89,7 +89,7 @@ class SearchMovieFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        val rvMovies = view?.findViewById<RecyclerView>(R.id.rv_movies)
+        val rvMovies = view?.findViewById<RecyclerView>(R.id.rvMovies)
         rvMovies?.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         rvMovies?.adapter = MoviesAdapter(movies)
@@ -101,7 +101,7 @@ class SearchMovieFragment : Fragment() {
     }
 
     private fun setSearchTextListener() {
-        val search = binding.searchView
+        val search = binding.svMovies
         search.setOnQueryTextListener(object :
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(newText: String?): Boolean {

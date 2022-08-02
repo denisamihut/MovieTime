@@ -39,7 +39,7 @@
             android:name=".ui.movie_details.MovieDetailsScreenActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.on_boarding.OnBoardingScreenActivity"
+            android:name=".ui.on_boarding.OnBoardingActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity

@@ -15,9 +15,6 @@ import com.google.android.material.tabs.TabLayout
 class SaveMovieFragment : Fragment() {
 
     private var _binding: FragmentSaveMoviesBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -25,7 +22,7 @@ class SaveMovieFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val galleryViewModel =
+        val saveMovieViewModel =
             ViewModelProvider(this).get(SaveMovieViewModel::class.java)
 
         _binding = FragmentSaveMoviesBinding.inflate(inflater, container, false)
