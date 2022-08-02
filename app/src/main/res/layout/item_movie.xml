@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/clMovie"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -35,8 +36,8 @@
 
     <TextView
         android:id="@+id/tvMovieDescription"
-        android:layout_width="248dp"
-        android:layout_height="62dp"
+        android:layout_width="251dp"
+        android:layout_height="64dp"
         android:layout_marginStart="8dp"
         android:text="this is a movie description"
         android:textColor="@color/black"
@@ -47,33 +48,6 @@
         app:layout_constraintStart_toEndOf="@+id/ivMoviePoster"
         app:layout_constraintTop_toBottomOf="@+id/tvMovieTitle"
         app:layout_constraintVertical_bias="0.285" />
-
-    <Button
-        android:id="@+id/btnFavorites"
-        android:layout_width="33dp"
-        android:layout_height="33dp"
-        android:layout_margin="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/orange"
-        android:text="f"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnWatched"
-        android:layout_width="33dp"
-        android:layout_height="37dp"
-        android:layout_margin="16dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/orange"
-        android:text="w"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFavorites"
-        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/ivMovieRelease"
@@ -87,6 +61,29 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/tvMovieTitle"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toEndOf="@+id/tvMovieDescription"
+        app:srcCompat="@drawable/ic_baseline_check_circle_24" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toEndOf="@+id/ivMovieRelease"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.82"
+        app:srcCompat="@drawable/ic_baseline_favorite_24" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
