@@ -22,8 +22,10 @@ import kotlinx.coroutines.withContext
 
 class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
 
-    private var _binding: FragmentSearchMoviesBinding? = null
     private var movies: List<Movies> = emptyList()
+
+    private var _binding: FragmentSearchMoviesBinding? = null
+
     private val moviesRepository = MoviesRepository.instance
     private val genresRepository = GenresRepository.instance
     private val actorsRepository = ActorsRepository.instance
@@ -60,9 +62,9 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
     private fun preselectSaveGenres() {
         GlobalScope.launch(Dispatchers.IO) {
             val savedGenresIds: List<Int> = genresRepository.getAllLocalIds()
-            genresIds = savedGenresIds.joinToString(separator = "|") { "$it" }
-
             val savedActorsIds: List<Int> = actorsRepository.getAllLocalIds()
+
+            genresIds = savedGenresIds.joinToString(separator = "|") { "$it" }
             actorsIds = savedActorsIds.joinToString(separator = "|") { "$it" }
 
             withContext(Dispatchers.Main) {
@@ -78,6 +80,7 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
                 setupRecyclerView()
             }
         }
+        preselectItems()
     }
 
     private fun setupRecyclerView() {
@@ -111,6 +114,20 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
             movies = moviesRepository.getAllSearchedMovies(query)
             withContext(Dispatchers.Main) {
                 binding.rvMovies.adapter = MoviesAdapter(movies)
+            }
+        }
+        preselectItems()
+    }
+
+    private fun preselectItems() {
+        GlobalScope.launch(Dispatchers.IO) {
+            val saved = moviesRepository.getAllLocalMovies()
+            withContext(Dispatchers.Main) {
+                movies.forEach {
+                    val idx = saved.indexOf(it)
+                    it.isFavorite = (idx != -1) && saved[idx].isFavorite
+                    it.isWatched = (idx != -1) && saved[idx].isWatched
+                }
             }
         }
     }

@@ -14,12 +14,11 @@ data class Movies(
     @ColumnInfo(name = "release_date") val release_date: String?,
     @PrimaryKey @NonNull @ColumnInfo(name = "id") val id: Int,
     @ColumnInfo(name = "title") val title: String,
-    @ColumnInfo(name = "isSelected") var isSelected: Boolean
+    @ColumnInfo(name = "is_favorite") var isFavorite: Boolean,
+    @ColumnInfo(name = "is_watched") var isWatched: Boolean
 
 ) {
+
     override fun equals(other: Any?) = (other is Movies) && id == other.id
 
-    override fun toString(): String {
-        return "Movie(poster_path=$poster_path, overview='$overview', release_date=$release_date, id=$id, title='$title', isSelected=$isSelected)"
-    }
 }

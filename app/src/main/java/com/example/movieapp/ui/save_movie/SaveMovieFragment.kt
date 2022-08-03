@@ -4,15 +4,24 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
+import com.example.movieapp.R
 import com.example.movieapp.databinding.FragmentSaveMoviesBinding
+import com.example.movieapp.ui.tab_activity.ui.main.PlaceholderFragment
 import com.example.movieapp.ui.tab_activity.ui.main.SectionsPagerAdapter
 import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class SaveMovieFragment : Fragment() {
+
+    private val tabTitles = arrayOf(
+        "Favorite",
+        "Watched"
+    )
+    private var adapter: AdapterTabPager2? = null
+
 
     private var _binding: FragmentSaveMoviesBinding? = null
     private val binding get() = _binding!!
@@ -33,16 +42,27 @@ class SaveMovieFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val viewPager = view.findViewById<ViewPager2>(R.id.ft_view_pager)
+        val tabs: TabLayout = view.findViewById(R.id.tabs)
 
-        val sectionsPagerAdapter = SectionsPagerAdapter(requireContext(), childFragmentManager)
-        val viewPager: ViewPager = binding.viewPager
-        viewPager.adapter = sectionsPagerAdapter
-        val tabs: TabLayout = binding.tabs
-        tabs.setupWithViewPager(viewPager)
+        adapter = activity?.let {
+            AdapterTabPager2(it)
+        }
+
+        adapter?.addFragment(FavouriteListFragment(), tabTitles[0])
+        adapter?.addFragment(WatchedListFragment(), tabTitles[1])
+
+        viewPager.adapter = adapter
+
+        TabLayoutMediator(tabs, viewPager) { tab, position ->
+            tab.text = adapter?.getTitle(position)
+        }.attach()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }

@@ -4,6 +4,7 @@ import com.example.movieapp.database.Database
 import com.example.movieapp.network.APIClient
 
 class ActorsRepository private constructor() {
+
     companion object {
         val instance = ActorsRepository()
     }

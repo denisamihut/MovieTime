@@ -41,7 +41,7 @@
         android:layout_height="62dp"
         android:layout_marginStart="8dp"
         android:text="@string/movie_description"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -13,7 +13,7 @@ interface MoviesAPIService {
         @Query("with_cast") withCast: String,
         @Query("with_genres") withGenres: String
 
-    ) : Call<MoviesListResponse>
+    ): Call<MoviesListResponse>
 
     @GET("search/movie")
     fun getSearchedMovies(
