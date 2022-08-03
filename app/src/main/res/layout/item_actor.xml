@@ -34,13 +34,13 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/heartIcon"
-        android:layout_width="45dp"
-        android:layout_height="29dp"
+        android:id="@+id/starIcon"
+        android:layout_width="29dp"
+        android:layout_height="35dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/app_heart" />
+        app:srcCompat="@drawable/ic_baseline_star_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

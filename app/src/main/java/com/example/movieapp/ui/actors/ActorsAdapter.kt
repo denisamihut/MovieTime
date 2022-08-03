@@ -22,7 +22,7 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
         val actorName: TextView = view.findViewById(R.id.tvActorName)
         val parentView: ConstraintLayout = view.findViewById(R.id.parent)
         val imageView: ImageView = view.findViewById(R.id.ivActorPhoto)
-        val heartIcon: ImageView = view.findViewById(R.id.heartIcon)
+        val heartIcon: ImageView = view.findViewById(R.id.starIcon)
 
     }
 
@@ -48,19 +48,19 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
 
     private fun selectActor(holder: ViewHolder, actor: Actors) {
 
-//        holder.parentView.setBackgroundColor(
-//            when (actor.isSelected) {
-//                true -> ContextCompat.getColor(holder.parentView.context, R.color.blue)
-//                else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
-//            }
-//        )
-//
-//        holder.actorName.setTextColor(
-//            when (actor.isSelected) {
-//                true -> ContextCompat.getColor(holder.parentView.context, R.color.black)
-//                else -> ContextCompat.getColor(holder.parentView.context, R.color.black)
-//            }
-//        )
+        holder.parentView.setBackgroundColor(
+            when (actor.isSelected) {
+                true -> ContextCompat.getColor(holder.parentView.context, R.color.blue)
+                else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
+            }
+        )
+
+        holder.actorName.setTextColor(
+            when (actor.isSelected) {
+                true -> ContextCompat.getColor(holder.parentView.context, R.color.black)
+                else -> ContextCompat.getColor(holder.parentView.context, R.color.black)
+            }
+        )
 
         holder.heartIcon.visibility = when (actor.isSelected) {
             true -> View.VISIBLE

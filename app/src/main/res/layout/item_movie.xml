@@ -15,6 +15,7 @@
         android:layout_height="90dp"
         android:layout_margin="8dp"
         android:layout_marginStart="16dp"
+        android:contentDescription="@string/description1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,68 +23,93 @@
 
     <TextView
         android:id="@+id/tvMovieTitle"
-        android:layout_width="177dp"
-        android:layout_height="20dp"
+        android:layout_width="199dp"
+        android:layout_height="21dp"
         android:layout_marginTop="8dp"
-        android:text="this is a title"
+        android:text="@string/app_logo_text"
         android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toEndOf="@+id/ivMoviePoster"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvMovieDescription"
-        android:layout_width="251dp"
-        android:layout_height="64dp"
+        android:layout_width="304dp"
+        android:layout_height="65dp"
         android:layout_marginStart="8dp"
-        android:text="this is a movie description"
+        android:text="@string/app_logo_text"
         android:textColor="@color/black"
-        android:textSize="10sp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ivMoviePoster"
         app:layout_constraintTop_toBottomOf="@+id/tvMovieTitle"
-        app:layout_constraintVertical_bias="0.285" />
+        app:layout_constraintVertical_bias="0.041" />
 
     <TextView
         android:id="@+id/ivMovieRelease"
-        android:layout_width="59dp"
-        android:layout_height="17dp"
-        android:layout_marginStart="12dp"
+        android:layout_width="89dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="release date"
-        android:textColor="@color/blue"
-        android:textSize="8dp"
-        android:textStyle="bold"
+        android:text="@string/app_logo_text"
+        android:textColor="@color/black"
+        android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tvMovieTitle"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imageView5"
+        android:layout_width="31dp"
+        android:layout_height="23dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toEndOf="@+id/tvMovieDescription"
-        app:srcCompat="@drawable/ic_baseline_check_circle_24" />
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_star_24" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+    <Button
+        android:id="@+id/btnWatched"
+        android:layout_width="147dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/black"
+        android:text="+ watched list"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
-        app:layout_constraintStart_toEndOf="@+id/ivMovieRelease"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.82"
-        app:srcCompat="@drawable/ic_baseline_favorite_24" />
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieDescription" />
+
+    <Button
+        android:id="@+id/btnFavorites"
+        android:layout_width="147dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/black"
+        android:text="+ Favorites list"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieDescription" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="45dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="12dp"
+        android:text="7.2"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnFavorites"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toEndOf="@+id/imageView5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
