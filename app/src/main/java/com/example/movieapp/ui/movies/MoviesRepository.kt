@@ -18,8 +18,6 @@ class MoviesRepository private constructor() {
         return movies
     }
 
-
-
     fun getSearchedMovies(query: String) = moviesRemoteDataSource.getSearchedMovies(query)
     fun getAllSearchedMovies(query: String) = moviesRemoteDataSource.getSearchedMovies(query)
     fun getAllLocalMovies() = moviesLocalDataSource.getAll()
@@ -30,4 +28,6 @@ class MoviesRepository private constructor() {
     fun deleteAllLocal(movies: List<Movies>) = moviesLocalDataSource.deleteAll(movies)
     fun replaceAllLocal(movies: List<Movies>) = moviesLocalDataSource.replaceAll(movies)
     fun getCount() = moviesLocalDataSource.getCount()
+    fun getFavorite() = moviesLocalDataSource.getFavorite()
+    fun getWatched() = moviesLocalDataSource.getWatched()
 }

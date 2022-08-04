@@ -14,7 +14,6 @@ import com.example.movieapp.ui.genres.GenresRepository
 import com.example.movieapp.ui.movies.Movies
 import com.example.movieapp.ui.movies.MoviesAdapter
 import com.example.movieapp.ui.movies.MoviesRepository
-
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -32,6 +31,7 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
 
     private var genresIds = ""
     private var actorsIds = ""
+
     private val binding get() = _binding!!
 
     override fun onCreateView(
