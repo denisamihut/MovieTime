@@ -1,11 +1,9 @@
 package com.example.movieapp.ui.movies
 
-import android.graphics.PorterDuff
-import android.graphics.PorterDuffColorFilter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -14,8 +12,6 @@ import com.bumptech.glide.Glide
 import com.example.movieapp.R
 import com.example.movieapp.utils.Constants.IMAGE_URL
 import kotlinx.coroutines.*
-import kotlinx.coroutines.Dispatchers.IO
-import okhttp3.Dispatcher
 
 class MoviesAdapter(
     private val moviesList: List<Movies>
@@ -30,11 +26,11 @@ class MoviesAdapter(
         val movieTitle: TextView = view.findViewById(R.id.tvMovieTitle)
         val parentView: ConstraintLayout = view.findViewById(R.id.clMovie)
         val imageView: ImageView = view.findViewById(R.id.ivMoviePoster)
-        val txtDescription: TextView = view.findViewById(R.id.tvMovieDescription)
+        val movieDescription: TextView = view.findViewById(R.id.tvMovieDescription)
         val movieRelease: TextView = view.findViewById(R.id.ivMovieRelease)
 
-        val btnFavorite: Button = view.findViewById(R.id.btnFavorites)
-        val btnWatched: Button = view.findViewById(R.id.btnWatched)
+        val btnFavorite: ImageButton = view.findViewById(R.id.btnFavorites)
+        val btnWatched: ImageButton = view.findViewById(R.id.btnWatched)
     }
 
     private val moviesRepository: MoviesRepository = MoviesRepository.instance
@@ -49,7 +45,7 @@ class MoviesAdapter(
         val movie = moviesList[position]
 
         holder.movieTitle.text = movie.title
-        holder.txtDescription.text = movie.overview
+        holder.movieDescription.text = movie.overview
         holder.movieRelease.text = movie.release_date
 
         holder.favorite = movie.isFavorite
@@ -66,8 +62,8 @@ class MoviesAdapter(
         }
 
         holder.btnWatched.setOnClickListener {
-            holder.favorite = !holder.favorite
-            movie.isWatched = holder.favorite
+            holder.watched = !holder.watched
+            movie.isWatched = holder.watched
             updateWatchedButton(holder)
             updateDatabase(moviesList[position])
         }
@@ -77,20 +73,20 @@ class MoviesAdapter(
     }
 
     private fun updateFavoriteButton(holder: ViewHolder) {
-        holder.btnFavorite.setBackgroundColor(
+        holder.btnFavorite.setImageResource(
             when (holder.favorite) {
-                true -> R.color.blue
-                else -> R.color.black
+                true -> R.drawable.ic_baseline_favorite_24
+                else -> R.drawable.ic_baseline_favorite_border_24
             }
         )
     }
 
     private fun updateWatchedButton(holder: ViewHolder) {
-        holder.btnWatched.background.colorFilter = PorterDuffColorFilter(
+        holder.btnWatched.setImageResource(
             when (holder.watched) {
-                true -> R.color.blue
-                else -> R.color.black
-            }, PorterDuff.Mode.SRC_IN
+                true -> R.drawable.ic_baseline_bookmark_24
+                else -> R.drawable.ic_baseline_bookmark_border_24
+            }
         )
     }
 

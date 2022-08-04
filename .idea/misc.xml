@@ -23,13 +23,13 @@
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_actors_screen.xml" value="0.2988679352838745" />
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_actors_secreen.xml" value="0.1" />
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_basic.xml" value="0.15416666666666667" />
-        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_genres.xml" value="0.3145833333333333" />
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_genres.xml" value="0.2988679352838745" />
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_genres_screen.xml" value="0.2988679352838745" />
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_main.xml" value="0.2989583333333333" />
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_movie_details.xml" value="0.2988679352838745" />
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_movie_details_screen.xml" value="0.2989583333333333" />
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_movies_screen.xml" value="0.2264151024877837" />
-        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_on_boarding.xml" value="0.2988679352838745" />
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_on_boarding.xml" value="0.43427230046948356" />
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_on_boarding_screen.xml" value="0.4528302049755674" />
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_search.xml" value="0.2988679352838745" />
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/activity_splash.xml" value="0.3145833333333333" />
@@ -47,7 +47,7 @@
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/item_actor.xml" value="0.2988679352838745" />
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/item_actors.xml" value="0.19924529018924966" />
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/item_genre.xml" value="0.2988679352838745" />
-        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/item_movie.xml" value="0.1" />
+        <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/item_movie.xml" value="0.6067924746672604" />
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/item_profile_path.xml" value="0.3145833333333333" />
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/layout/nav_header_search.xml" value="0.2264151024877837" />
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/menu/activity_main_drawer.xml" value="0.4528302049755674" />

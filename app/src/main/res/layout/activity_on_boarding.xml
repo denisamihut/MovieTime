@@ -4,78 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
+    android:background="@color/white"
+
     tools:context=".ui.on_boarding.OnBoardingActivity">
+
 
     <ImageView
         android:id="@+id/onBoardingLogo"
-        android:layout_width="143dp"
-        android:layout_height="164dp"
+        android:layout_width="104dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
         android:contentDescription="@string/app_logo_text"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606"
         app:srcCompat="@drawable/app_logo" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="273dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="64dp"
+        android:text="MovieTime: Menu"
+        android:textColor="@color/orange"
+        android:textSize="28sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent=".64"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toEndOf="@+id/onBoardingLogo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="274dp"
+        android:layout_height="29dp"
+        android:text="PICK YOUR FAVOURITES"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/onBoardingDescription"
+        android:layout_width="381dp"
+        android:layout_height="60dp"
+        android:text="@string/on_boarding_text"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnActors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.433"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.743" />
 
-        <TextView
-            android:id="@+id/onBoardingDescription"
-            android:layout_width="373dp"
-            android:layout_height="62dp"
-            android:text="@string/on_boarding_text"
-            android:textAlignment="center"
-            android:textColor="@color/blue"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/btnActors"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/btnActors"
+        style="@style/Button"
+        android:layout_width="184dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="392dp"
+        android:background="@drawable/rounded_blue_button"
+        android:text="@string/actors_btn_text"
+        android:textColor="@color/white"
+        android:textOff="@string/actors_btn_text"
+        android:textOn="@string/actors_btn_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatToggleButton
-            android:id="@+id/btnActors"
-            style="@style/Button"
-            android:layout_width="208dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="156dp"
-            android:background="@drawable/rounded_orange_button"
-            android:text="@string/actors_btn_text"
-            android:textColor="@color/black"
-            android:textOff="@string/actors_btn_text"
-            android:textOn="@string/actors_btn_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/btnGenres"
+        style="@style/Button"
+        android:layout_width="186dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rounded_blue_button"
+        android:text="@string/genres_btn_text"
+        android:textColor="@color/white"
+        android:textOff="@string/genres_btn_text"
+        android:textOn="@string/genres_btn_text"
+        app:layout_constraintEnd_toEndOf="@+id/btnActors"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnActors"
+        app:layout_constraintTop_toBottomOf="@+id/btnActors" />
 
-        <androidx.appcompat.widget.AppCompatToggleButton
-            android:id="@+id/btnGenres"
-            style="@style/Button"
-            android:layout_width="208dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="52dp"
-            android:background="@drawable/rounded_orange_button"
-            android:text="@string/genres_btn_text"
-            android:textColor="@color/black"
-            android:textOff="@string/genres_btn_text"
-            android:textOn="@string/genres_btn_text"
-            app:layout_constraintEnd_toEndOf="@+id/btnActors"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/btnActors"
-            app:layout_constraintTop_toBottomOf="@+id/btnActors" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

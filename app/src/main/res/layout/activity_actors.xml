@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_100"
+    android:background="@color/white"
     tools:context=".ui.actors.ActorsActivity">
 
     <TextView
@@ -16,7 +16,7 @@
         android:text="@string/preferences_text"
         android:textAlignment="center"
         android:textColor="@color/orange"
-        android:textSize="32sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -25,13 +25,13 @@
 
     <TextView
         android:id="@+id/actorsInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="277dp"
+        android:layout_height="23dp"
         android:fontFamily="sans-serif-condensed"
         android:text="@string/actor_text"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +59,7 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/rounded_blue_button"
         android:text="@string/save_btn_text"
-        android:textColor="@color/blue"
+        android:textColor="@color/white"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

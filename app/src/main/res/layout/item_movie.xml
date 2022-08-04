@@ -41,7 +41,7 @@
         android:layout_height="62dp"
         android:layout_marginStart="8dp"
         android:text="@string/movie_description"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,31 +62,55 @@
         app:layout_constraintStart_toEndOf="@+id/tvMovieTitle"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnWatched"
-        android:layout_width="147dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="4dp"
-        android:backgroundTint="@color/grey_102"
-        android:text="@string/btn_watched"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.973"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMovieDescription" />
-
-    <Button
+    <ImageButton
         android:id="@+id/btnFavorites"
-        android:layout_width="147dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="4dp"
-        android:backgroundTint="@color/grey_102"
-        android:text="@string/btn_favorite"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.401"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMovieDescription" />
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="84dp"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvMovieDescription"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieDescription"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
+    <ImageButton
+        android:id="@+id/btnWatched"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvMovieDescription"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieDescription"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_bookmark_border_24" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btnWatched"-->
+    <!--        android:layout_width="147dp"-->
+    <!--        android:layout_height="37dp"-->
+    <!--        android:layout_marginTop="4dp"-->
+    <!--        android:backgroundTint="@color/grey_102"-->
+    <!--        android:text="@string/btn_watched"-->
+    <!--        android:textSize="12sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.973"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvMovieDescription" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btnFavorites"-->
+    <!--        android:layout_width="147dp"-->
+    <!--        android:layout_height="37dp"-->
+    <!--        android:layout_marginTop="4dp"-->
+    <!--        android:backgroundTint="@color/grey_102"-->
+    <!--        android:text="@string/btn_favorite"-->
+    <!--        android:textSize="12sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.401"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvMovieDescription" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
