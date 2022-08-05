@@ -6,11 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movieapp.R
 import com.example.movieapp.databinding.FragmentSearchMoviesBinding
 import com.example.movieapp.ui.actors.ActorsRepository
 import com.example.movieapp.ui.genres.GenresRepository
+import com.example.movieapp.ui.movie_details.MovieDetailsViewModel
 import com.example.movieapp.ui.movies.Movies
 import com.example.movieapp.ui.movies.MoviesAdapter
 import com.example.movieapp.ui.movies.MoviesRepository
@@ -24,6 +26,7 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
     private var movies: List<Movies> = emptyList()
 
     private var _binding: FragmentSearchMoviesBinding? = null
+    private val binding get() = _binding!!
 
     private val moviesRepository = MoviesRepository.instance
     private val genresRepository = GenresRepository.instance
@@ -32,7 +35,7 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
     private var genresIds = ""
     private var actorsIds = ""
 
-    private val binding get() = _binding!!
+    private lateinit var viewModel: MovieDetailsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -44,6 +47,8 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
 
         _binding = FragmentSearchMoviesBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        viewModel = ViewModelProvider(requireActivity())[MovieDetailsViewModel::class.java]
 
         return root
     }
@@ -77,18 +82,21 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
         GlobalScope.launch(Dispatchers.IO) {
             movies = moviesRepository.getAllRemoteMovies(actorsIds, genresIds)
             withContext(Dispatchers.Main) {
-                setupRecyclerView()
+                moviesLoaded(movies)
             }
         }
         preselectItems()
+    }
+
+    private fun moviesLoaded(movies: List<Movies>) {
+        setupRecyclerView()
     }
 
     private fun setupRecyclerView() {
         val rvMovies = binding.rvMovies
         rvMovies?.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        rvMovies?.adapter = MoviesAdapter(movies)
-
+        rvMovies?.adapter = MoviesAdapter(movies, { navigateToMovieDetails() }, viewModel)
     }
 
     private fun setSearchTextListener() {
@@ -113,7 +121,8 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
         GlobalScope.launch(Dispatchers.IO) {
             movies = moviesRepository.getAllSearchedMovies(query)
             withContext(Dispatchers.Main) {
-                binding.rvMovies.adapter = MoviesAdapter(movies)
+                binding.rvMovies.adapter =
+                    MoviesAdapter(movies, { navigateToMovieDetails() }, viewModel)
             }
         }
         preselectItems()
@@ -130,6 +139,10 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
                 }
             }
         }
+    }
+
+    private fun navigateToMovieDetails() {
+        findNavController().navigate(R.id.fragmentMovieDetails)
     }
 
     override fun onDestroy() {

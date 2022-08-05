@@ -10,11 +10,14 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.movieapp.R
+import com.example.movieapp.ui.movie_details.MovieDetailsViewModel
 import com.example.movieapp.utils.Constants.IMAGE_URL
 import kotlinx.coroutines.*
 
 class MoviesAdapter(
-    private val moviesList: List<Movies>
+    private val moviesList: List<Movies>,
+    private val detailsCallback: (() -> Unit)?,
+    private val viewModel: MovieDetailsViewModel
 ) :
     RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
 
@@ -44,6 +47,9 @@ class MoviesAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val movie = moviesList[position]
 
+        Glide.with(holder.imageView.context).load(IMAGE_URL + movie.poster_path)
+            .into(holder.imageView)
+
         holder.movieTitle.text = movie.title
         holder.movieDescription.text = movie.overview
         holder.movieRelease.text = movie.release_date
@@ -68,8 +74,10 @@ class MoviesAdapter(
             updateDatabase(moviesList[position])
         }
 
-        Glide.with(holder.imageView.context).load(IMAGE_URL + movie.poster_path)
-            .into(holder.imageView)
+        holder.parentView.setOnClickListener {
+            viewModel.currentMovieId.postValue(movie.id)
+            detailsCallback?.invoke()
+        }
     }
 
     private fun updateFavoriteButton(holder: ViewHolder) {

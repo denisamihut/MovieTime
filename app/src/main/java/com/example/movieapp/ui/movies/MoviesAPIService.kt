@@ -1,7 +1,9 @@
 package com.example.movieapp.ui.movies
 
+import com.example.movieapp.ui.movie_details.MovieDetailsResponse
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface MoviesAPIService {
@@ -12,7 +14,6 @@ interface MoviesAPIService {
         @Query("language") language: String,
         @Query("with_cast") withCast: String,
         @Query("with_genres") withGenres: String
-
     ): Call<MoviesListResponse>
 
     @GET("search/movie")
@@ -21,4 +22,12 @@ interface MoviesAPIService {
         @Query("language") language: String,
         @Query("query") query: String
     ): Call<MoviesListResponse>
+
+    @GET("movie/{movie_id}")
+    fun getMovieDetails(
+        @Path("movie_id") movieId: Int,
+        @Query("api_key") apiKey: String,
+        @Query("language") language: String,
+        @Query("append_to_response") appendToResponse: String
+    ): Call<MovieDetailsResponse>
 }

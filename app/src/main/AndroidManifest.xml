@@ -17,7 +17,7 @@
         android:theme="@style/Theme.MovieApp"
         tools:targetApi="31">
         <activity
-            android:name=".TabbedMainActivity"
+            android:name=".ui.tab_activity.TabbedMainActivity"
             android:exported="false"
             android:label="@string/title_activity_tabbed_main"
             android:theme="@style/Theme.MovieApp.NoActionBar" />
