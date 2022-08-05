@@ -22,7 +22,6 @@ class SaveMovieFragment : Fragment() {
     )
     private var adapter: AdapterTabPager2? = null
 
-
     private var _binding: FragmentSaveMoviesBinding? = null
     private val binding get() = _binding!!
 
@@ -63,6 +62,4 @@ class SaveMovieFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
-
 }

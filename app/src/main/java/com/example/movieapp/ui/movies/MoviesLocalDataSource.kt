@@ -16,5 +16,4 @@ class MoviesLocalDataSource(database: Database) {
     fun getCount() = moviesDAO.getCount()
     fun getFavorite() = moviesDAO.getFavorite()
     fun getWatched() = moviesDAO.getWatched()
-
 }

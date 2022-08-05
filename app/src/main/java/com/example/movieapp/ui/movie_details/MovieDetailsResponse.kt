@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class MovieDetailsResponse(
     var id: Int,
-    @SerializedName("title") var title: String,
+    var title: String,
     @SerializedName("backdrop_path") var backdropPath: String?,
     var overview: String,
     @SerializedName("poster_path") var posterPath: String?,

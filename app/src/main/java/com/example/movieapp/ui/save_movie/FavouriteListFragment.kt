@@ -18,7 +18,6 @@ class FavouriteListFragment : Fragment(R.layout.fragment_favourite_list) {
     private val movieRepository: MoviesRepository = MoviesRepository.instance
     private var movies: MutableList<Movies> = mutableListOf()
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initializeListOfMovies(view)
@@ -33,7 +32,6 @@ class FavouriteListFragment : Fragment(R.layout.fragment_favourite_list) {
 
         recyclerView.layoutManager = linearLayoutManager
         recyclerView.adapter = FavoriteMoviesAdapter(movies)
-
     }
 
     private fun initializeListOfMovies(view: View) {

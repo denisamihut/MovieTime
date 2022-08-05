@@ -4,7 +4,7 @@ import com.example.movieapp.database.Database
 
 class GenresLocalDataSource(database: Database) {
 
-    val genresDAO: GenresDAO = database.movieAppDatabase.genresDao()
+    private val genresDAO: GenresDAO = database.movieAppDatabase.genresDao()
 
     fun getAll() = genresDAO.getAll()
     fun getAllIds() = genresDAO.getAllIds()

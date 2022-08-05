@@ -35,7 +35,6 @@ class GenresAdapter(private val genresList: List<Genres>) :
         holder.parentView.setOnClickListener {
             genre.isSelected = !genre.isSelected
             selectGenre(holder, genre)
-
         }
     }
 

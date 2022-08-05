@@ -4,7 +4,7 @@ import com.example.movieapp.database.Database
 
 class ActorsLocalDataSource(database: Database) {
 
-    val actorsDAO: ActorsDAO = database.movieAppDatabase.actorsDao()
+    private val actorsDAO: ActorsDAO = database.movieAppDatabase.actorsDao()
 
     fun getAll() = actorsDAO.getAll()
     fun getAllIds() = actorsDAO.getAllIds()
@@ -15,5 +15,4 @@ class ActorsLocalDataSource(database: Database) {
     fun deleteAll(actors: List<Actors>) = actorsDAO.deleteAll(actors)
     fun replaceAll(actors: List<Actors>) = actorsDAO.replaceAll(actors)
     fun getCount() = actorsDAO.getCount()
-
 }

@@ -9,7 +9,6 @@ class MoviesRepository private constructor() {
         val instance = MoviesRepository()
     }
 
-
     private val moviesRemoteDataSource = MoviesRemoteDataSource(APIClient.instance.retrofit)
     private val moviesLocalDataSource = MoviesLocalDataSource(Database.instance)
 

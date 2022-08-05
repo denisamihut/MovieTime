@@ -59,8 +59,7 @@ class SplashActivity : AppCompatActivity() {
         val isSaved = genreCount > 0 && actorsCount > 0
         if (isSaved) {
             SearchActivity.open(this)
-        }
-        else
+        } else
             OnBoardingActivity.open(this)
     }
 
