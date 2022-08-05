@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/clMovie"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -67,11 +66,12 @@
         android:layout_height="40dp"
         android:layout_marginStart="208dp"
         android:backgroundTint="@color/orange"
+        android:contentDescription="@string/image_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tvMovieDescription"
         app:layout_constraintTop_toBottomOf="@+id/tvMovieDescription"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_baseline_delete_24" />
-
+        app:srcCompat="@drawable/ic_baseline_delete_24"
+        app:tint="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

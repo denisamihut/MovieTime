@@ -2,9 +2,9 @@
 <resources>
 
     <color name="black">#FF000000</color>
-    <color name="grey_102">#3d3d3f</color>
-    <color name="grey_103">#2c2c2c</color>
     <color name="grey_104">#1a1a1a</color>
+    <color name="grey_103">#2c2c2c</color>
+    <color name="grey_102">#3d3d3f</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -20,6 +20,5 @@
     <color name="brown">#964B00</color>
     <color name="orange">#f9bc3d</color>
     <color name="pink">#f49190</color>
-
 
 </resources>

@@ -3,7 +3,7 @@
     <string name="splash_title">MovieTime</string>
 
     <string name="app_logo_text">App logo</string>
-    <string name="on_boarding_text">This is a setup for first time users so you can get personalized content</string>
+    <string name="on_boarding_description">This is a setup for first time users so you can get personalized content</string>
     <string name="actors_btn_text">Actors</string>
     <string name="genres_btn_text">Genres</string>
 
@@ -19,6 +19,9 @@
     <string name="nav_header_subtitle">Your ultimate movie experience</string>
     <string name="nav_header_desc">Navigation header</string>
 
+    <string name="movie_detail_title">this is a title</string>
+    <string name="movie_detail_description">this is a description</string>
+    <string name="movie_detail_release">this is a date</string>
 
     <string name="menu_search_movies">All Movies</string>
     <string name="menu_save_movies">My Movies</string>
@@ -31,14 +34,21 @@
     <string name="actor_image_description">This is actor photo</string>
     <string name="movie_image_description">This is movie photo</string>
     <string name="genre_image_description">This is genre photo</string>
+
+    <string name="on_boarding_text">PICK YOUR FAVOURITES</string>
+    <string name="on_boarding_title">MovieTime: Menu</string>
+
+    <string name="image_button">This is image button</string>
+
+
     <string name="movie_title">This is movie title</string>
     <string name="movie_description">This is movie description</string>
     <string name="movie_release">This is movie release</string>
+
     <string name="star_icon">This is a star icon</string>
     <string name="btn_watched">+ Watched List</string>
     <string name="btn_favorite">+ Favorites</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
