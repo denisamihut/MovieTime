@@ -8,12 +8,12 @@
     tools:context=".ui.actors.ActorsActivity">
 
     <TextView
-        android:id="@+id/actorsScreenTitle"
+        android:id="@+id/tvActorsPreferences"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="@string/preferences_text"
+        android:text="@string/preferences_title"
         android:textAlignment="center"
         android:textColor="@color/orange"
         android:textSize="28sp"
@@ -24,21 +24,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/actorsInfo"
+        android:id="@+id/tvActorsInfo"
         android:layout_width="277dp"
         android:layout_height="23dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="@string/actor_text"
+        android:text="@string/actors_info"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/actorsScreenTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tvActorsPreferences" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_actors"
+        android:id="@+id/rvActors"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="100dp"
@@ -58,14 +58,14 @@
         android:layout_height="43dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/rounded_blue_button"
-        android:text="@string/save_btn_text"
+        android:text="@string/save_btn_name"
         android:textColor="@color/white"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_actors"
+        app:layout_constraintTop_toBottomOf="@+id/rvActors"
         app:layout_constraintVertical_bias="0.666" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

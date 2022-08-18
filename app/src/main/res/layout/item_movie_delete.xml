@@ -66,7 +66,7 @@
         android:layout_height="40dp"
         android:layout_marginStart="208dp"
         android:backgroundTint="@color/orange"
-        android:contentDescription="@string/image_button"
+        android:contentDescription="@string/image_button_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tvMovieDescription"
         app:layout_constraintTop_toBottomOf="@+id/tvMovieDescription"

@@ -51,7 +51,7 @@ class ActorsActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-        val rvActor = findViewById<RecyclerView>(R.id.rv_actors)
+        val rvActor = findViewById<RecyclerView>(R.id.rvActors)
         rvActor.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         rvActor.adapter = ActorsAdapter(actors)

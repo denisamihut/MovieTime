@@ -5,16 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-
     tools:context=".ui.genres.GenresActivity">
 
     <TextView
-        android:id="@+id/genresScreenTitle"
+        android:id="@+id/tvGenresPreferences"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="@string/preferences_text"
+        android:text="@string/preferences_title"
         android:textAlignment="center"
         android:textColor="@color/orange"
         android:textSize="28sp"
@@ -25,21 +24,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/genresInfo"
+        android:id="@+id/tvGenresInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
-        android:text="@string/genre_text"
+        android:text="@string/genres_info"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genresScreenTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tvGenresPreferences" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_genres"
+        android:id="@+id/rvGenres"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="100dp"
@@ -57,14 +56,14 @@
         android:layout_height="43dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/rounded_blue_button"
-        android:text="@string/save_btn_text"
+        android:text="@string/save_btn_name"
         android:textColor="@color/white"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_genres"
+        app:layout_constraintTop_toBottomOf="@+id/rvGenres"
         app:layout_constraintVertical_bias="0.666" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

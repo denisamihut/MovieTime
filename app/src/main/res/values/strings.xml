@@ -1,54 +1,34 @@
 <resources>
+    <string name="logo_description">App logo</string>
     <string name="app_name">MovieTime</string>
-    <string name="splash_title">MovieTime</string>
+    <string name="on_boarding_title">MovieTime: MENU</string>
+    <string name="on_boarding_subtitle">PICK YOUR FAVOURITES</string>
+    <string name="on_boarding_info">This is a setup for first time users so you can get personalized content</string>
+    <string name="on_boarding_actor_btn">Actors</string>
+    <string name="on_boarding_genre_btn">Genres</string>
 
-    <string name="app_logo_text">App logo</string>
-    <string name="on_boarding_description">This is a setup for first time users so you can get personalized content</string>
-    <string name="actors_btn_text">Actors</string>
-    <string name="genres_btn_text">Genres</string>
+    <string name="preferences_title">MovieTime: Preferences</string>
+    <string name="actors_info">PICK YOUR FAVOURITE ACTORS</string>
+    <string name="genres_info">PICK YOUR FAVOURITE GENRES</string>
+    <string name="star_icon_description">This is a star icon</string>
+    <string name="save_btn_name">Save</string>
 
-    <string name="preferences_text">MovieTime: Preferences</string>
-    <string name="actor_text">PICK YOUR FAVOURITE ACTORS</string>
-    <string name="genre_text">PICK YOUR FAVOURITE GENRES</string>
-    <string name="save_btn_text">Save</string>
-
-    <string name="title_activity_search">SearchActivity</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">MovieTime App</string>
-    <string name="nav_header_subtitle">Your ultimate movie experience</string>
-    <string name="nav_header_desc">Navigation header</string>
-
+    <string name="actor_image_description">This is actor photo</string>
+    <string name="movie_image_description">This is movie photo</string>
+    <string name="movie_title">This is movie title</string>
+    <string name="movie_description">This is movie description</string>
+    <string name="movie_release">This is movie release</string>
+    <string name="image_button_description">This is image button</string>
     <string name="movie_detail_title">this is a title</string>
     <string name="movie_detail_description">this is a description</string>
     <string name="movie_detail_release">this is a date</string>
 
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="nav_header_subtitle">Your ultimate movie experience</string>
+    <string name="nav_header_description">Navigation header</string>
+    <string name="title_activity_tabbed_main">TabbedMainActivity</string>
     <string name="menu_search_movies">All Movies</string>
     <string name="menu_save_movies">My Movies</string>
-    <string name="title_activity_tabbed_main">TabbedMainActivity</string>
     <string name="tab_text_1">Favorites</string>
     <string name="tab_text_2">Watched</string>
-    <string name="favorites">Favorites</string>
-    <string name="watched">Watched</string>
-
-    <string name="actor_image_description">This is actor photo</string>
-    <string name="movie_image_description">This is movie photo</string>
-    <string name="genre_image_description">This is genre photo</string>
-
-    <string name="on_boarding_text">PICK YOUR FAVOURITES</string>
-    <string name="on_boarding_title">MovieTime: Menu</string>
-
-    <string name="image_button">This is image button</string>
-
-
-    <string name="movie_title">This is movie title</string>
-    <string name="movie_description">This is movie description</string>
-    <string name="movie_release">This is movie release</string>
-
-    <string name="star_icon">This is a star icon</string>
-    <string name="btn_watched">+ Watched List</string>
-    <string name="btn_favorite">+ Favorites</string>
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 </resources>
