@@ -27,16 +27,10 @@
             android:label="@string/title_activity_search"
             android:theme="@style/Theme.MovieApp.NoActionBar" />
         <activity
-            android:name=".ui.movies.MoviesActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.actors.ActorsActivity"
             android:exported="false" />
         <activity
             android:name=".ui.genres.GenresActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.movie_details.MovieDetailsScreenActivity"
             android:exported="false" />
         <activity
             android:name=".ui.on_boarding.OnBoardingActivity"
@@ -47,7 +41,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
