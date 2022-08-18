@@ -7,18 +7,18 @@
 
     <fragment
         android:id="@+id/nav_search_movies"
-        android:name="com.example.movieApp.ui.search_movie.SearchMovieFragment"
+        android:name="com.denimihut.movieApp.ui.search_movie.SearchMovieFragment"
         android:label="@string/menu_search_movies"
         tools:layout="@layout/fragment_search_movies" />
 
     <fragment
         android:id="@+id/nav_save_movies"
-        android:name="com.example.movieApp.ui.save_movie.SaveMovieFragment"
+        android:name="com.denimihut.movieApp.ui.save_movie.SaveMovieFragment"
         android:label="@string/menu_save_movies"
         tools:layout="@layout/fragment_save_movies" />
     <fragment
         android:id="@+id/fragmentMovieDetails"
-        android:name="com.example.movieApp.ui.movie_details.FragmentMovieDetails"
+        android:name="com.denimihut.movieApp.ui.movie_details.FragmentMovieDetails"
         android:label="Movie Details"
         tools:layout="@layout/fragment_movie_details" />
 
