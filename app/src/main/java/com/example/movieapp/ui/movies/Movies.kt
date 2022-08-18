@@ -6,7 +6,6 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "movies")
-
 data class Movies(
     @ColumnInfo(name = "poster_path") val poster_path: String?,
     @ColumnInfo(name = "overview") val overview: String?,

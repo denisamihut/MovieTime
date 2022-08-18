@@ -5,7 +5,6 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class AdapterTabPager2(activity: FragmentActivity) : FragmentStateAdapter(activity) {
-
     private val nFragmentList: MutableList<Fragment> = mutableListOf()
     private val nFragmentTitleList: MutableList<String> = mutableListOf()
 

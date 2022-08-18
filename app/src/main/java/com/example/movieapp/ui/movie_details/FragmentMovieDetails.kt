@@ -12,7 +12,6 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.Abs
 import kotlinx.coroutines.*
 
 class FragmentMovieDetails : Fragment() {
-
     private var _binding: FragmentMovieDetailsBinding? = null
     private val binding get() = _binding!!
 

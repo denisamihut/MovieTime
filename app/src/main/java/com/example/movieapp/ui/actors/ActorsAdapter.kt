@@ -16,7 +16,6 @@ import com.example.movieapp.utils.Constants.IMAGE_URL
 class ActorsAdapter(private val actorsList: List<Actors>) :
 
     RecyclerView.Adapter<ActorsAdapter.ViewHolder>() {
-
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val actorName: TextView = view.findViewById(R.id.tvActorName)
         val imageView: ImageView = view.findViewById(R.id.ivActorPhoto)

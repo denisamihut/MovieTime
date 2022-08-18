@@ -3,7 +3,6 @@ package com.example.movieapp.ui.actors
 import com.example.movieapp.database.Database
 
 class ActorsLocalDataSource(database: Database) {
-
     private val actorsDAO: ActorsDAO = database.movieAppDatabase.actorsDao()
 
     fun getAll() = actorsDAO.getAll()

@@ -10,7 +10,6 @@ import com.example.movieapp.ui.on_boarding.OnBoardingActivity
 import kotlinx.coroutines.*
 
 class ActorsActivity : AppCompatActivity() {
-
     private var actors: List<Actors> = emptyList()
     private val actorRepository = ActorsRepository.instance
 

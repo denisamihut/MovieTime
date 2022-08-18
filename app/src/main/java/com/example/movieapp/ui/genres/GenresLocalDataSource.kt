@@ -3,7 +3,6 @@ package com.example.movieapp.ui.genres
 import com.example.movieapp.database.Database
 
 class GenresLocalDataSource(database: Database) {
-
     private val genresDAO: GenresDAO = database.movieAppDatabase.genresDao()
 
     fun getAll() = genresDAO.getAll()
