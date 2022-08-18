@@ -8,7 +8,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "movies")
 
 data class Movies(
-
     @ColumnInfo(name = "poster_path") val poster_path: String?,
     @ColumnInfo(name = "overview") val overview: String?,
     @ColumnInfo(name = "release_date") val release_date: String?,
@@ -16,9 +15,7 @@ data class Movies(
     @ColumnInfo(name = "title") val title: String,
     @ColumnInfo(name = "is_favorite") var isFavorite: Boolean,
     @ColumnInfo(name = "is_watched") var isWatched: Boolean
-
 ) {
 
     override fun equals(other: Any?) = (other is Movies) && id == other.id
-
 }

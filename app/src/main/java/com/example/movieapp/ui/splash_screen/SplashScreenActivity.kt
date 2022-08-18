@@ -10,19 +10,15 @@ import com.example.movieapp.SearchActivity
 import com.example.movieapp.ui.actors.ActorsRepository
 import com.example.movieapp.ui.genres.GenresRepository
 import com.example.movieapp.ui.on_boarding.OnBoardingActivity
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
+import java.lang.Runnable
 
 private const val DELAY = 3000L
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
-
     private var handler: Handler? = null
     private var runnable: Runnable? = null
-
     private val genresRepository = GenresRepository.instance
     private val actorsRepository = ActorsRepository.instance
 
@@ -45,6 +41,7 @@ class SplashActivity : AppCompatActivity() {
         finish()
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun isSaved() {
         GlobalScope.launch(Dispatchers.IO) {
             val genreCount = genresRepository.getCount()

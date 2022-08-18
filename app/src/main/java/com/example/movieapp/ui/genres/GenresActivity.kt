@@ -7,16 +7,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.R
 import com.example.movieapp.ui.on_boarding.OnBoardingActivity
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 
 class GenresActivity : AppCompatActivity() {
 
     private var genres: List<Genres> = emptyList()
     private val genreRepository = GenresRepository.instance
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun getGenres() {
         GlobalScope.launch(Dispatchers.IO) {
             genres = genreRepository.getAllRemoteGenres()
@@ -44,6 +42,7 @@ class GenresActivity : AppCompatActivity() {
         return genres.filter { genre -> genre.isSelected }
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun saveGenres() {
         GlobalScope.launch(Dispatchers.IO) {
             genreRepository.deleteAllLocal()
@@ -59,6 +58,7 @@ class GenresActivity : AppCompatActivity() {
         rvGenres.adapter = GenresAdapter(genres)
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun preselectSavedGenres() {
         GlobalScope.launch(Dispatchers.IO) {
             val savedGenres: List<Genres> = genreRepository.getAllLocalGenres()

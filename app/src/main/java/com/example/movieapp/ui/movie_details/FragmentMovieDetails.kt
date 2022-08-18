@@ -9,10 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.movieapp.databinding.FragmentMovieDetailsBinding
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 
 class FragmentMovieDetails : Fragment() {
 
@@ -25,15 +22,15 @@ class FragmentMovieDetails : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         viewModel =
-            ViewModelProvider(requireActivity()).get(MovieDetailsViewModel::class.java)
+            ViewModelProvider(requireActivity())[MovieDetailsViewModel::class.java]
 
         _binding = FragmentMovieDetailsBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-        return root
+        return binding.root
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         GlobalScope.launch(Dispatchers.IO) {

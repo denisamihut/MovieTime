@@ -22,7 +22,6 @@ class GenresAdapter(private val genresList: List<Genres>) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_genre, parent, false)
-
         return ViewHolder(view)
     }
 
@@ -39,7 +38,6 @@ class GenresAdapter(private val genresList: List<Genres>) :
     }
 
     private fun selectGenre(holder: ViewHolder, genre: Genres) {
-
         holder.parentView.setBackgroundColor(
             when (genre.isSelected) {
                 true -> ContextCompat.getColor(holder.parentView.context, R.color.blue)

@@ -12,6 +12,7 @@ import com.example.movieapp.R
 import com.example.movieapp.ui.movies.Movies
 import com.example.movieapp.ui.movies.MoviesRepository
 import com.example.movieapp.utils.Constants.IMAGE_URL
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -27,7 +28,6 @@ class WatchedMoviesAdapter(
         val itemIvTitle = view.findViewById<TextView>(R.id.tvMovieTitle)!!
         val itemIvReleaseDate = view.findViewById<TextView>(R.id.ivMovieRelease)!!
         val itemIvOverview = view.findViewById<TextView>(R.id.tvMovieDescription)!!
-
         val itemBtnDelete = view.findViewById<ImageButton>(R.id.btnDelete)!!
     }
 
@@ -60,6 +60,7 @@ class WatchedMoviesAdapter(
         }
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun updateItem(movie: Movies) {
         GlobalScope.launch(Dispatchers.IO) {
             val saved = ArrayList(moviesRep.getAllLocalMovies())

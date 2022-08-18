@@ -16,22 +16,16 @@ import com.example.movieapp.ui.movie_details.MovieDetailsViewModel
 import com.example.movieapp.ui.movies.Movies
 import com.example.movieapp.ui.movies.MoviesAdapter
 import com.example.movieapp.ui.movies.MoviesRepository
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 
 class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
-
     private var movies: List<Movies> = emptyList()
 
     private var _binding: FragmentSearchMoviesBinding? = null
     private val binding get() = _binding!!
-
     private val moviesRepository = MoviesRepository.instance
     private val genresRepository = GenresRepository.instance
     private val actorsRepository = ActorsRepository.instance
-
     private var genresIds = ""
     private var actorsIds = ""
 
@@ -41,9 +35,8 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val searchMoviesViewModel =
-            ViewModelProvider(this).get(SearchMovieViewModel::class.java)
+    ): View {
+        ViewModelProvider(this)[SearchMovieViewModel::class.java]
 
         _binding = FragmentSearchMoviesBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -64,6 +57,7 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
         preselectSaveGenres()
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun preselectSaveGenres() {
         GlobalScope.launch(Dispatchers.IO) {
             val savedGenresIds: List<Int> = genresRepository.getAllLocalIds()
@@ -78,25 +72,26 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
         }
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun getMovies() {
         GlobalScope.launch(Dispatchers.IO) {
             movies = moviesRepository.getAllRemoteMovies(actorsIds, genresIds)
             withContext(Dispatchers.Main) {
-                moviesLoaded(movies)
+                moviesLoaded()
             }
         }
         preselectItems()
     }
 
-    private fun moviesLoaded(movies: List<Movies>) {
+    private fun moviesLoaded() {
         setupRecyclerView()
     }
 
     private fun setupRecyclerView() {
         val rvMovies = binding.rvMovies
-        rvMovies?.layoutManager =
+        rvMovies.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        rvMovies?.adapter = MoviesAdapter(movies, { navigateToMovieDetails() }, viewModel)
+        rvMovies.adapter = MoviesAdapter(movies, { navigateToMovieDetails() }, viewModel)
     }
 
     private fun setSearchTextListener() {
@@ -117,6 +112,7 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
         })
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun getSearchedMovies(query: String) {
         GlobalScope.launch(Dispatchers.IO) {
             movies = moviesRepository.getAllSearchedMovies(query)
@@ -128,6 +124,7 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
         preselectItems()
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun preselectItems() {
         GlobalScope.launch(Dispatchers.IO) {
             val saved = moviesRepository.getAllLocalMovies()

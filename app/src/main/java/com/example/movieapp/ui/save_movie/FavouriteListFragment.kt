@@ -8,13 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.R
 import com.example.movieapp.ui.movies.Movies
 import com.example.movieapp.ui.movies.MoviesRepository
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 
 class FavouriteListFragment : Fragment(R.layout.fragment_favourite_list) {
-
     private val movieRepository: MoviesRepository = MoviesRepository.instance
     private var movies: MutableList<Movies> = mutableListOf()
 
@@ -34,6 +30,7 @@ class FavouriteListFragment : Fragment(R.layout.fragment_favourite_list) {
         recyclerView.adapter = FavoriteMoviesAdapter(movies)
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun initializeListOfMovies(view: View) {
         GlobalScope.launch(Dispatchers.IO) {
             movies = movieRepository.getFavorite().toMutableList()

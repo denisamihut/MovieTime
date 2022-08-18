@@ -11,13 +11,9 @@ import com.example.movieapp.ui.actors.ActorsActivity
 import com.example.movieapp.ui.actors.ActorsRepository
 import com.example.movieapp.ui.genres.GenresActivity
 import com.example.movieapp.ui.genres.GenresRepository
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 
 class OnBoardingActivity : AppCompatActivity() {
-
     private val genresRepository = GenresRepository.instance
     private val actorsRepository = ActorsRepository.instance
 
@@ -34,6 +30,7 @@ class OnBoardingActivity : AppCompatActivity() {
         genresButton.setOnClickListener {
             startActivity(Intent(this, GenresActivity::class.java))
         }
+
         actorsButton.setOnClickListener {
             startActivity(Intent(this, ActorsActivity::class.java))
         }
@@ -50,6 +47,7 @@ class OnBoardingActivity : AppCompatActivity() {
         verifyFilterIsSelected()
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun verifyFilterIsSelected() {
         GlobalScope.launch(Dispatchers.IO) {
             val genreCount = genresRepository.getCount()

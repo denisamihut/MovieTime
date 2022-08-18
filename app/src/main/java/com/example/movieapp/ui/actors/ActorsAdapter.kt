@@ -18,10 +18,9 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
     RecyclerView.Adapter<ActorsAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
         val actorName: TextView = view.findViewById(R.id.tvActorName)
-        val parentView: ConstraintLayout = view.findViewById(R.id.parent)
         val imageView: ImageView = view.findViewById(R.id.ivActorPhoto)
+        val parentView: ConstraintLayout = view.findViewById(R.id.parent)
         val heartIcon: ImageView = view.findViewById(R.id.starIcon)
     }
 
@@ -46,7 +45,6 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
     }
 
     private fun selectActor(holder: ViewHolder, actor: Actors) {
-
         holder.parentView.setBackgroundColor(
             when (actor.isSelected) {
                 true -> ContextCompat.getColor(holder.parentView.context, R.color.blue)
