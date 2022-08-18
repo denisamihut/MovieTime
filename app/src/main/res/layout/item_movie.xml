@@ -48,7 +48,7 @@
         app:layout_constraintVertical_bias="0.041" />
 
     <TextView
-        android:id="@+id/ivMovieRelease"
+        android:id="@+id/tvMovieRelease"
         android:layout_width="89dp"
         android:layout_height="20dp"
         android:layout_marginStart="12dp"

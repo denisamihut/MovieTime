@@ -15,7 +15,7 @@ class GenresAdapter(private val genresList: List<Genres>) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val genreName: TextView = view.findViewById(R.id.tvGenreName)
         val parentView: ConstraintLayout = view.findViewById(R.id.parent)
-        val heartIcon: ImageView = view.findViewById(R.id.starIcon)
+        val starIcon: ImageView = view.findViewById(R.id.starIcon)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -51,7 +51,7 @@ class GenresAdapter(private val genresList: List<Genres>) :
             }
         )
 
-        holder.heartIcon.visibility = when (genre.isSelected) {
+        holder.starIcon.visibility = when (genre.isSelected) {
             true -> View.VISIBLE
             else -> View.INVISIBLE
         }

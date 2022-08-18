@@ -8,8 +8,8 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "actors")
 
 data class Actors(
-    @ColumnInfo(name = "profile_path") val profile_path: String?,
     @PrimaryKey @NonNull @ColumnInfo(name = "id") val id: Int,
+    @ColumnInfo(name = "profile_path") val profile_path: String?,
     @ColumnInfo(name = "name") val name: String,
     @ColumnInfo(name = "isSelected") var isSelected: Boolean
 ) {
@@ -20,8 +20,8 @@ data class Actors(
     }
 
     override fun hashCode(): Int {
-        var result = profile_path?.hashCode() ?: 0
-        result = 31 * result + id
+        var result = id
+        result = 31 * result + (profile_path?.hashCode() ?: 0)
         result = 31 * result + name.hashCode()
         result = 31 * result + isSelected.hashCode()
         return result

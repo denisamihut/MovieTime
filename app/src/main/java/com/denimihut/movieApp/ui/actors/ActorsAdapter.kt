@@ -20,7 +20,7 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
         val actorName: TextView = view.findViewById(R.id.tvActorName)
         val imageView: ImageView = view.findViewById(R.id.ivActorPhoto)
         val parentView: ConstraintLayout = view.findViewById(R.id.parent)
-        val heartIcon: ImageView = view.findViewById(R.id.starIcon)
+        val starIcon: ImageView = view.findViewById(R.id.starIcon)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -58,7 +58,7 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
             }
         )
 
-        holder.heartIcon.visibility = when (actor.isSelected) {
+        holder.starIcon.visibility = when (actor.isSelected) {
             true -> View.VISIBLE
             else -> View.INVISIBLE
         }

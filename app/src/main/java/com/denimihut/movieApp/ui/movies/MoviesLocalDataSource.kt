@@ -3,6 +3,7 @@ package com.denimihut.movieApp.ui.movies
 import com.denimihut.movieApp.database.Database
 
 class MoviesLocalDataSource(database: Database) {
+
     private val moviesDAO: MoviesDAO = database.movieAppDatabase.moviesDao()
 
     fun getAll() = moviesDAO.getAll()

@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class SearchMovieViewModel : ViewModel() {
-    private val _text = MutableLiveData<String>().apply {
-    }
+    private val _text = MutableLiveData<String>().apply { }
     val text: LiveData<String> = _text
 }

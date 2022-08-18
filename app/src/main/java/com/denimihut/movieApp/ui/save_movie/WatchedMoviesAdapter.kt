@@ -20,57 +20,58 @@ import kotlinx.coroutines.launch
 class WatchedMoviesAdapter(
     private val moviesList: MutableList<Movies>
 ) : RecyclerView.Adapter<WatchedMoviesAdapter.ViewHolder>() {
+
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var favorite: Boolean = false
         var watched: Boolean = false
 
-        val itemIvMovie = view.findViewById<ImageView>(R.id.ivMoviePoster)!!
-        val itemIvTitle = view.findViewById<TextView>(R.id.tvMovieTitle)!!
-        val itemIvReleaseDate = view.findViewById<TextView>(R.id.ivMovieRelease)!!
-        val itemIvOverview = view.findViewById<TextView>(R.id.tvMovieDescription)!!
-        val itemBtnDelete = view.findViewById<ImageButton>(R.id.btnDelete)!!
+        val moviePoster = view.findViewById<ImageView>(R.id.ivMoviePoster)!!
+        val movieName = view.findViewById<TextView>(R.id.tvMovieTitle)!!
+        val movieDescription = view.findViewById<TextView>(R.id.tvMovieDescription)!!
+        val movieRelease = view.findViewById<TextView>(R.id.tvMovieRelease)!!
+        val btnDelete = view.findViewById<ImageButton>(R.id.btnDelete)!!
     }
 
-    private val moviesRep: MoviesRepository = MoviesRepository.instance
+    private val moviesRepository: MoviesRepository = MoviesRepository.instance
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_movie_delete, parent, false)
-
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val movie = moviesList[position]
 
-        Glide.with(holder.itemIvMovie.context).load(IMAGE_URL + movie.poster_path)
-            .into(holder.itemIvMovie)
-        holder.itemIvTitle.text = movie.title
-        holder.itemIvOverview.text = movie.overview
-        holder.itemIvReleaseDate.text = movie.release_date
+        Glide.with(holder.moviePoster.context).load(IMAGE_URL + movie.poster_path)
+            .into(holder.moviePoster)
 
-        holder.favorite = moviesList[position].isFavorite
-        holder.watched = moviesList[position].isWatched
+        holder.movieName.text = movie.title
+        holder.movieDescription.text = movie.overview
+        holder.movieRelease.text = movie.release_date
 
-        holder.itemBtnDelete.setOnClickListener {
+        holder.btnDelete.setOnClickListener {
             updateItem(moviesList[position])
             moviesList.removeAt(position)
             notifyItemRemoved(position)
             notifyItemRangeChanged(position, moviesList.size)
         }
+
+        holder.favorite = moviesList[position].isFavorite
+        holder.watched = moviesList[position].isWatched
     }
 
     @OptIn(DelicateCoroutinesApi::class)
     private fun updateItem(movie: Movies) {
         GlobalScope.launch(Dispatchers.IO) {
-            val saved = ArrayList(moviesRep.getAllLocalMovies())
+            val saved = ArrayList(moviesRepository.getAllLocalMovies())
             val idx = saved.indexOf(movie)
             if (idx != -1) saved[idx].isFavorite = !saved[idx].isFavorite
             if (!saved[idx].isFavorite && !saved[idx].isWatched) {
-                moviesRep.deleteLocal(saved[idx])
+                moviesRepository.deleteLocal(saved[idx])
                 saved.removeAt(idx)
             }
-            moviesRep.replaceAllLocal(saved.toList())
+            moviesRepository.replaceAllLocal(saved.toList())
         }
     }
 

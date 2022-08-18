@@ -29,7 +29,7 @@ class MoviesAdapter(
         val parentView: ConstraintLayout = view.findViewById(R.id.clMovie)
         val imageView: ImageView = view.findViewById(R.id.ivMoviePoster)
         val movieDescription: TextView = view.findViewById(R.id.tvMovieDescription)
-        val movieRelease: TextView = view.findViewById(R.id.ivMovieRelease)
+        val movieRelease: TextView = view.findViewById(R.id.tvMovieRelease)
         val btnFavorite: ImageButton = view.findViewById(R.id.btnFavorites)
         val btnWatched: ImageButton = view.findViewById(R.id.btnWatched)
     }
@@ -103,9 +103,7 @@ class MoviesAdapter(
         GlobalScope.launch(Dispatchers.IO) {
             val saved = ArrayList<Movies>(moviesRepository.getAllLocalMovies())
             val filtered = ArrayList<Movies>(filterWithFlags())
-
             saved.remove(item)
-
             moviesRepository.replaceAllLocal(saved.union(filtered).toList())
         }
     }

@@ -3,9 +3,9 @@ package com.denimihut.movieApp.ui.actors
 class ActorsMapper {
     fun map(actorsResponse: ActorsResponse): Actors {
         return Actors(
-            profile_path = actorsResponse.actor_photo,
-            id = actorsResponse.actor_id,
-            name = actorsResponse.actor_name,
+            id = actorsResponse.actorId,
+            profile_path = actorsResponse.actorPoster,
+            name = actorsResponse.actorName,
             isSelected = false,
         )
     }

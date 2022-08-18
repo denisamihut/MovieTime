@@ -3,11 +3,11 @@ package com.denimihut.movieApp.ui.movies
 class MoviesMapper {
     fun map(moviesResponse: MoviesResponse): Movies {
         return Movies(
-            poster_path = moviesResponse.movie_poster,
-            overview = moviesResponse.movie_description,
-            release_date = moviesResponse.movie_release,
-            id = moviesResponse.movie_id,
-            title = moviesResponse.movie_name,
+            id = moviesResponse.movieId,
+            poster_path = moviesResponse.moviePoster,
+            title = moviesResponse.movieName,
+            overview = moviesResponse.movieDescription,
+            release_date = moviesResponse.movieRelease,
             isFavorite = false,
             isWatched = false
         )

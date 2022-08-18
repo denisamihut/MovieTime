@@ -3,6 +3,7 @@ package com.denimihut.movieApp.ui.genres
 import com.denimihut.movieApp.database.Database
 
 class GenresLocalDataSource(database: Database) {
+
     private val genresDAO: GenresDAO = database.movieAppDatabase.genresDao()
 
     fun getAll() = genresDAO.getAll()

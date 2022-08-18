@@ -26,6 +26,7 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
     private val moviesRepository = MoviesRepository.instance
     private val genresRepository = GenresRepository.instance
     private val actorsRepository = ActorsRepository.instance
+
     private var genresIds = ""
     private var actorsIds = ""
 
@@ -40,15 +41,12 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
 
         _binding = FragmentSearchMoviesBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
         viewModel = ViewModelProvider(requireActivity())[MovieDetailsViewModel::class.java]
-
         return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         getQueryParams()
         setSearchTextListener()
     }

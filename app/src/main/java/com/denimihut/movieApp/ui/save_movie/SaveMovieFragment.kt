@@ -17,7 +17,7 @@ class SaveMovieFragment : Fragment() {
         "Favorite",
         "Watched"
     )
-    private var adapter: AdapterTabPager2? = null
+    private var adapter: AdapterTabPager? = null
 
     private var _binding: FragmentSaveMoviesBinding? = null
     private val binding get() = _binding!!
@@ -38,7 +38,7 @@ class SaveMovieFragment : Fragment() {
         val tabs: TabLayout = view.findViewById(R.id.tabs)
 
         adapter = activity?.let {
-            AdapterTabPager2(it)
+            AdapterTabPager(it)
         }
 
         adapter?.addFragment(FavouriteListFragment(), tabTitles[0])
