@@ -1,7 +1,6 @@
 package com.example.movieapp.ui.movies
 
 class MoviesMapper {
-
     fun map(moviesResponse: MoviesResponse): Movies {
         return Movies(
             poster_path = moviesResponse.movie_poster,

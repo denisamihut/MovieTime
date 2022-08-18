@@ -10,7 +10,6 @@ import com.example.movieapp.ui.on_boarding.OnBoardingActivity
 import kotlinx.coroutines.*
 
 class GenresActivity : AppCompatActivity() {
-
     private var genres: List<Genres> = emptyList()
     private val genreRepository = GenresRepository.instance
 

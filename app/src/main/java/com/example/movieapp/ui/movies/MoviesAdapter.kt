@@ -20,7 +20,6 @@ class MoviesAdapter(
     private val viewModel: MovieDetailsViewModel
 ) :
     RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
-
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         var favorite: Boolean = false
