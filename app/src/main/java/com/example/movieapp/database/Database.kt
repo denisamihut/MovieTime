@@ -21,7 +21,6 @@ class Database private constructor() {
     )
 
     abstract class MovieAppDatabase : RoomDatabase() {
-
         abstract fun genresDao(): GenresDAO
         abstract fun actorsDao(): ActorsDAO
         abstract fun moviesDao(): MoviesDAO
@@ -36,7 +35,6 @@ class Database private constructor() {
             MovieAppDatabase::class.java,
             "movie_app.db"
         ).fallbackToDestructiveMigration().build()
-
     }
 }
 

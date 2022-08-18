@@ -7,16 +7,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.R
 import com.example.movieapp.ui.on_boarding.OnBoardingActivity
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 
 class ActorsActivity : AppCompatActivity() {
 
     private var actors: List<Actors> = emptyList()
     private val actorRepository = ActorsRepository.instance
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun getActors() {
         GlobalScope.launch(Dispatchers.IO) {
             actors = actorRepository.getAllRemoteActors()
@@ -44,6 +42,7 @@ class ActorsActivity : AppCompatActivity() {
         return actors.filter { actor -> actor.isSelected }
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun saveActors() {
         GlobalScope.launch(Dispatchers.IO) {
             actorRepository.deleteAllLocal()
@@ -59,6 +58,7 @@ class ActorsActivity : AppCompatActivity() {
         rvActor.adapter = ActorsAdapter(actors)
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun preselectSavedActors() {
         GlobalScope.launch(Dispatchers.IO) {
             val savedActors: List<Actors> = actorRepository.getAllLocalActors()

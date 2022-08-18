@@ -10,7 +10,6 @@ class AdapterTabPager2(activity: FragmentActivity) : FragmentStateAdapter(activi
     private val nFragmentTitleList: MutableList<String> = mutableListOf()
 
     override fun getItemCount(): Int = nFragmentList.size
-
     override fun createFragment(position: Int): Fragment = nFragmentList[position]
 
     fun addFragment(fragment: Fragment, title: String) {

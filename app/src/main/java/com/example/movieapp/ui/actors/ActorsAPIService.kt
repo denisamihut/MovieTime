@@ -5,7 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ActorsAPIService {
-
     @GET("person/popular")
     fun getActors(
         @Query("api_key") apiKey: String,

@@ -31,7 +31,6 @@ class MoviesAdapter(
         val imageView: ImageView = view.findViewById(R.id.ivMoviePoster)
         val movieDescription: TextView = view.findViewById(R.id.tvMovieDescription)
         val movieRelease: TextView = view.findViewById(R.id.ivMovieRelease)
-
         val btnFavorite: ImageButton = view.findViewById(R.id.btnFavorites)
         val btnWatched: ImageButton = view.findViewById(R.id.btnWatched)
     }
@@ -100,6 +99,7 @@ class MoviesAdapter(
 
     private fun filterWithFlags() = moviesList.filter { it.isFavorite || it.isWatched }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun updateDatabase(item: Movies) {
         GlobalScope.launch(Dispatchers.IO) {
             val saved = ArrayList<Movies>(moviesRepository.getAllLocalMovies())

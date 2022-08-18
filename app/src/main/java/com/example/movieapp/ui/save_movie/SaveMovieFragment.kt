@@ -9,13 +9,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.example.movieapp.R
 import com.example.movieapp.databinding.FragmentSaveMoviesBinding
-import com.example.movieapp.ui.tab_activity.ui.main.PlaceholderFragment
-import com.example.movieapp.ui.tab_activity.ui.main.SectionsPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 class SaveMovieFragment : Fragment() {
-
     private val tabTitles = arrayOf(
         "Favorite",
         "Watched"
@@ -30,13 +27,9 @@ class SaveMovieFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val saveMovieViewModel =
-            ViewModelProvider(this).get(SaveMovieViewModel::class.java)
-
+        ViewModelProvider(this)[SaveMovieViewModel::class.java]
         _binding = FragmentSaveMoviesBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        return root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

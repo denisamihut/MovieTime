@@ -12,6 +12,7 @@ import com.example.movieapp.R
 import com.example.movieapp.ui.movies.Movies
 import com.example.movieapp.ui.movies.MoviesRepository
 import com.example.movieapp.utils.Constants.IMAGE_URL
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -59,6 +60,7 @@ class FavoriteMoviesAdapter(
         }
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun updateItem(movie: Movies) {
         GlobalScope.launch(Dispatchers.IO) {
             val saved = ArrayList(moviesRep.getAllLocalMovies())
