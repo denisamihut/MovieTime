@@ -38,6 +38,7 @@
         android:layout_width="415dp"
         android:layout_height="40dp"
         android:queryHint="Search Movies Here"
+        app:defaultQueryHint="Search Movie Here"
         app:iconifiedByDefault="false"
         app:layout_constraintBottom_toTopOf="@id/rvMovies"
         app:layout_constraintEnd_toEndOf="parent"

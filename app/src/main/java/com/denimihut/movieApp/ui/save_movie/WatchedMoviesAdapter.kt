@@ -26,7 +26,7 @@ class WatchedMoviesAdapter(
         var watched: Boolean = false
 
         val moviePoster = view.findViewById<ImageView>(R.id.ivMoviePoster)!!
-        val movieName = view.findViewById<TextView>(R.id.tvMovieTitle)!!
+        val movieName = view.findViewById<TextView>(R.id.tvMovieName)!!
         val movieDescription = view.findViewById<TextView>(R.id.tvMovieDescription)!!
         val movieRelease = view.findViewById<TextView>(R.id.tvMovieRelease)!!
         val btnDelete = view.findViewById<ImageButton>(R.id.btnDelete)!!

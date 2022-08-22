@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/grey_dark"
     tools:context=".ui.genres.GenresActivity">
 
     <TextView
@@ -30,7 +30,7 @@
         android:fontFamily="sans-serif-condensed"
         android:text="@string/genres_info"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +41,7 @@
         android:id="@+id/rvGenres"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="130dp"
         android:layout_marginBottom="90dp"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,12 +52,13 @@
 
     <Button
         android:id="@+id/btnSave"
-        android:layout_width="112dp"
-        android:layout_height="43dp"
+        android:layout_width="170dp"
+        android:layout_height="52dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/rounded_blue_button"
         android:text="@string/save_btn_name"
         android:textColor="@color/white"
+        android:textSize="20sp"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,5 +66,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rvGenres"
         app:layout_constraintVertical_bias="0.666" />
+
+    <SearchView
+        android:id="@+id/svGenres"
+        android:layout_width="409dp"
+        android:layout_height="47dp"
+        android:background="@color/white"
+        android:queryHint="Search Genres Here"
+        app:defaultQueryHint="Search Genres Here"
+        app:iconifiedByDefault="false"
+        app:layout_constraintBottom_toTopOf="@+id/rvGenres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,6 +14,7 @@ import com.denimihut.movieApp.ui.genres.GenresRepository
 import kotlinx.coroutines.*
 
 class OnBoardingActivity : AppCompatActivity() {
+
     private val genresRepository = GenresRepository.instance
     private val actorsRepository = ActorsRepository.instance
 

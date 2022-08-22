@@ -25,11 +25,12 @@ class MoviesAdapter(
         var favorite: Boolean = false
         var watched: Boolean = false
 
-        val movieTitle: TextView = view.findViewById(R.id.tvMovieTitle)
         val parentView: ConstraintLayout = view.findViewById(R.id.clMovie)
         val imageView: ImageView = view.findViewById(R.id.ivMoviePoster)
+        val movieName: TextView = view.findViewById(R.id.tvMovieName)
         val movieDescription: TextView = view.findViewById(R.id.tvMovieDescription)
         val movieRelease: TextView = view.findViewById(R.id.tvMovieRelease)
+
         val btnFavorite: ImageButton = view.findViewById(R.id.btnFavorites)
         val btnWatched: ImageButton = view.findViewById(R.id.btnWatched)
     }
@@ -48,7 +49,7 @@ class MoviesAdapter(
         Glide.with(holder.imageView.context).load(IMAGE_URL + movie.poster_path)
             .into(holder.imageView)
 
-        holder.movieTitle.text = movie.title
+        holder.movieName.text = movie.title
         holder.movieDescription.text = movie.overview
         holder.movieRelease.text = movie.release_date
 

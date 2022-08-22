@@ -13,9 +13,9 @@ import com.denimihut.movieApp.R
 class GenresAdapter(private val genresList: List<Genres>) :
     RecyclerView.Adapter<GenresAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val parentView: ConstraintLayout = view.findViewById(R.id.clActor)
         val genreName: TextView = view.findViewById(R.id.tvGenreName)
-        val parentView: ConstraintLayout = view.findViewById(R.id.parent)
-        val starIcon: ImageView = view.findViewById(R.id.starIcon)
+        val starIcon: ImageView = view.findViewById(R.id.ivStarIcon)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
