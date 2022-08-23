@@ -14,7 +14,6 @@ import com.denimihut.movieApp.R
 import com.denimihut.movieApp.utils.Constants.IMAGE_URL
 
 class ActorsAdapter(private val actorsList: List<Actors>) :
-
     RecyclerView.Adapter<ActorsAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val parentView: ConstraintLayout = view.findViewById(R.id.clActor)
