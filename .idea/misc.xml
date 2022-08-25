@@ -56,6 +56,7 @@
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/menu/search.xml" value="0.2264151024877837" />
         <entry key="..\:/00 - Development/internship/MovieApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1625" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1965" />
+        <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/border_selected.xml" value="0.211" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/ic_baseline_account_box_24.xml" value="0.179" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/ic_baseline_bookmark_24.xml" value="0.1965" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/ic_baseline_bookmark_border_24.xml" value="0.1965" />
@@ -73,7 +74,7 @@
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/rounded_orange_button.xml" value="0.1965" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/side_nav_bar.xml" value="0.1965" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/layout/activity_actors.xml" value="0.2264151024877837" />
-        <entry key="..\:/Development/repos/MovieApp/app/src/main/res/layout/activity_genres.xml" value="0.1" />
+        <entry key="..\:/Development/repos/MovieApp/app/src/main/res/layout/activity_genres.xml" value="0.2264151024877837" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/layout/activity_main.xml" value="0.4528302049755674" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/layout/activity_on_boarding.xml" value="0.2988679352838745" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/layout/activity_search.xml" value="0.2988679352838745" />
@@ -88,7 +89,7 @@
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/layout/fragment_tabbed_main.xml" value="0.2264151024877837" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/layout/fragment_watched_list.xml" value="0.2140625" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/layout/item_actor.xml" value="0.2988679352838745" />
-        <entry key="..\:/Development/repos/MovieApp/app/src/main/res/layout/item_genre.xml" value="0.2264151024877837" />
+        <entry key="..\:/Development/repos/MovieApp/app/src/main/res/layout/item_genre.xml" value="0.2988679352838745" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/layout/item_movie.xml" value="0.2988679352838745" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/layout/item_movie_delete.xml" value="0.2140625" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/layout/nav_header_search.xml" value="0.2264151024877837" />

@@ -1,8 +1,9 @@
 package com.denimihut.movieApp.ui.genres
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.denimihut.movieApp.R
@@ -55,6 +56,10 @@ class GenresActivity : AppCompatActivity() {
         rvGenres.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         rvGenres.adapter = GenresAdapter(genres)
+
+        val gridLayoutManager =
+            GridLayoutManager(applicationContext, 2, LinearLayoutManager.VERTICAL, false)
+        rvGenres.layoutManager = gridLayoutManager
     }
 
     @OptIn(DelicateCoroutinesApi::class)

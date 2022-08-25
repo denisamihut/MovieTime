@@ -3,7 +3,6 @@ package com.denimihut.movieApp.ui.genres
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -15,7 +14,7 @@ class GenresAdapter(private val genresList: List<Genres>) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val parentView: ConstraintLayout = view.findViewById(R.id.clGenre)
         val genreName: TextView = view.findViewById(R.id.tvGenreName)
-        val starIcon: ImageView = view.findViewById(R.id.ivStarIcon)
+//        val starIcon: ImageView = view.findViewById(R.id.ivStarIcon)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -37,24 +36,26 @@ class GenresAdapter(private val genresList: List<Genres>) :
     }
 
     private fun selectGenre(holder: ViewHolder, genre: Genres) {
-        holder.parentView.setBackgroundColor(
-            when (genre.isSelected) {
-                true -> ContextCompat.getColor(holder.parentView.context, R.color.blue)
-                else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
-            }
-        )
+
+//        holder.genreName.setBackgroundColor(
+//            when (genre.isSelected) {
+//                true -> ContextCompat.getColor(holder.parentView.context, R.color.black)
+//                else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
+//            }
+//        )
+
 
         holder.genreName.setTextColor(
             when (genre.isSelected) {
-                true -> ContextCompat.getColor(holder.parentView.context, R.color.white)
+                true -> ContextCompat.getColor(holder.parentView.context, R.color.orange)
                 else -> ContextCompat.getColor(holder.parentView.context, R.color.black)
             }
         )
 
-        holder.starIcon.visibility = when (genre.isSelected) {
-            true -> View.VISIBLE
-            else -> View.INVISIBLE
-        }
+//        holder.starIcon.visibility = when (genre.isSelected) {
+//            true -> View.VISIBLE
+//            else -> View.INVISIBLE
+//        }
     }
 
     override fun getItemCount() = genresList.size
