@@ -11,6 +11,9 @@ class ActorsRepository private constructor() {
     private val actorsRemoteDataSource = ActorsRemoteDataSource(APIClient.instance.retrofit)
     private val actorsLocalDataSource = ActorsLocalDataSource(Database.instance)
 
+    fun getAllSearchedActors(query: String) = actorsRemoteDataSource.getSearchedActors(query)
+
+
     fun getAllRemoteActors() = actorsRemoteDataSource.getActors()
 
     fun getAllLocalIds() = actorsLocalDataSource.getAllIds()
