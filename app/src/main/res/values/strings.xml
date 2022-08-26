@@ -11,9 +11,9 @@
 
     <string name="preferences_title">MovieTime: Preferences</string>
     <string name="actors_info">PICK YOUR FAVOURITE ACTORS</string>
-    <string name="genres_info">PICK YOUR FAVOURITE GENRES</string>
+    <string name="genres_info">PICK YOUR FAVORITE GENRES</string>
     <string name="star_icon_description">This is a star icon</string>
-    <string name="save_btn_name">Save</string>
+    <string name="genres_prefs_save_btn">Save</string>
 
     <string name="actor_image_description">This is actor photo</string>
     <string name="movie_image_description">This is movie photo</string>
