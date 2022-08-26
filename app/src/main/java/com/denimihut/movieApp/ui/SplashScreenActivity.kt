@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.splash_screen
+package com.denimihut.movieApp.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
