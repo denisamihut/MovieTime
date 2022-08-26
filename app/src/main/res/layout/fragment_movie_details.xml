@@ -44,7 +44,7 @@
                 android:layout_height="29dp"
                 android:layout_marginStart="4dp"
                 android:text="@string/movie_detail_release"
-                android:textColor="@color/blue"
+                android:textColor="@color/blue_1"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
                 app:layout_constraintStart_toEndOf="@+id/tvTitle"

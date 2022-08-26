@@ -1,8 +1,8 @@
 <resources>
     <string name="logo_description">App logo</string>
     <string name="app_name">MovieTime</string>
-    <string name="on_boarding_title">MovieTime: MENU</string>
-    <string name="on_boarding_subtitle">PICK YOUR FAVOURITES</string>
+    <string name="on_boarding_title">MENU</string>
+    <string name="on_boarding_subtitle">PICK YOUR FAVORITES</string>
     <string name="on_boarding_info">This is a setup for first time users so you can get personalized content</string>
     <string name="on_boarding_actor_btn">Actors</string>
     <string name="on_boarding_genre_btn">Genres</string>

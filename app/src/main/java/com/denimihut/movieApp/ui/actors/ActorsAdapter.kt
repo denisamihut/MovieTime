@@ -45,7 +45,7 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
     private fun selectActor(holder: ViewHolder, actor: Actors) {
         holder.parentView.setBackgroundColor(
             when (actor.isSelected) {
-                true -> ContextCompat.getColor(holder.parentView.context, R.color.blue)
+                true -> ContextCompat.getColor(holder.parentView.context, R.color.blue_1)
                 else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
             }
         )

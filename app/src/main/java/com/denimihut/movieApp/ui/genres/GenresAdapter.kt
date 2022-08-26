@@ -14,7 +14,6 @@ class GenresAdapter(private val genresList: List<Genres>) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val parentView: ConstraintLayout = view.findViewById(R.id.clGenre)
         val genreName: TextView = view.findViewById(R.id.tvGenreName)
-//        val starIcon: ImageView = view.findViewById(R.id.ivStarIcon)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -47,15 +46,10 @@ class GenresAdapter(private val genresList: List<Genres>) :
 
         holder.genreName.setTextColor(
             when (genre.isSelected) {
-                true -> ContextCompat.getColor(holder.parentView.context, R.color.orange)
+                true -> ContextCompat.getColor(holder.parentView.context, R.color.yellow_neon)
                 else -> ContextCompat.getColor(holder.parentView.context, R.color.black)
             }
         )
-
-//        holder.starIcon.visibility = when (genre.isSelected) {
-//            true -> View.VISIBLE
-//            else -> View.INVISIBLE
-//        }
     }
 
     override fun getItemCount() = genresList.size

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_dark"
+    android:background="@color/grey_neon"
     tools:context=".ui.genres.GenresActivity">
 
     <TextView
@@ -15,7 +15,7 @@
         android:fontFamily="sans-serif-condensed"
         android:text="@string/preferences_title"
         android:textAlignment="center"
-        android:textColor="@color/orange"
+        android:textColor="@color/yellow_neon"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
