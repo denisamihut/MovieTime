@@ -4,75 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/grey_neon"
     tools:context=".ui.actors.ActorsActivity">
 
     <TextView
-        android:id="@+id/tvActorsPreferences"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="@string/preferences_title"
+        android:text="@string/actors_info"
         android:textAlignment="center"
-        android:textColor="@color/yellow_neon"
-        android:textSize="28sp"
+        android:textColor="@color/white"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvActorsInfo"
-        android:layout_width="277dp"
-        android:layout_height="23dp"
-        android:fontFamily="sans-serif-condensed"
-        android:text="@string/actors_info"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvActorsPreferences" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvActors"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="90dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:listitem="@layout/item_actor" />
-
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="112dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/button_shape"
-        android:text="@string/genres_prefs_save_btn"
-        android:textColor="@color/white"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvActors"
-        app:layout_constraintVertical_bias="0.666" />
-
-
     <SearchView
         android:id="@+id/svActors"
-        android:layout_width="409dp"
-        android:layout_height="47dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:background="@color/white"
         android:queryHint="Search Actors Here"
         app:defaultQueryHint="Search Actors Here"
@@ -80,5 +33,36 @@
         app:layout_constraintBottom_toTopOf="@+id/rvActors"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvActors"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="72dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_actor" />
+
+    <Button
+        android:id="@+id/btnSave"
+        style="@style/Button"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/genres_prefs_save_btn"
+        android:textColor="@drawable/button_text_color"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvActors"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
