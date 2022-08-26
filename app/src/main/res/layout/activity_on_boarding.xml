@@ -7,22 +7,22 @@
     android:background="@color/grey_neon"
     tools:context=".ui.on_boarding.OnBoardingActivity">
 
-
     <TextView
         android:id="@+id/tvOnBoardingTitle"
-        android:layout_width="271dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="128dp"
+        android:layout_width="314dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="124dp"
         android:text="@string/on_boarding_title"
         android:textColor="@color/yellow_neon"
-        android:textSize="24sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/onBoardingInfo"
+        android:id="@+id/tvOnBoardInfo1"
         android:layout_width="356dp"
         android:layout_height="32dp"
         android:text="@string/on_boarding_info"
@@ -36,9 +36,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.648" />
 
-
     <TextView
-        android:id="@+id/onBoardingInfo2"
+        android:id="@+id/tvOnBoardInfo2"
         android:layout_width="356dp"
         android:layout_height="46dp"
         android:text="@string/on_boarding_info2"
@@ -55,30 +54,31 @@
     <androidx.appcompat.widget.AppCompatToggleButton
         android:id="@+id/btnActors"
         style="@style/Button"
-        android:layout_width="184dp"
+        android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginTop="412dp"
-        android:background="@drawable/rounded_blue_button"
         android:text="@string/on_boarding_actor_btn"
+        android:textSize="20sp"
         android:textColor="@drawable/button_text_color"
         android:textOff="@string/on_boarding_actor_btn"
         android:textOn="@string/on_boarding_actor_btn"
+        android:background="@drawable/button_shape"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatToggleButton
         android:id="@+id/btnGenres"
         style="@style/Button"
-        android:layout_width="186dp"
+        android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginTop="28dp"
-        android:background="@drawable/rounded_blue_button"
         android:text="@string/on_boarding_genre_btn"
+        android:textSize="20sp"
         android:textColor="@drawable/button_text_color"
         android:textOff="@string/on_boarding_genre_btn"
         android:textOn="@string/on_boarding_genre_btn"
+        android:background="@drawable/button_shape"
         app:layout_constraintEnd_toEndOf="@+id/btnActors"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/btnActors"

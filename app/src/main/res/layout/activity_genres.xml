@@ -56,7 +56,7 @@
         android:layout_height="48dp"
         android:fontFamily="sans-serif-condensed"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/rounded_blue_button"
+        android:background="@drawable/button_shape"
         android:text="@string/save_btn_name"
         android:textColor="@color/white"
         android:textSize="20sp"
