@@ -7,71 +7,64 @@
     android:background="@color/grey_neon"
     tools:context=".ui.on_boarding.OnBoardingActivity">
 
-    <ImageView
-        android:id="@+id/onBoardingLogo"
-        android:layout_width="79dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="56dp"
-        android:contentDescription="@string/logo_description"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/app_logo" />
 
     <TextView
         android:id="@+id/tvOnBoardingTitle"
-        android:layout_width="254dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="64dp"
+        android:layout_width="271dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="128dp"
         android:text="@string/on_boarding_title"
         android:textColor="@color/yellow_neon"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
-        app:layout_constraintStart_toEndOf="@+id/onBoardingLogo"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvOnBoardingSubtitle"
-        android:layout_width="252dp"
-        android:layout_height="38dp"
-        android:text="@string/on_boarding_subtitle"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/tvOnBoardingTitle"
-        app:layout_constraintStart_toStartOf="@+id/tvOnBoardingTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tvOnBoardingTitle" />
-
-    <TextView
         android:id="@+id/onBoardingInfo"
-        android:layout_width="330dp"
-        android:layout_height="49dp"
+        android:layout_width="356dp"
+        android:layout_height="32dp"
         android:text="@string/on_boarding_info"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btnActors"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.576" />
+        app:layout_constraintVertical_bias="0.648" />
+
+
+    <TextView
+        android:id="@+id/onBoardingInfo2"
+        android:layout_width="356dp"
+        android:layout_height="46dp"
+        android:text="@string/on_boarding_info2"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnActors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.758" />
 
     <androidx.appcompat.widget.AppCompatToggleButton
         android:id="@+id/btnActors"
         style="@style/Button"
         android:layout_width="184dp"
         android:layout_height="48dp"
-        android:layout_marginTop="396dp"
+        android:layout_marginTop="412dp"
         android:background="@drawable/rounded_blue_button"
         android:text="@string/on_boarding_actor_btn"
-        android:textColor="@color/grey_neon"
+        android:textColor="@drawable/button_text_color"
         android:textOff="@string/on_boarding_actor_btn"
         android:textOn="@string/on_boarding_actor_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -80,10 +73,10 @@
         style="@style/Button"
         android:layout_width="186dp"
         android:layout_height="48dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/rounded_blue_button"
         android:text="@string/on_boarding_genre_btn"
-        android:textColor="@color/grey_neon"
+        android:textColor="@drawable/button_text_color"
         android:textOff="@string/on_boarding_genre_btn"
         android:textOn="@string/on_boarding_genre_btn"
         app:layout_constraintEnd_toEndOf="@+id/btnActors"
