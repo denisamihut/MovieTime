@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.genres
+package com.denimihut.movieApp.ui
 
 import android.os.Bundle
 import android.widget.Button
@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.denimihut.movieApp.R
-import com.denimihut.movieApp.ui.on_boarding.OnBoardingActivity
+import com.denimihut.movieApp.adapter.GenresAdapter
+import com.denimihut.movieApp.ui.genres.Genres
+import com.denimihut.movieApp.ui.genres.GenresRepository
 import kotlinx.coroutines.*
 
 class GenresActivity : AppCompatActivity() {

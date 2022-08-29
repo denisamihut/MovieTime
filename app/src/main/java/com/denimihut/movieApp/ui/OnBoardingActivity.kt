@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.on_boarding
+package com.denimihut.movieApp.ui
 
 import android.content.Context
 import android.content.Intent
@@ -7,9 +7,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.denimihut.movieApp.R
 import com.denimihut.movieApp.SearchActivity
-import com.denimihut.movieApp.ui.actors.ActorsActivity
 import com.denimihut.movieApp.ui.actors.ActorsRepository
-import com.denimihut.movieApp.ui.genres.GenresActivity
 import com.denimihut.movieApp.ui.genres.GenresRepository
 import kotlinx.coroutines.*
 

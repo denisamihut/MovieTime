@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.actors
+package com.denimihut.movieApp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,7 +7,9 @@ import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.denimihut.movieApp.R
-import com.denimihut.movieApp.ui.on_boarding.OnBoardingActivity
+import com.denimihut.movieApp.ui.actors.Actors
+import com.denimihut.movieApp.ui.actors.ActorsAdapter
+import com.denimihut.movieApp.ui.actors.ActorsRepository
 import kotlinx.coroutines.*
 
 class ActorsActivity : AppCompatActivity() {
@@ -29,11 +31,9 @@ class ActorsActivity : AppCompatActivity() {
         GlobalScope.launch(Dispatchers.IO) {
             actors = actorRepository.getAllSearchedActors(query)
             withContext(Dispatchers.Main) {
-
             }
         }
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

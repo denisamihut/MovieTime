@@ -9,7 +9,6 @@ import com.denimihut.movieApp.R
 import com.denimihut.movieApp.SearchActivity
 import com.denimihut.movieApp.ui.actors.ActorsRepository
 import com.denimihut.movieApp.ui.genres.GenresRepository
-import com.denimihut.movieApp.ui.on_boarding.OnBoardingActivity
 import kotlinx.coroutines.*
 import java.lang.Runnable
 
