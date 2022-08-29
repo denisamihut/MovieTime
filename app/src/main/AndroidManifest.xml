@@ -27,17 +27,17 @@
             android:label="@string/title_activity_search"
             android:theme="@style/Theme.MovieApp.NoActionBar" />
         <activity
-            android:name="com.denimihut.movieApp.ui.actors.ActorsActivity"
+            android:name="com.denimihut.movieApp.ui.ActorsActivity"
             android:exported="false" />
         <activity
-            android:name="com.denimihut.movieApp.ui.genres.GenresActivity"
+            android:name="com.denimihut.movieApp.ui.GenresActivity"
             android:exported="false" />
         <activity
-            android:name="com.denimihut.movieApp.ui.on_boarding.OnBoardingActivity"
+            android:name="com.denimihut.movieApp.ui.OnBoardingActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="com.denimihut.movieApp.ui.splash_screen.SplashActivity"
+            android:name="com.denimihut.movieApp.ui.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

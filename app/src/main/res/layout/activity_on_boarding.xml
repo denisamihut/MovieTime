@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey_neon"
-    tools:context=".ui.on_boarding.OnBoardingActivity">
+    tools:context=".ui.OnBoardingActivity">
 
     <TextView
         android:id="@+id/tvOnBoardingTitle"

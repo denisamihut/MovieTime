@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.genres
+package com.denimihut.movieApp.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,12 +8,15 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.denimihut.movieApp.R
+import com.denimihut.movieApp.ui.genres.Genres
+
 
 class GenresAdapter(private val genresList: List<Genres>) :
     RecyclerView.Adapter<GenresAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val parentView: ConstraintLayout = view.findViewById(R.id.clGenre)
         val genreName: TextView = view.findViewById(R.id.tvGenreName)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -36,18 +39,24 @@ class GenresAdapter(private val genresList: List<Genres>) :
 
     private fun selectGenre(holder: ViewHolder, genre: Genres) {
 
-//        holder.genreName.setBackgroundColor(
+//        holder.genreName.setBackgroundResource(
 //            when (genre.isSelected) {
 //                true -> ContextCompat.getColor(holder.parentView.context, R.color.black)
 //                else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
 //            }
 //        )
 
+        holder.genreName.setBackgroundColor(
+            when (genre.isSelected) {
+                true -> ContextCompat.getColor(holder.parentView.context, R.color.yellow_neon)
+                else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
+            }
+        )
 
         holder.genreName.setTextColor(
             when (genre.isSelected) {
-                true -> ContextCompat.getColor(holder.parentView.context, R.color.yellow_neon)
-                else -> ContextCompat.getColor(holder.parentView.context, R.color.black)
+                true -> ContextCompat.getColor(holder.parentView.context, R.color.black)
+                else -> ContextCompat.getColor(holder.parentView.context, R.color.yellow_neon)
             }
         )
     }
