@@ -16,7 +16,6 @@ class GenresAdapter(private val genresList: List<Genres>) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val parentView: ConstraintLayout = view.findViewById(R.id.clGenre)
         val genreName: TextView = view.findViewById(R.id.tvGenreName)
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -46,17 +45,17 @@ class GenresAdapter(private val genresList: List<Genres>) :
 //            }
 //        )
 
-        holder.genreName.setBackgroundColor(
-            when (genre.isSelected) {
-                true -> ContextCompat.getColor(holder.parentView.context, R.color.yellow_neon)
-                else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
-            }
-        )
+//        holder.genreName.setBackgroundColor(
+//            when (genre.isSelected) {
+//                true -> ContextCompat.getColor(holder.parentView.context, R.color.yellow_neon)
+//                else -> ContextCompat.getColor(holder.parentView.context, R.color.yellow_neon)
+//            }
+//        )
 
         holder.genreName.setTextColor(
             when (genre.isSelected) {
-                true -> ContextCompat.getColor(holder.parentView.context, R.color.black)
-                else -> ContextCompat.getColor(holder.parentView.context, R.color.yellow_neon)
+                true -> ContextCompat.getColor(holder.parentView.context, R.color.red_neon)
+                else -> ContextCompat.getColor(holder.parentView.context, R.color.black)
             }
         )
     }
