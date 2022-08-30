@@ -7,9 +7,9 @@ import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.denimihut.movieApp.R
-import com.denimihut.movieApp.ui.actors.Actors
-import com.denimihut.movieApp.ui.actors.ActorsAdapter
-import com.denimihut.movieApp.ui.actors.ActorsRepository
+import com.denimihut.movieApp.service_actor.Actors
+import com.denimihut.movieApp.service_actor.ActorsAdapter
+import com.denimihut.movieApp.service_actor.ActorsRepository
 import kotlinx.coroutines.*
 
 class ActorsActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.denimihut.movieApp
+package com.denimihut.movieApp.ui
 
 import android.content.Context
 import android.content.Intent
@@ -13,6 +13,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.denimihut.movieApp.R
 import com.denimihut.movieApp.databinding.ActivitySearchBinding
 
 class SearchActivity : AppCompatActivity() {

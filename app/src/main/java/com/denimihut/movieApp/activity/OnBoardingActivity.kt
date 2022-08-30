@@ -6,9 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.denimihut.movieApp.R
-import com.denimihut.movieApp.SearchActivity
-import com.denimihut.movieApp.ui.actors.ActorsRepository
-import com.denimihut.movieApp.ui.genres.GenresRepository
+import com.denimihut.movieApp.service_actor.ActorsRepository
+import com.denimihut.movieApp.service_genre.GenresRepository
 import kotlinx.coroutines.*
 
 class OnBoardingActivity : AppCompatActivity() {

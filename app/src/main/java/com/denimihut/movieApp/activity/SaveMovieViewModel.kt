@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.save_movie
+package com.denimihut.movieApp.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

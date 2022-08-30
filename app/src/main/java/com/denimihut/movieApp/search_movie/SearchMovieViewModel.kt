@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.search_movie
+package com.denimihut.movieApp.search_movie
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

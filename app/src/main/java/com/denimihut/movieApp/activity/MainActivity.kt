@@ -1,7 +1,8 @@
-package com.denimihut.movieApp
+package com.denimihut.movieApp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.denimihut.movieApp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

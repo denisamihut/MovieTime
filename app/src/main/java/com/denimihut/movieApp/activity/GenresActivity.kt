@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.denimihut.movieApp.R
 import com.denimihut.movieApp.adapter.GenresAdapter
-import com.denimihut.movieApp.ui.genres.Genres
-import com.denimihut.movieApp.ui.genres.GenresRepository
+import com.denimihut.movieApp.service_genre.Genres
+import com.denimihut.movieApp.service_genre.GenresRepository
 import kotlinx.coroutines.*
 
 class GenresActivity : AppCompatActivity() {
