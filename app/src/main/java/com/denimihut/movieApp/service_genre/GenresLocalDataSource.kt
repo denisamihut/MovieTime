@@ -1,5 +1,6 @@
-package com.denimihut.movieApp.ui.genres
+package com.denimihut.movieApp.service_genre
 
+import com.denimihut.movieApp.dao.GenresDAO
 import com.denimihut.movieApp.database.Database
 
 class GenresLocalDataSource(database: Database) {

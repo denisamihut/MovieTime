@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.tab_activity.ui.main
+package com.denimihut.movieApp.activity.tab_activity.ui.main
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.save_movie
+package com.denimihut.movieApp.save_movie
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.denimihut.movieApp.R
 import com.denimihut.movieApp.databinding.FragmentSaveMoviesBinding
+import com.denimihut.movieApp.activity.SaveMovieViewModel
+import com.denimihut.movieApp.adapter.AdapterTabPager
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 

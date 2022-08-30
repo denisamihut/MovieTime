@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui
+package com.denimihut.movieApp.activity
 
 import android.content.Context
 import android.content.Intent

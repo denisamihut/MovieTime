@@ -1,5 +1,6 @@
-package com.denimihut.movieApp.ui.actors
+package com.denimihut.movieApp.service_actor
 
+import com.denimihut.movieApp.dao.ActorsDAO
 import com.denimihut.movieApp.database.Database
 
 class ActorsLocalDataSource(database: Database) {

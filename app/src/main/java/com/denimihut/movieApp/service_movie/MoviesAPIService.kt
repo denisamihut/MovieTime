@@ -1,6 +1,6 @@
-package com.denimihut.movieApp.ui.movies
+package com.denimihut.movieApp.service_movie
 
-import com.denimihut.movieApp.ui.movie_details.MovieDetailsResponse
+import com.denimihut.movieApp.service_movie_detail.MovieDetailsResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

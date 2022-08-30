@@ -1,6 +1,5 @@
-package com.denimihut.movieApp.ui.actors
+package com.denimihut.movieApp.service_actor
 
-import com.denimihut.movieApp.ui.genres.GenresListResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

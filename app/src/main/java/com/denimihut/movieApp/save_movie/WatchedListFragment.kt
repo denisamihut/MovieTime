@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.save_movie
+package com.denimihut.movieApp.save_movie
 
 import android.os.Bundle
 import android.view.View
@@ -6,8 +6,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.denimihut.movieApp.R
-import com.denimihut.movieApp.ui.movies.Movies
-import com.denimihut.movieApp.ui.movies.MoviesRepository
+import com.denimihut.movieApp.adapter.WatchedMoviesAdapter
+import com.denimihut.movieApp.service_movie.Movies
+import com.denimihut.movieApp.repository.MoviesRepository
 import kotlinx.coroutines.*
 
 class WatchedListFragment : Fragment(R.layout.fragment_watched_list) {

@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui
+package com.denimihut.movieApp.activity
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.denimihut.movieApp.R
-import com.denimihut.movieApp.service_actor.ActorsRepository
-import com.denimihut.movieApp.service_genre.GenresRepository
+import com.denimihut.movieApp.repository.ActorsRepository
+import com.denimihut.movieApp.repository.GenresRepository
 import kotlinx.coroutines.*
 import java.lang.Runnable
 

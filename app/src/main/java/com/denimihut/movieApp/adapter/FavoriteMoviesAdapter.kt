@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.save_movie
+package com.denimihut.movieApp.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,8 +9,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.denimihut.movieApp.R
-import com.denimihut.movieApp.ui.movies.Movies
-import com.denimihut.movieApp.ui.movies.MoviesRepository
+import com.denimihut.movieApp.service_movie.Movies
+import com.denimihut.movieApp.repository.MoviesRepository
 import com.denimihut.movieApp.utils.Constants.IMAGE_URL
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers

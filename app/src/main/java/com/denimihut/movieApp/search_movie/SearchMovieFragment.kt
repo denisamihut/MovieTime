@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.search_movie
+package com.denimihut.movieApp.search_movie
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,12 +10,12 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.denimihut.movieApp.R
 import com.denimihut.movieApp.databinding.FragmentSearchMoviesBinding
-import com.denimihut.movieApp.ui.actors.ActorsRepository
-import com.denimihut.movieApp.ui.genres.GenresRepository
-import com.denimihut.movieApp.ui.movie_details.MovieDetailsViewModel
-import com.denimihut.movieApp.ui.movies.Movies
-import com.denimihut.movieApp.ui.movies.MoviesAdapter
-import com.denimihut.movieApp.ui.movies.MoviesRepository
+import com.denimihut.movieApp.repository.ActorsRepository
+import com.denimihut.movieApp.repository.GenresRepository
+import com.denimihut.movieApp.service_movie_detail.MovieDetailsViewModel
+import com.denimihut.movieApp.service_movie.Movies
+import com.denimihut.movieApp.adapter.MoviesAdapter
+import com.denimihut.movieApp.repository.MoviesRepository
 import kotlinx.coroutines.*
 
 class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {

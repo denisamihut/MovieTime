@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui
+package com.denimihut.movieApp.activity
 
 import android.content.Context
 import android.content.Intent
@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.denimihut.movieApp.R
-import com.denimihut.movieApp.service_actor.ActorsRepository
-import com.denimihut.movieApp.service_genre.GenresRepository
+import com.denimihut.movieApp.repository.ActorsRepository
+import com.denimihut.movieApp.repository.GenresRepository
 import kotlinx.coroutines.*
 
 class OnBoardingActivity : AppCompatActivity() {

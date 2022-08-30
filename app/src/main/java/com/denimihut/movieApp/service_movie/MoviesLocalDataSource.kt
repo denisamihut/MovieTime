@@ -1,5 +1,6 @@
-package com.denimihut.movieApp.ui.movies
+package com.denimihut.movieApp.service_movie
 
+import com.denimihut.movieApp.dao.MoviesDAO
 import com.denimihut.movieApp.database.Database
 
 class MoviesLocalDataSource(database: Database) {

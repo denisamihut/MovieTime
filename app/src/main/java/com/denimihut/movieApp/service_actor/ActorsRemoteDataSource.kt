@@ -1,7 +1,6 @@
-package com.denimihut.movieApp.ui.actors
+package com.denimihut.movieApp.service_actor
 
 import com.denimihut.movieApp.network.executeAndDeliver
-import com.denimihut.movieApp.ui.genres.Genres
 import com.denimihut.movieApp.utils.Constants.API_KEY
 import com.denimihut.movieApp.utils.Constants.LANGUAGE
 import retrofit2.Retrofit

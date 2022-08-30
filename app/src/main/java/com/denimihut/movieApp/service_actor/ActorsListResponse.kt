@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.actors
+package com.denimihut.movieApp.service_actor
 
 import com.google.gson.annotations.SerializedName
 

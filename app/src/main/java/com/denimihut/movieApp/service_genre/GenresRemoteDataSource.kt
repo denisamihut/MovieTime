@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.genres
+package com.denimihut.movieApp.service_genre
 
 import com.denimihut.movieApp.network.executeAndDeliver
 import com.denimihut.movieApp.utils.Constants.API_KEY

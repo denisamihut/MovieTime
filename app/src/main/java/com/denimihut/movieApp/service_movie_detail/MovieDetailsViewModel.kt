@@ -1,9 +1,9 @@
-package com.denimihut.movieApp.ui.movie_details
+package com.denimihut.movieApp.service_movie_detail
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.denimihut.movieApp.network.APIClient
-import com.denimihut.movieApp.ui.movies.MoviesRemoteDataSource
+import com.denimihut.movieApp.service_movie.MoviesRemoteDataSource
 
 class MovieDetailsViewModel : ViewModel() {
     val currentMovieId = MutableLiveData<Int>()

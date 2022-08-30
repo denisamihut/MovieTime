@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui
+package com.denimihut.movieApp.activity
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

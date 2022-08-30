@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui
+package com.denimihut.movieApp.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

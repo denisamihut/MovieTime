@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui
+package com.denimihut.movieApp.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.denimihut.movieApp.R
 import com.denimihut.movieApp.service_actor.Actors
-import com.denimihut.movieApp.service_actor.ActorsAdapter
-import com.denimihut.movieApp.service_actor.ActorsRepository
+import com.denimihut.movieApp.adapter.ActorsAdapter
+import com.denimihut.movieApp.repository.ActorsRepository
 import kotlinx.coroutines.*
 
 class ActorsActivity : AppCompatActivity() {

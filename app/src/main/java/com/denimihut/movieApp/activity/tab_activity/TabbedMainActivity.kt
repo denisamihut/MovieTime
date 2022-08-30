@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.tab_activity
+package com.denimihut.movieApp.activity.tab_activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

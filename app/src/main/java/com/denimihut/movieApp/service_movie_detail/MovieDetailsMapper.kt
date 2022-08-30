@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.movie_details
+package com.denimihut.movieApp.service_movie_detail
 
 class MovieDetailsMapper {
     fun map(movieResponse: MovieDetailsResponse): MovieDetails {
