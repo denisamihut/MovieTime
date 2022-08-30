@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="transparent">#00000000</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blue_1">#00A3FB</color>
-
     <color name="grey_neon">#293462</color>
     <color name="grey_neon_light">#3A4A8E</color>
     <color name="blue_neon">#1CD6CE</color>
     <color name="yellow_neon">#FEDB39</color>
     <color name="yellow_neon_dark">#9C8102</color>
-
     <color name="red_neon">#D61C4E</color>
     <!--    <color name="orange">#FEB139</color>-->
     <!--    <color name="grey_dark">#293462</color>-->
+    <drawable name="option_on">#5AFA00</drawable>
+    <drawable name="option_off">#CC0000</drawable>
 </resources>

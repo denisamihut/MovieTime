@@ -46,19 +46,28 @@ class GenresAdapter(private val genresList: List<Genres>) :
 //            }
 //        )
 
-        holder.genreName.setBackgroundColor(
-            when (genre.isSelected) {
-                true -> ContextCompat.getColor(holder.parentView.context, R.color.yellow_neon)
-                else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
-            }
-        )
+//        holder.shape1?.setBackgroundColor(
+//            when (genre.isSelected) {
+//                true -> ContextCompat.getColor(holder.parentView.context, R.color.blue_1)
+//                else -> ContextCompat.getColor(holder.parentView.context, R.color.yellow_neon)
+//            }
+//        )
 
         holder.genreName.setTextColor(
             when (genre.isSelected) {
-                true -> ContextCompat.getColor(holder.parentView.context, R.color.black)
-                else -> ContextCompat.getColor(holder.parentView.context, R.color.yellow_neon)
+                true -> ContextCompat.getColor(holder.parentView.context, R.color.grey_neon)
+                else -> ContextCompat.getColor(holder.parentView.context, R.color.black)
             }
         )
+
+//        holder.shape1?.visibility  = when (genre.isSelected) {
+//            true -> View.VISIBLE
+//            else -> View.INVISIBLE
+//        }
+//        holder.shape2?.visibility  = when (genre.isSelected) {
+//            true -> View.VISIBLE
+//            else -> View.INVISIBLE
+//        }
     }
 
     override fun getItemCount() = genresList.size
