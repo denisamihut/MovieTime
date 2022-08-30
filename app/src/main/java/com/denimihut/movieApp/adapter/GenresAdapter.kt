@@ -8,7 +8,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.denimihut.movieApp.R
-import com.denimihut.movieApp.ui.genres.Genres
+import com.denimihut.movieApp.service_genre.Genres
 
 
 class GenresAdapter(private val genresList: List<Genres>) :

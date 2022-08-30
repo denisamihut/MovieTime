@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.ui.save_movie
+package com.denimihut.movieApp.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

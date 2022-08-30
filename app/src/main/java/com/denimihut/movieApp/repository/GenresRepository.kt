@@ -1,7 +1,10 @@
-package com.denimihut.movieApp.ui.genres
+package com.denimihut.movieApp.repository
 
 import com.denimihut.movieApp.database.Database
 import com.denimihut.movieApp.network.APIClient
+import com.denimihut.movieApp.service_genre.Genres
+import com.denimihut.movieApp.service_genre.GenresLocalDataSource
+import com.denimihut.movieApp.service_genre.GenresRemoteDataSource
 
 class GenresRepository private constructor() {
     companion object {
