@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/clGenre"
-android:layout_margin="4dp"
-    android:background="@drawable/shape1"
+    android:background="@drawable/shape2"
+
+    android:layout_margin="4dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:visibility="visible">
@@ -16,9 +17,10 @@ android:layout_margin="4dp"
         android:fontFamily="sans-serif-condensed"
         android:padding="8dp"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.461"

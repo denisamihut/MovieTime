@@ -83,8 +83,10 @@
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/rounded_blue_button.xml" value="0.1965" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/rounded_border.xml" value="0.3145" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/rounded_orange_button.xml" value="0.1965" />
-        <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/shape1.xml" value="0.269" />
-        <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/shape2.xml" value="0.2385" />
+        <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/selected_state.xml" value="0.1" />
+        <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/shape1.xml" value="0.19924529018924966" />
+        <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/shape2.xml" value="0.19924529018924966" />
+        <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/shape3.xml" value="0.2355" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/shapes.xml" value="0.2385" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/drawable/side_nav_bar.xml" value="0.1965" />
         <entry key="..\:/Development/repos/MovieApp/app/src/main/res/layout/activity_actors.xml" value="0.2988679352838745" />

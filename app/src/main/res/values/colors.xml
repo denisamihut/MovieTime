@@ -12,4 +12,6 @@
     <color name="red_neon">#D61C4E</color>
     <!--    <color name="orange">#FEB139</color>-->
     <!--    <color name="grey_dark">#293462</color>-->
+    <drawable name="option_on">#5AFA00</drawable>
+    <drawable name="option_off">#CC0000</drawable>
 </resources>
