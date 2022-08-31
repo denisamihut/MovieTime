@@ -13,5 +13,9 @@
             android:id="@+id/nav_save_movies"
             android:icon="@drawable/ic_baseline_account_box_24"
             android:title="@string/menu_save_movies" />
+        <item
+            android:id="@+id/nav_save_prefs"
+            android:icon="@drawable/ic_baseline_favorite_24"
+            android:title="@string/menu_save_preferences" />
     </group>
 </menu>

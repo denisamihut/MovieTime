@@ -33,6 +33,7 @@
     <string name="title_activity_tabbed_main">TabbedMainActivity</string>
     <string name="menu_search_movies">All Movies</string>
     <string name="menu_save_movies">My Movies</string>
+    <string name="menu_save_preferences">My Preferences</string>
     <string name="tab_text_1">Favorites</string>
     <string name="tab_text_2">Watched</string>
 </resources>
