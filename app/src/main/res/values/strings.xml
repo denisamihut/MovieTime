@@ -4,10 +4,12 @@
     <string name="on_boarding_title">Welcome to MovieTime!</string>
     <string name="on_boarding_subtitle">PICK YOUR FAVORITES</string>
     <string name="on_boarding_info">Tell us what you are interested in</string>
-    <string name="on_boarding_info2">(Pick 5 or more items to start discovering new movies)</string>
+    <string name="on_boarding_info2">Your ultimate movie experience to start discovering what you like</string>
 
     <string name="on_boarding_actor_btn">Actors</string>
     <string name="on_boarding_genre_btn">Genres</string>
+    <string name="on_boarding_skip_btn">Skip</string>
+
 
     <string name="preferences_title">MovieTime: Preferences</string>
     <string name="actors_info">PICK YOUR FAVOURITE ACTORS</string>
@@ -31,6 +33,7 @@
     <string name="title_activity_tabbed_main">TabbedMainActivity</string>
     <string name="menu_search_movies">All Movies</string>
     <string name="menu_save_movies">My Movies</string>
+    <string name="menu_save_preferences">My Preferences</string>
     <string name="tab_text_1">Favorites</string>
     <string name="tab_text_2">Watched</string>
 </resources>

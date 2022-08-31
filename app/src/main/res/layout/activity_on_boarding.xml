@@ -11,7 +11,7 @@
         android:id="@+id/tvOnBoardingTitle"
         android:layout_width="314dp"
         android:layout_height="43dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="72dp"
         android:text="@string/on_boarding_title"
         android:textColor="@color/yellow_neon"
         android:textSize="28sp"
@@ -25,47 +25,46 @@
         android:id="@+id/tvOnBoardInfo1"
         android:layout_width="356dp"
         android:layout_height="32dp"
+        android:layout_marginTop="168dp"
         android:text="@string/on_boarding_info"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnActors"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.648" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvOnBoardInfo2"
-        android:layout_width="356dp"
-        android:layout_height="46dp"
+        android:layout_width="357dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="12dp"
         android:text="@string/on_boarding_info2"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnActors"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.758" />
+        app:layout_constraintTop_toBottomOf="@+id/tvOnBoardInfo1" />
 
     <androidx.appcompat.widget.AppCompatToggleButton
         android:id="@+id/btnActors"
         style="@style/Button"
         android:layout_width="160dp"
         android:layout_height="48dp"
-        android:layout_marginTop="412dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/button_shape"
         android:text="@string/on_boarding_actor_btn"
-        android:textSize="20sp"
         android:textColor="@drawable/button_text_color"
         android:textOff="@string/on_boarding_actor_btn"
         android:textOn="@string/on_boarding_actor_btn"
-        android:background="@drawable/button_shape"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvOnBoardInfo2" />
 
     <androidx.appcompat.widget.AppCompatToggleButton
         android:id="@+id/btnGenres"
@@ -83,4 +82,25 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/btnActors"
         app:layout_constraintTop_toBottomOf="@+id/btnActors" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="147dp"
+        android:layout_height="48dp"
+
+        android:background="@drawable/button_skip"
+        android:text="@string/on_boarding_skip_btn"
+        android:textColor="@drawable/button_text_color"
+        android:textOff="@string/on_boarding_skip_btn"
+        android:textOn="@string/on_boarding_skip_btn"
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGenres"
+        app:layout_constraintVertical_bias="0.803" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
