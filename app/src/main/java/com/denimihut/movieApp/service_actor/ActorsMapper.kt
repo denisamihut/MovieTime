@@ -6,7 +6,8 @@ class ActorsMapper {
             id = actorsResponse.actorId,
             profile_path = actorsResponse.actorPoster,
             name = actorsResponse.actorName,
-            isSelected = false,
+            popularity = actorsResponse.actorPopularity,
+            isSelected = false
         )
     }
 }

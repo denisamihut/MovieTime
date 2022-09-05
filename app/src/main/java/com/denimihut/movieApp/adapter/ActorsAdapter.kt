@@ -22,6 +22,8 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
         val actorName: TextView = view.findViewById(R.id.tvActorName)
         val starIcon: ImageView = view.findViewById(R.id.ivStarIcon)
         val starIcon2: ImageView = view.findViewById(R.id.ivStarIcon2)
+        val popular: TextView = view.findViewById(R.id.popularity)
+
 
     }
 
@@ -34,6 +36,8 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val actor = actorsList[position]
         holder.actorName.text = actor.name
+//        holder.popular.text = actor.popularity
+        holder.popular.text = actor.popularity.toString()
 
         Glide.with(holder.imageView.context).load(IMAGE_URL + actor.profile_path)
             .into(holder.imageView)
