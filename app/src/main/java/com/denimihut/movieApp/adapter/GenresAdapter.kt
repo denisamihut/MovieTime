@@ -43,7 +43,7 @@ class GenresAdapter(private val genresList: List<Genres>) :
         holder.genreName.setTextColor(
             when (genre.isSelected) {
                 true -> ContextCompat.getColor(holder.parentView.context, R.color.grey_neon)
-                else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
+                else -> ContextCompat.getColor(holder.parentView.context, R.color.grey_neon)
             }
         )
 
