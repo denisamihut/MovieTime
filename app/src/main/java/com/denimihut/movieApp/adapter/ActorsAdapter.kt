@@ -21,6 +21,8 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
         val imageView: ImageView = view.findViewById(R.id.ivActorPhoto)
         val actorName: TextView = view.findViewById(R.id.tvActorName)
         val starIcon: ImageView = view.findViewById(R.id.ivStarIcon)
+        val starIcon2: ImageView = view.findViewById(R.id.ivStarIcon2)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -61,6 +63,11 @@ class ActorsAdapter(private val actorsList: List<Actors>) :
         holder.starIcon.visibility = when (actor.isSelected) {
             true -> View.VISIBLE
             else -> View.INVISIBLE
+        }
+
+        holder.starIcon2.visibility = when (actor.isSelected) {
+            true -> View.INVISIBLE
+            else -> View.VISIBLE
         }
     }
 
