@@ -15,6 +15,7 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/menu_save_movies"
             app:tabIndicatorColor="@color/yellow_neon"
             app:tabTextColor="@color/yellow_neon" />
     </com.google.android.material.appbar.AppBarLayout>
