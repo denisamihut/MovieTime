@@ -3,6 +3,7 @@ package com.denimihut.movieApp.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -10,13 +11,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.denimihut.movieApp.R
 import com.denimihut.movieApp.service_genre.Genres
 
-
 class GenresAdapter(private val genresList: List<Genres>) :
     RecyclerView.Adapter<GenresAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val parentView: ConstraintLayout = view.findViewById(R.id.clGenre)
         val genreName: TextView = view.findViewById(R.id.tvGenreName)
-
+        val shape1: ImageView = view.findViewById(R.id.ivActorBackground)
+        val shape2: ImageView = view.findViewById(R.id.ivActorBackground2)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -39,35 +40,21 @@ class GenresAdapter(private val genresList: List<Genres>) :
 
     private fun selectGenre(holder: ViewHolder, genre: Genres) {
 
-//        holder.genreName.setBackgroundResource(
-//            when (genre.isSelected) {
-//                true -> ContextCompat.getColor(holder.parentView.context, R.color.black)
-//                else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
-//            }
-//        )
-
-//        holder.shape1?.setBackgroundColor(
-//            when (genre.isSelected) {
-//                true -> ContextCompat.getColor(holder.parentView.context, R.color.blue_1)
-//                else -> ContextCompat.getColor(holder.parentView.context, R.color.yellow_neon)
-//            }
-//        )
-
         holder.genreName.setTextColor(
             when (genre.isSelected) {
-                true -> ContextCompat.getColor(holder.parentView.context, R.color.yellow_neon)
-                else -> ContextCompat.getColor(holder.parentView.context, R.color.blue_1)
+                true -> ContextCompat.getColor(holder.parentView.context, R.color.grey_neon)
+                else -> ContextCompat.getColor(holder.parentView.context, R.color.white)
             }
         )
 
-//        holder.shape1?.visibility  = when (genre.isSelected) {
-//            true -> View.VISIBLE
-//            else -> View.INVISIBLE
-//        }
-//        holder.shape2?.visibility  = when (genre.isSelected) {
-//            true -> View.VISIBLE
-//            else -> View.INVISIBLE
-//        }
+        holder.shape1.visibility  = when (genre.isSelected) {
+            true -> View.VISIBLE
+            else -> View.INVISIBLE
+        }
+        holder.shape2.visibility  = when (genre.isSelected) {
+            true -> View.INVISIBLE
+            else -> View.VISIBLE
+        }
     }
 
     override fun getItemCount() = genresList.size

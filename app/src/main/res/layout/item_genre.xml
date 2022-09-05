@@ -3,12 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/clGenre"
-    android:background="@drawable/shape2"
-
     android:layout_margin="4dp"
     android:layout_width="match_parent"
     android:layout_height="48dp"
     android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/ivActorBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/genres_bg_selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvGenreName"
+        app:layout_constraintStart_toStartOf="@+id/tvGenreName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shape1" />
+
+    <ImageView
+        android:id="@+id/ivActorBackground2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/genres_bg_unselected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvGenreName"
+        app:layout_constraintStart_toStartOf="@+id/tvGenreName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shape2" />
 
     <TextView
         android:id="@+id/tvGenreName"
@@ -17,10 +37,9 @@
         android:fontFamily="sans-serif-condensed"
         android:padding="8dp"
         android:textAlignment="center"
-        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.461"
