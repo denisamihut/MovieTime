@@ -1,8 +1,11 @@
 package com.denimihut.movieApp.service_movie
 
+import com.denimihut.movieApp.APIs.MoviesAPIService
+import com.denimihut.movieApp.entities.Movies
+import com.denimihut.movieApp.mapper.MoviesMapper
 import com.denimihut.movieApp.network.executeAndDeliver
 import com.denimihut.movieApp.service_movie_detail.MovieDetails
-import com.denimihut.movieApp.service_movie_detail.MovieDetailsMapper
+import com.denimihut.movieApp.mapper.MovieDetailsMapper
 import com.denimihut.movieApp.utils.Constants.API_KEY
 import com.denimihut.movieApp.utils.Constants.APPEND_TO_RESPONSE
 import com.denimihut.movieApp.utils.Constants.LANGUAGE

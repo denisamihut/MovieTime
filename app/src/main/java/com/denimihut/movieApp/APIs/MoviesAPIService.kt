@@ -1,6 +1,7 @@
-package com.denimihut.movieApp.service_movie
+package com.denimihut.movieApp.APIs
 
-import com.denimihut.movieApp.service_movie_detail.MovieDetailsResponse
+import com.denimihut.movieApp.response.MoviesListResponse
+import com.denimihut.movieApp.response.MovieDetailsResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

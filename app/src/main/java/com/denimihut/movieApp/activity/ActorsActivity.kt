@@ -7,7 +7,7 @@ import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.denimihut.movieApp.R
-import com.denimihut.movieApp.service_actor.Actors
+import com.denimihut.movieApp.entities.Actors
 import com.denimihut.movieApp.adapter.ActorsAdapter
 import com.denimihut.movieApp.repository.ActorsRepository
 import kotlinx.coroutines.*

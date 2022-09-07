@@ -1,5 +1,8 @@
 package com.denimihut.movieApp.service_genre
 
+import com.denimihut.movieApp.APIs.GenresAPIService
+import com.denimihut.movieApp.entities.Genres
+import com.denimihut.movieApp.mapper.GenresMapper
 import com.denimihut.movieApp.network.executeAndDeliver
 import com.denimihut.movieApp.utils.Constants.API_KEY
 import com.denimihut.movieApp.utils.Constants.LANGUAGE

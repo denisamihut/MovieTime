@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.denimihut.movieApp.R
 import com.denimihut.movieApp.adapter.FavoriteMoviesAdapter
-import com.denimihut.movieApp.service_movie.Movies
+import com.denimihut.movieApp.entities.Movies
 import com.denimihut.movieApp.repository.MoviesRepository
 import kotlinx.coroutines.*
 

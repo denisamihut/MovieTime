@@ -1,5 +1,6 @@
-package com.denimihut.movieApp.service_actor
+package com.denimihut.movieApp.response
 
+import com.denimihut.movieApp.response.ActorsResponse
 import com.google.gson.annotations.SerializedName
 
 class ActorsListResponse(

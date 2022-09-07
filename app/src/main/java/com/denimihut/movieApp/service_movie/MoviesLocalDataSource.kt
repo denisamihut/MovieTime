@@ -2,6 +2,7 @@ package com.denimihut.movieApp.service_movie
 
 import com.denimihut.movieApp.dao.MoviesDAO
 import com.denimihut.movieApp.database.Database
+import com.denimihut.movieApp.entities.Movies
 
 class MoviesLocalDataSource(database: Database) {
 

@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.service_actor
+package com.denimihut.movieApp.entities
 
 import androidx.annotation.NonNull
 import androidx.room.ColumnInfo

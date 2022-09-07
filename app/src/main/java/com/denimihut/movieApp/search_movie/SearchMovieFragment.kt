@@ -13,7 +13,7 @@ import com.denimihut.movieApp.databinding.FragmentSearchMoviesBinding
 import com.denimihut.movieApp.repository.ActorsRepository
 import com.denimihut.movieApp.repository.GenresRepository
 import com.denimihut.movieApp.service_movie_detail.MovieDetailsViewModel
-import com.denimihut.movieApp.service_movie.Movies
+import com.denimihut.movieApp.entities.Movies
 import com.denimihut.movieApp.adapter.MoviesAdapter
 import com.denimihut.movieApp.repository.MoviesRepository
 import kotlinx.coroutines.*

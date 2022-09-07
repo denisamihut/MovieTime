@@ -1,4 +1,7 @@
-package com.denimihut.movieApp.service_genre
+package com.denimihut.movieApp.mapper
+
+import com.denimihut.movieApp.entities.Genres
+import com.denimihut.movieApp.response.GenresResponse
 
 class GenresMapper {
     fun map(genresResponse: GenresResponse): Genres {

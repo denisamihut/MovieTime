@@ -1,5 +1,6 @@
-package com.denimihut.movieApp.service_movie_detail
+package com.denimihut.movieApp.response
 
+import com.denimihut.movieApp.service_movie_detail.VideosList
 import com.google.gson.annotations.SerializedName
 
 data class MovieDetailsResponse(

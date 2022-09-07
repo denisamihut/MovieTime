@@ -1,4 +1,7 @@
-package com.denimihut.movieApp.service_actor
+package com.denimihut.movieApp.mapper
+
+import com.denimihut.movieApp.entities.Actors
+import com.denimihut.movieApp.response.ActorsResponse
 
 class ActorsMapper {
     fun map(actorsResponse: ActorsResponse): Actors {

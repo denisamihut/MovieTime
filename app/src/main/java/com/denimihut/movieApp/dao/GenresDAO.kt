@@ -1,7 +1,7 @@
 package com.denimihut.movieApp.dao
 
 import androidx.room.*
-import com.denimihut.movieApp.service_genre.Genres
+import com.denimihut.movieApp.entities.Genres
 
 @Dao
 interface GenresDAO {

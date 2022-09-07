@@ -2,6 +2,7 @@ package com.denimihut.movieApp.service_genre
 
 import com.denimihut.movieApp.dao.GenresDAO
 import com.denimihut.movieApp.database.Database
+import com.denimihut.movieApp.entities.Genres
 
 class GenresLocalDataSource(database: Database) {
 

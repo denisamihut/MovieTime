@@ -10,7 +10,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.denimihut.movieApp.R
-import com.denimihut.movieApp.service_actor.Actors
+import com.denimihut.movieApp.entities.Actors
 
 import com.denimihut.movieApp.utils.Constants.IMAGE_URL
 

@@ -1,4 +1,7 @@
-package com.denimihut.movieApp.service_movie
+package com.denimihut.movieApp.mapper
+
+import com.denimihut.movieApp.entities.Movies
+import com.denimihut.movieApp.response.MoviesResponse
 
 class MoviesMapper {
     fun map(moviesResponse: MoviesResponse): Movies {

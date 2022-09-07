@@ -3,11 +3,11 @@ package com.denimihut.movieApp.database
 import android.content.Context
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.denimihut.movieApp.service_genre.Genres
+import com.denimihut.movieApp.entities.Genres
 import com.denimihut.movieApp.dao.GenresDAO
-import com.denimihut.movieApp.service_actor.Actors
+import com.denimihut.movieApp.entities.Actors
 import com.denimihut.movieApp.dao.ActorsDAO
-import com.denimihut.movieApp.service_movie.Movies
+import com.denimihut.movieApp.entities.Movies
 import com.denimihut.movieApp.dao.MoviesDAO
 
 class Database private constructor() {

@@ -1,7 +1,7 @@
 package com.denimihut.movieApp.dao
 
 import androidx.room.*
-import com.denimihut.movieApp.service_movie.Movies
+import com.denimihut.movieApp.entities.Movies
 
 @Dao
 interface MoviesDAO {

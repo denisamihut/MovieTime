@@ -1,5 +1,6 @@
-package com.denimihut.movieApp.service_actor
+package com.denimihut.movieApp.APIs
 
+import com.denimihut.movieApp.response.ActorsListResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
