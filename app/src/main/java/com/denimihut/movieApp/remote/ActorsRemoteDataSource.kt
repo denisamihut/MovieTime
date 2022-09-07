@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.service_actor
+package com.denimihut.movieApp.remote
 
 import com.denimihut.movieApp.APIs.ActorsAPIService
 import com.denimihut.movieApp.entities.Actors

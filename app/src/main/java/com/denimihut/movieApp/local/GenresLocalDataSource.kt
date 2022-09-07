@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.service_genre
+package com.denimihut.movieApp.local
 
 import com.denimihut.movieApp.dao.GenresDAO
 import com.denimihut.movieApp.database.Database

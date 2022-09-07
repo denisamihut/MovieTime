@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.service_genre
+package com.denimihut.movieApp.remote
 
 import com.denimihut.movieApp.APIs.GenresAPIService
 import com.denimihut.movieApp.entities.Genres

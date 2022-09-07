@@ -3,8 +3,8 @@ package com.denimihut.movieApp.repository
 import com.denimihut.movieApp.database.Database
 import com.denimihut.movieApp.network.APIClient
 import com.denimihut.movieApp.entities.Movies
-import com.denimihut.movieApp.service_movie.MoviesLocalDataSource
-import com.denimihut.movieApp.service_movie.MoviesRemoteDataSource
+import com.denimihut.movieApp.local.MoviesLocalDataSource
+import com.denimihut.movieApp.remote.MoviesRemoteDataSource
 
 class MoviesRepository private constructor() {
     companion object {

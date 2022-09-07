@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.service_movie_detail
+package com.denimihut.movieApp.movie_detail
 
 data class Video(
     val key: String,

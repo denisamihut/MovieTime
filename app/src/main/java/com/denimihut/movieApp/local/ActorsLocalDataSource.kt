@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.service_actor
+package com.denimihut.movieApp.local
 
 import com.denimihut.movieApp.dao.ActorsDAO
 import com.denimihut.movieApp.database.Database

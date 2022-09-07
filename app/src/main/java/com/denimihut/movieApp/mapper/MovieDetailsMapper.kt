@@ -1,6 +1,6 @@
 package com.denimihut.movieApp.mapper
 
-import com.denimihut.movieApp.service_movie_detail.MovieDetails
+import com.denimihut.movieApp.movie_detail.MovieDetails
 import com.denimihut.movieApp.response.MovieDetailsResponse
 
 class MovieDetailsMapper {

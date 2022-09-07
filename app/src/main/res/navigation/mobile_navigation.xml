@@ -18,7 +18,7 @@
         tools:layout="@layout/fragment_save_movies" />
     <fragment
         android:id="@+id/fragmentMovieDetails"
-        android:name="com.denimihut.movieApp.service_movie_detail.FragmentMovieDetails"
+        android:name="com.denimihut.movieApp.movie_detail.FragmentMovieDetails"
         android:label="Movie Details"
         tools:layout="@layout/fragment_movie_details" />
 

@@ -12,7 +12,7 @@ import com.bumptech.glide.Glide
 import com.denimihut.movieApp.R
 import com.denimihut.movieApp.entities.Movies
 import com.denimihut.movieApp.repository.MoviesRepository
-import com.denimihut.movieApp.service_movie_detail.MovieDetailsViewModel
+import com.denimihut.movieApp.movie_detail.MovieDetailsViewModel
 import com.denimihut.movieApp.utils.Constants.IMAGE_URL
 import kotlinx.coroutines.*
 
