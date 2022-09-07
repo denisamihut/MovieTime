@@ -1,10 +1,10 @@
-package com.denimihut.movieApp.search_movie
+package com.denimihut.movieApp.movies
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SearchMovieViewModel : ViewModel() {
+class AllMoviesViewModel : ViewModel() {
     private val _text = MutableLiveData<String>().apply { }
     val text: LiveData<String> = _text
 }

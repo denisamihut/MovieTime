@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.save_movie
+package com.denimihut.movieApp.my_movies
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,20 +8,20 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.denimihut.movieApp.R
-import com.denimihut.movieApp.databinding.FragmentSaveMoviesBinding
 import com.denimihut.movieApp.activity.SaveMovieViewModel
 import com.denimihut.movieApp.adapter.AdapterTabPager
+import com.denimihut.movieApp.databinding.FragmentMyMoviesBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
-class SaveMovieFragment : Fragment() {
+class MyMoviesFragment : Fragment() {
     private val tabTitles = arrayOf(
         "Favorite",
         "Watched"
     )
     private var adapter: AdapterTabPager? = null
 
-    private var _binding: FragmentSaveMoviesBinding? = null
+    private var _binding: FragmentMyMoviesBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -30,7 +30,7 @@ class SaveMovieFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         ViewModelProvider(this)[SaveMovieViewModel::class.java]
-        _binding = FragmentSaveMoviesBinding.inflate(inflater, container, false)
+        _binding = FragmentMyMoviesBinding.inflate(inflater, container, false)
         return binding.root
     }
 

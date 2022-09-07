@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.search_movie
+package com.denimihut.movieApp.movies
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,19 +9,19 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.denimihut.movieApp.R
-import com.denimihut.movieApp.databinding.FragmentSearchMoviesBinding
 import com.denimihut.movieApp.repository.ActorsRepository
 import com.denimihut.movieApp.repository.GenresRepository
 import com.denimihut.movieApp.movie_detail.MovieDetailsViewModel
 import com.denimihut.movieApp.entities.Movies
 import com.denimihut.movieApp.adapter.MoviesAdapter
+import com.denimihut.movieApp.databinding.FragmentAllMoviesBinding
 import com.denimihut.movieApp.repository.MoviesRepository
 import kotlinx.coroutines.*
 
-class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
+class AllMoviesFragment : Fragment(R.layout.fragment_all_movies) {
     private var movies: List<Movies> = emptyList()
 
-    private var _binding: FragmentSearchMoviesBinding? = null
+    private var _binding: FragmentAllMoviesBinding? = null
     private val binding get() = _binding!!
     private val moviesRepository = MoviesRepository.instance
     private val genresRepository = GenresRepository.instance
@@ -37,9 +37,9 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        ViewModelProvider(this)[SearchMovieViewModel::class.java]
+        ViewModelProvider(this)[AllMoviesViewModel::class.java]
 
-        _binding = FragmentSearchMoviesBinding.inflate(inflater, container, false)
+        _binding = FragmentAllMoviesBinding.inflate(inflater, container, false)
         val root: View = binding.root
         viewModel = ViewModelProvider(requireActivity())[MovieDetailsViewModel::class.java]
         return root
@@ -144,4 +144,7 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movies) {
         super.onDestroy()
         _binding = null
     }
+
+
+
 }

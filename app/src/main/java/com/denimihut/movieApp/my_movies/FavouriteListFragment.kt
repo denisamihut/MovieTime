@@ -1,4 +1,4 @@
-package com.denimihut.movieApp.save_movie
+package com.denimihut.movieApp.my_movies
 
 import android.os.Bundle
 import android.view.View

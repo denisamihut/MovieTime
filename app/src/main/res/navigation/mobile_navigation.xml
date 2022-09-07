@@ -3,19 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_search_movies">
+    app:startDestination="@+id/nav_all_movies">
 
     <fragment
-        android:id="@+id/nav_search_movies"
-        android:name="com.denimihut.movieApp.search_movie.SearchMovieFragment"
+        android:id="@+id/nav_all_movies"
+        android:name="com.denimihut.movieApp.movies.AllMoviesFragment"
         android:label="@string/menu_search_movies"
-        tools:layout="@layout/fragment_search_movies" />
+        tools:layout="@layout/fragment_all_movies" />
 
     <fragment
-        android:id="@+id/nav_save_movies"
-        android:name="com.denimihut.movieApp.save_movie.SaveMovieFragment"
+        android:id="@+id/nav_my_movies"
+        android:name="com.denimihut.movieApp.my_movies.MyMoviesFragment"
         android:label="@string/menu_save_movies"
-        tools:layout="@layout/fragment_save_movies" />
+        tools:layout="@layout/fragment_my_movies" />
+
     <fragment
         android:id="@+id/fragmentMovieDetails"
         android:name="com.denimihut.movieApp.movie_detail.FragmentMovieDetails"
