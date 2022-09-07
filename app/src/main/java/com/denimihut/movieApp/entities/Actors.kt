@@ -12,7 +12,7 @@ data class Actors(
     @ColumnInfo(name = "profile_path") val profile_path: String?,
     @ColumnInfo(name = "name") val name: String,
     @ColumnInfo(name = "popularity") val popularity: Double,
-    @ColumnInfo(name = "isSelected") var isSelected: Boolean
+    @ColumnInfo(name = "is_selected") var isSelected: Boolean
 ) {
     override fun equals(other: Any?) = (other is Actors) && id == other.id
 
