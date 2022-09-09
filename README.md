@@ -21,6 +21,12 @@
 - Glide library to display image views
 - using coroutines
 
+# Concepts
+- CardView?
+- Firebase?
+- use of binding in the project
+
+
 # Finished Tasks
 - group string values and refactor
 - change name of variables in layout files
