@@ -45,7 +45,7 @@
 - add search bar to actors 50%
 - add more fields to movies, actors and genres
 
-#Future Tasks
+# Future Tasks
 - functionality tab that can reselect the preferences
 - add actor details
 - get movies with certain actors and vice-versa
