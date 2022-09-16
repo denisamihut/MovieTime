@@ -26,7 +26,6 @@
 - Firebase?
 - use of binding in the project
 
-
 # Finished Tasks
 - group string values and refactor
 - change name of variables in layout files
@@ -42,6 +41,8 @@
 
 # Current Tasks
 - change all colors in the app
+- 
+TO-DO 
 - add search bar to actors 50%
 - add more fields to movies, actors and genres
 

@@ -28,6 +28,7 @@
             android:theme="@style/Theme.MovieApp.NoActionBar" />
         <activity
             android:name="com.denimihut.movieApp.activity.ActorsActivity"
+
             android:exported="false" />
         <activity
             android:name="com.denimihut.movieApp.activity.GenresActivity"
