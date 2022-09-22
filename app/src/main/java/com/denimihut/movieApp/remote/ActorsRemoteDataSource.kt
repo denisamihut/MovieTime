@@ -18,12 +18,4 @@ class ActorsRemoteDataSource(retrofit: Retrofit) {
             .actors
             .map { actorMapper.map(it) }
     }
-
-
-    fun getSearchedActors(query: String): List<Actors> {
-        return apiService.getSearchedActors(API_KEY, LANGUAGE, query)
-            .executeAndDeliver()
-            .actors
-            .map { actorMapper.map(it) }
-    }
 }

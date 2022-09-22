@@ -2,6 +2,7 @@ package com.denimihut.movieApp.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.widget.Button
 import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -26,21 +27,11 @@ class ActorsActivity : AppCompatActivity() {
         }
     }
 
-    @OptIn(DelicateCoroutinesApi::class)
-    private fun getSearchedActors(query: String) {
-        GlobalScope.launch(Dispatchers.IO) {
-            actors = actorRepository.getAllSearchedActors(query)
-            withContext(Dispatchers.Main) {
-            }
-        }
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_actors)
         setOnClickListeners()
         getActors()
-        setSearchTextListener()
     }
 
     private fun setOnClickListeners() {
@@ -79,21 +70,5 @@ class ActorsActivity : AppCompatActivity() {
                 setupRecyclerView()
             }
         }
-    }
-
-    private fun setSearchTextListener() {
-        val search = findViewById<SearchView>(R.id.svActors)
-        search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(newText: String?): Boolean {
-                return false
-            }
-            override fun onQueryTextChange(newText: String?): Boolean {
-                if ((newText?.length ?: 0) >= 1) {
-                    getSearchedActors(newText ?: "")
-                } else
-                    getActors()
-                return false
-            }
-        })
     }
 }
