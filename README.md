@@ -1,13 +1,15 @@
 # MovieApp
-- This is an app that displays information about TV shows, movies, and actorsThis is an app that displays information about TV shows, movies, and actors
+- This is a kotlin app that displays information about TV shows, movies and actors
 
 # Owner
 - Mihut Denisa Georgiana
 - 15.07.2022
-- LANG: EN
+- Lang: EN
 
 # Sources
 - https://developer.android.com/studio/intro
+- https://colorhunt.co/palette/293462d61c4efeb139fff80a
+- https://www.iconfinder.com/icons/378135/video_camera_icon
 
 # Features
 - MVVM Architecture
@@ -20,11 +22,6 @@
 - SearchView for Activity
 - Glide library to display image views
 - using coroutines
-
-# Concepts
-- CardView?
-- Firebase?
-- use of binding in the project
 
 # Finished Tasks
 - group string values and refactor
@@ -41,14 +38,11 @@
 
 # Current Tasks
 - change all colors in the app
-- 
-TO-DO 
-- add search bar to actors 50%
-- add more fields to movies, actors and genres
+- add search view to actors 50%
+- add more fields to movies, actors and genres 20%
 
 # Future Tasks
 - functionality tab that can reselect the preferences
 - add actor details
 - get movies with certain actors and vice-versa
 - create functionality for skip button
-
